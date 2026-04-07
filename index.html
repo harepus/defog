@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Defog — Fjern støyen fra nyhetsbildet</title>
+  <meta name="description" content="Gratis Chrome-utvidelse som skjuler sport, sladder og AI-slop fra VG, NRK og Dagbladet. Se kun nyhetene du faktisk bryr deg om.">
+  <meta property="og:title" content="Defog — Fjern støyen fra nyhetsbildet">
+  <meta property="og:description" content="Gratis Chrome-utvidelse som skjuler sport, sladder og AI-slop fra norske nyhetssider.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://defog.cloud">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;0,9..144,800;1,9..144,400&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --sun: #FBBF24;
+      --sun-deep: #F59E0B;
+      --sun-glow: #FDE68A;
+      --fog: #9CA3AF;
+      --fog-light: #D1D5DB;
+      --ink: #111111;
+      --ink-soft: #374151;
+      --ink-muted: #6B7280;
+      --paper: #FAFAF9;
+      --card: #FFFFFF;
+      --border: #E5E7EB;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      color: var(--ink);
+      background: var(--paper);
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    /* --- HERO --- */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem 1.5rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Ambient sun glow behind hero */
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -20%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 800px;
+      height: 800px;
+      background: radial-gradient(circle, rgba(251, 191, 36, 0.12) 0%, rgba(251, 191, 36, 0.04) 40%, transparent 70%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 680px;
+    }
+
+    /* Sun icon */
+    .sun-icon {
+      width: 72px;
+      height: 72px;
+      margin: 0 auto 2rem;
+      animation: rise 1s ease-out both;
+    }
+
+    @keyframes rise {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .hero h1 {
+      font-family: 'Fraunces', serif;
+      font-weight: 700;
+      font-size: clamp(2.8rem, 6vw, 4.2rem);
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+      margin-bottom: 1.25rem;
+      animation: rise 1s ease-out 0.1s both;
+    }
+
+    .hero h1 .highlight {
+      background: linear-gradient(135deg, var(--sun-deep), var(--sun));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero .subtitle {
+      font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+      color: var(--ink-soft);
+      line-height: 1.6;
+      max-width: 520px;
+      margin: 0 auto 2.5rem;
+      animation: rise 1s ease-out 0.2s both;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      animation: rise 1s ease-out 0.3s both;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.85rem 1.75rem;
+      border-radius: 100px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      cursor: pointer;
+      border: none;
+    }
+
+    .btn-primary {
+      background: var(--ink);
+      color: #fff;
+    }
+    .btn-primary:hover {
+      background: #000;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    }
+
+    .btn-ghost {
+      background: transparent;
+      color: var(--ink-soft);
+      border: 1.5px solid var(--border);
+    }
+    .btn-ghost:hover {
+      border-color: var(--ink-muted);
+      color: var(--ink);
+    }
+
+    .btn svg { width: 18px; height: 18px; flex-shrink: 0; }
+
+    /* Fog decoration at bottom of hero */
+    .fog-strips {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 120px;
+      pointer-events: none;
+      z-index: 0;
+      overflow: hidden;
+    }
+
+    .fog-strip {
+      position: absolute;
+      height: 6px;
+      border-radius: 100px;
+      background: var(--fog-light);
+      opacity: 0.4;
+      animation: drift 20s ease-in-out infinite alternate;
+    }
+    .fog-strip:nth-child(1) { width: 300px; bottom: 80px; left: 10%; animation-delay: 0s; }
+    .fog-strip:nth-child(2) { width: 450px; bottom: 55px; left: 20%; opacity: 0.3; animation-delay: -4s; }
+    .fog-strip:nth-child(3) { width: 350px; bottom: 30px; left: 30%; opacity: 0.25; animation-delay: -8s; }
+    .fog-strip:nth-child(4) { width: 250px; bottom: 12px; left: 15%; opacity: 0.15; animation-delay: -12s; }
+
+    @keyframes drift {
+      from { transform: translateX(0); }
+      to { transform: translateX(40px); }
+    }
+
+    /* --- SITES BAR --- */
+    .sites-bar {
+      padding: 3rem 1.5rem;
+      text-align: center;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .sites-bar p {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--ink-muted);
+      margin-bottom: 1.5rem;
+      font-weight: 500;
+    }
+
+    .site-logos {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 3rem;
+      flex-wrap: wrap;
+    }
+
+    .site-logo {
+      font-family: 'Fraunces', serif;
+      font-weight: 800;
+      font-size: 1.4rem;
+      color: var(--fog);
+      letter-spacing: -0.02em;
+      transition: color 0.2s;
+    }
+
+    .site-logo:hover { color: var(--ink-soft); }
+
+    /* --- FEATURES --- */
+    .features {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 6rem 1.5rem;
+    }
+
+    .features-header {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+
+    .features-header h2 {
+      font-family: 'Fraunces', serif;
+      font-weight: 700;
+      font-size: clamp(1.8rem, 4vw, 2.4rem);
+      letter-spacing: -0.02em;
+      margin-bottom: 0.75rem;
+    }
+
+    .features-header p {
+      color: var(--ink-muted);
+      font-size: 1.05rem;
+      max-width: 480px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+
+    @media (max-width: 700px) {
+      .features-grid { grid-template-columns: 1fr; }
+    }
+
+    .feature-card {
+      padding: 2rem;
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      background: var(--card);
+      transition: all 0.25s ease;
+    }
+
+    .feature-card:hover {
+      border-color: var(--sun);
+      box-shadow: 0 8px 30px rgba(251, 191, 36, 0.08);
+      transform: translateY(-2px);
+    }
+
+    .feature-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, var(--sun-glow), var(--sun));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.25rem;
+      font-size: 1.1rem;
+    }
+
+    .feature-card h3 {
+      font-weight: 600;
+      font-size: 1.05rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .feature-card p {
+      color: var(--ink-muted);
+      font-size: 0.9rem;
+      line-height: 1.55;
+    }
+
+    /* --- HOW IT WORKS --- */
+    .how {
+      background: var(--ink);
+      color: #fff;
+      padding: 6rem 1.5rem;
+    }
+
+    .how-inner {
+      max-width: 760px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .how h2 {
+      font-family: 'Fraunces', serif;
+      font-weight: 700;
+      font-size: clamp(1.8rem, 4vw, 2.4rem);
+      letter-spacing: -0.02em;
+      margin-bottom: 3.5rem;
+    }
+
+    .steps {
+      display: flex;
+      gap: 2rem;
+      text-align: left;
+    }
+
+    @media (max-width: 700px) {
+      .steps { flex-direction: column; }
+    }
+
+    .step {
+      flex: 1;
+      position: relative;
+      padding-left: 1rem;
+    }
+
+    .step::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: linear-gradient(180deg, var(--sun), transparent);
+      border-radius: 2px;
+    }
+
+    .step-num {
+      font-family: 'Fraunces', serif;
+      font-weight: 700;
+      font-size: 0.8rem;
+      color: var(--sun);
+      margin-bottom: 0.5rem;
+      letter-spacing: 0.05em;
+    }
+
+    .step h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 0.4rem;
+    }
+
+    .step p {
+      font-size: 0.88rem;
+      color: #9CA3AF;
+      line-height: 1.55;
+    }
+
+    /* --- CATEGORIES PREVIEW --- */
+    .categories {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 6rem 1.5rem;
+      text-align: center;
+    }
+
+    .categories h2 {
+      font-family: 'Fraunces', serif;
+      font-weight: 700;
+      font-size: clamp(1.8rem, 4vw, 2.4rem);
+      letter-spacing: -0.02em;
+      margin-bottom: 0.75rem;
+    }
+
+    .categories > p {
+      color: var(--ink-muted);
+      margin-bottom: 2.5rem;
+      line-height: 1.6;
+    }
+
+    .toggle-list {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 0.5rem;
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+    .toggle-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.75rem 1rem;
+      border-radius: 10px;
+      transition: background 0.15s;
+    }
+
+    .toggle-item:hover { background: var(--paper); }
+
+    .toggle-item span {
+      font-size: 0.92rem;
+      font-weight: 500;
+      color: var(--ink-soft);
+    }
+
+    .pill {
+      width: 38px;
+      height: 22px;
+      border-radius: 11px;
+      position: relative;
+      transition: background 0.2s;
+    }
+    .pill.on { background: var(--sun); }
+    .pill.off { background: var(--fog-light); }
+
+    .pill::after {
+      content: '';
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: #fff;
+      top: 3px;
+      transition: left 0.2s;
+    }
+    .pill.on::after { left: 19px; }
+    .pill.off::after { left: 3px; }
+
+    /* --- CTA --- */
+    .cta {
+      text-align: center;
+      padding: 5rem 1.5rem 6rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .cta h2 {
+      font-family: 'Fraunces', serif;
+      font-weight: 700;
+      font-size: clamp(1.6rem, 3.5vw, 2rem);
+      letter-spacing: -0.02em;
+      margin-bottom: 1rem;
+    }
+
+    .cta p {
+      color: var(--ink-muted);
+      margin-bottom: 2rem;
+      font-size: 1rem;
+    }
+
+    .cta-actions {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    /* --- FOOTER --- */
+    footer {
+      padding: 2.5rem 1.5rem;
+      text-align: center;
+      color: var(--ink-muted);
+      font-size: 0.82rem;
+      border-top: 1px solid var(--border);
+    }
+
+    footer a {
+      color: var(--ink-muted);
+      text-decoration: none;
+    }
+    footer a:hover { color: var(--ink); }
+  </style>
+</head>
+<body>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-content">
+      <div class="sun-icon">
+        <svg viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="36" cy="32" r="14" fill="#FBBF24"/>
+          <g stroke="#FBBF24" stroke-width="2.5" stroke-linecap="round">
+            <line x1="36" y1="8" x2="36" y2="13"/>
+            <line x1="36" y1="51" x2="36" y2="56"/>
+            <line x1="12" y1="32" x2="17" y2="32"/>
+            <line x1="55" y1="32" x2="60" y2="32"/>
+            <line x1="19" y1="15" x2="22.5" y2="18.5"/>
+            <line x1="49.5" y1="45.5" x2="53" y2="49"/>
+            <line x1="53" y1="15" x2="49.5" y2="18.5"/>
+            <line x1="22.5" y1="45.5" x2="19" y2="49"/>
+          </g>
+          <rect x="10" y="52" rx="3" width="44" height="5" fill="#D1D5DB" opacity="0.5"/>
+          <rect x="18" y="60" rx="3" width="40" height="4" fill="#D1D5DB" opacity="0.3"/>
+        </svg>
+      </div>
+      <h1>Fjern <span class="highlight">støyen</span> fra nyhetsbildet</h1>
+      <p class="subtitle">Gratis Chrome-utvidelse som skjuler sport, sladder og AI-generert innhold fra norske nyhetssider. Du bestemmer hva du ser.</p>
+      <div class="hero-actions">
+        <a href="#" class="btn btn-primary">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14.5v-9l6 4.5-6 4.5z"/></svg>
+          Installer fra Chrome Web Store
+        </a>
+        <a href="#hvordan" class="btn btn-ghost">Hvordan virker det?</a>
+      </div>
+    </div>
+    <div class="fog-strips">
+      <div class="fog-strip"></div>
+      <div class="fog-strip"></div>
+      <div class="fog-strip"></div>
+      <div class="fog-strip"></div>
+    </div>
+  </section>
+
+  <!-- SUPPORTED SITES -->
+  <div class="sites-bar">
+    <p>Fungerer på</p>
+    <div class="site-logos">
+      <span class="site-logo">VG.no</span>
+      <span class="site-logo">NRK.no</span>
+      <span class="site-logo">Dagbladet.no</span>
+    </div>
+  </div>
+
+  <!-- FEATURES -->
+  <section class="features">
+    <div class="features-header">
+      <h2>Nyheter uten støy</h2>
+      <p>Slå av kategoriene du ikke bryr deg om. Defog fjerner dem fra forsiden — enkelt og greit.</p>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">🏀</div>
+        <h3>Skjul hele kategorier</h3>
+        <p>Sport, sladder, økonomi, kultur, debatt — slå av det du ikke vil se med ett klikk.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🤖</div>
+        <h3>AI-slop-deteksjon</h3>
+        <p>Oppdager og skjuler artikler med AI-genererte bilder og innhold. Ingen API — bare smart gjenkjenning.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🔄</div>
+        <h3>Synkronisert</h3>
+        <p>Innstillingene dine følger Chrome-profilen din. Sett opp én gang, virker overalt.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">⚡</div>
+        <h3>Null ytelsestap</h3>
+        <p>Ingen eksterne kall, ingen tracking, ingen analytics. Alt kjører lokalt i nettleseren din.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🧩</div>
+        <h3>Flere sider kommer</h3>
+        <p>VG, NRK og Dagbladet først. Flere norske — og internasjonale — sider på vei.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">☕</div>
+        <h3>100% gratis</h3>
+        <p>Ingen betalingsmur, ingen premium-versjon. Liker du det? Sleng en kaffe.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="how" id="hvordan">
+    <div class="how-inner">
+      <h2>Tre steg til klarere nyheter</h2>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">01</div>
+          <h3>Installer</h3>
+          <p>Legg til Defog fra Chrome Web Store. Tar under 10 sekunder.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">02</div>
+          <h3>Tilpass</h3>
+          <p>Klikk på Defog-ikonet og slå av kategoriene du vil skjule.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">03</div>
+          <h3>Les</h3>
+          <p>Åpne VG, NRK eller Dagbladet. Støyen er borte.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TOGGLE PREVIEW -->
+  <section class="categories">
+    <h2>Du bestemmer</h2>
+    <p>Hver kategori kan slås av og på. Defog husker valgene dine.</p>
+    <div class="toggle-list">
+      <div class="toggle-item"><span>Sport</span><div class="pill off"></div></div>
+      <div class="toggle-item"><span>Sladder / Rampelys</span><div class="pill off"></div></div>
+      <div class="toggle-item"><span>Nyheter</span><div class="pill on"></div></div>
+      <div class="toggle-item"><span>Økonomi</span><div class="pill on"></div></div>
+      <div class="toggle-item"><span>Kultur / Underholdning</span><div class="pill on"></div></div>
+      <div class="toggle-item"><span>Debatt / Meninger</span><div class="pill on"></div></div>
+      <div class="toggle-item"><span>AI-generert innhold</span><div class="pill off"></div></div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <h2>Klar for klarere nyheter?</h2>
+    <p>Gratis, åpen kildekode, ingen tracking.</p>
+    <div class="cta-actions">
+      <a href="#" class="btn btn-primary">Installer Defog</a>
+      <a href="https://buymeacoffee.com/getdefog" class="btn btn-ghost" target="_blank">☕ Støtt prosjektet</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>Defog &copy; 2026 · <a href="https://buymeacoffee.com/getdefog" target="_blank">Støtt Defog</a></p>
+  </footer>
+
+</body>
+</html>
