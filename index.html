@@ -359,21 +359,30 @@
     }
 
     .feature-card:hover {
-      border-color: var(--sun);
-      box-shadow: 0 8px 30px rgba(251, 191, 36, 0.08);
+      border-color: var(--amber);
+      box-shadow: 0 8px 30px rgba(245, 158, 11, 0.08);
       transform: translateY(-2px);
     }
 
     .feature-icon {
-      width: 40px;
-      height: 40px;
-      border-radius: 10px;
-      background: linear-gradient(135deg, var(--sun-glow), var(--sun));
+      width: 38px;
+      height: 38px;
+      border-radius: 9px;
+      background: var(--amber-light);
       display: flex;
       align-items: center;
       justify-content: center;
       margin-bottom: 1.25rem;
-      font-size: 1.1rem;
+    }
+
+    .feature-icon svg {
+      width: 18px;
+      height: 18px;
+      stroke: var(--amber-deep);
+      fill: none;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
     }
 
     .feature-card h3 {
@@ -648,37 +657,67 @@
   <!-- FEATURES -->
   <section class="features">
     <div class="features-header">
+      <span class="section-badge">Funksjoner</span>
       <h2>Nyheter uten støy</h2>
       <p>Slå av kategoriene du ikke bryr deg om. Defog fjerner dem fra forsiden — enkelt og greit.</p>
     </div>
     <div class="features-grid">
       <div class="feature-card">
-        <div class="feature-icon" aria-hidden="true">🏀</div>
+        <div class="feature-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <rect width="7" height="7" x="3" y="3" rx="1"/><rect width="7" height="7" x="3" y="14" rx="1"/>
+            <path d="M14 4h7M14 9h7M14 15h7M14 20h7"/>
+          </svg>
+        </div>
         <h3>Skjul hele kategorier</h3>
         <p>Sport, sladder, økonomi, kultur, debatt — slå av det du ikke vil se med ett klikk.</p>
       </div>
       <div class="feature-card">
-        <div class="feature-icon" aria-hidden="true">🤖</div>
+        <div class="feature-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/>
+            <path d="M9 2v2M15 2v2M9 20v2M15 20v2M2 9h2M2 15h2M20 9h2M20 15h2"/>
+          </svg>
+        </div>
         <h3>AI-slop-deteksjon</h3>
         <p>Oppdager og skjuler artikler med AI-genererte bilder og innhold. Ingen API — bare smart gjenkjenning.</p>
       </div>
       <div class="feature-card">
-        <div class="feature-icon" aria-hidden="true">🔄</div>
+        <div class="feature-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+          </svg>
+        </div>
         <h3>Synkronisert</h3>
         <p>Innstillingene dine følger Chrome-profilen din. Sett opp én gang, virker overalt.</p>
       </div>
       <div class="feature-card">
-        <div class="feature-icon" aria-hidden="true">⚡</div>
+        <div class="feature-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+          </svg>
+        </div>
         <h3>Null ytelsestap</h3>
         <p>Ingen eksterne kall, ingen tracking, ingen analytics. Alt kjører lokalt i nettleseren din.</p>
       </div>
       <div class="feature-card">
-        <div class="feature-icon" aria-hidden="true">🧩</div>
+        <div class="feature-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <polygon points="12 2 2 7 12 12 22 7 12 2"/>
+            <polyline points="2 17 12 22 22 17"/>
+            <polyline points="2 12 12 17 22 12"/>
+          </svg>
+        </div>
         <h3>Flere sider kommer</h3>
         <p>VG, NRK og Dagbladet først. Flere norske — og internasjonale — sider på vei.</p>
       </div>
       <div class="feature-card">
-        <div class="feature-icon" aria-hidden="true">☕</div>
+        <div class="feature-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+          </svg>
+        </div>
         <h3>100% gratis</h3>
         <p>Ingen betalingsmur, ingen premium-versjon. Liker du det? Sleng en kaffe.</p>
       </div>
