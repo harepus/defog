@@ -374,7 +374,7 @@
     }
 
     .features-header p {
-      color: var(--ink-muted);
+      color: var(--text-muted);
       font-size: 1.05rem;
       max-width: 480px;
       margin: 0 auto;
@@ -395,7 +395,7 @@
       padding: 2rem;
       border-radius: 16px;
       border: 1px solid var(--border);
-      background: var(--card);
+      background: var(--light-1);
       transition: all 0.25s ease;
     }
 
@@ -433,7 +433,7 @@
     }
 
     .feature-card p {
-      color: var(--ink-muted);
+      color: var(--text-muted);
       font-size: 0.9rem;
       line-height: 1.55;
     }
@@ -486,7 +486,7 @@
       top: 0;
       bottom: 0;
       width: 2px;
-      background: linear-gradient(180deg, var(--sun), transparent);
+      background: linear-gradient(180deg, var(--amber), transparent);
       border-radius: 2px;
     }
 
@@ -494,7 +494,7 @@
       font-family: 'Fraunces', serif;
       font-weight: 700;
       font-size: 0.8rem;
-      color: var(--sun);
+      color: var(--amber);
       margin-bottom: 0.5rem;
       letter-spacing: 0.05em;
     }
@@ -528,7 +528,7 @@
     }
 
     .categories > p {
-      color: var(--ink-muted);
+      color: var(--text-muted);
       margin-bottom: 2.5rem;
       line-height: 1.6;
     }
@@ -537,7 +537,7 @@
       display: flex;
       flex-direction: column;
       gap: 2px;
-      background: var(--card);
+      background: var(--light-1);
       border: 1px solid var(--border);
       border-radius: 16px;
       padding: 0.5rem;
@@ -554,12 +554,12 @@
       transition: background 0.15s;
     }
 
-    .toggle-item:hover { background: var(--paper); }
+    .toggle-item:hover { background: var(--light-2); }
 
     .toggle-item span {
       font-size: 0.92rem;
       font-weight: 500;
-      color: var(--ink-soft);
+      color: var(--text-soft);
     }
 
     .pill {
@@ -601,7 +601,7 @@
     }
 
     .cta p {
-      color: var(--ink-muted);
+      color: var(--text-muted);
       margin-bottom: 2rem;
       font-size: 1rem;
     }
@@ -615,18 +615,15 @@
 
     /* --- FOOTER --- */
     footer {
+      background: var(--light-1);
       padding: 2.5rem 1.5rem;
       text-align: center;
-      color: var(--ink-muted);
+      color: var(--text-muted);
       font-size: 0.82rem;
       border-top: 1px solid var(--border);
     }
-
-    footer a {
-      color: var(--ink-muted);
-      text-decoration: none;
-    }
-    footer a:hover { color: var(--ink); }
+    footer a { color: var(--text-muted); text-decoration: none; }
+    footer a:hover { color: var(--text); }
 
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
