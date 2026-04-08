@@ -48,6 +48,12 @@ body {
 
 #siteName { color: #e4e4e7; font-weight: 600; }
 
+.hint {
+  margin: -4px 0 10px;
+  color: #71717a;
+  font-size: 11px;
+}
+
 .toggles {
   display: flex;
   flex-direction: column;

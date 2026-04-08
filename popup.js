@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
+  const storage = chrome.storage.local;
   const togglesEl = document.getElementById("toggles");
   const siteNameEl = document.getElementById("siteName");
   const hiddenCountEl = document.getElementById("hiddenCount");
@@ -23,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const firstSite = SITES[Object.keys(SITES)[0]];
   const categories = Object.keys(firstSite.categories);
 
-  chrome.storage.sync.get(DEFAULT_SETTINGS, (settings) => {
+  storage.get(DEFAULT_SETTINGS, (settings) => {
     categories.forEach((key) => {
       const cat = firstSite.categories[key];
       const row = document.createElement("div");
@@ -42,7 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
       input.id = "toggle-" + key;
       input.checked = settings[key] !== false;
       input.addEventListener("change", () => {
-        chrome.storage.sync.set({ [key]: input.checked });
+        storage.set({ [key]: input.checked });
       });
 
       const slider = document.createElement("span");
