@@ -1,0 +1,4 @@
+{"type":"server-started","port":63458,"host":"127.0.0.1","url_host":"localhost","url":"http://localhost:63458","screen_dir":"/Users/sh/dev-inv/defog-site/.superpowers/brainstorm/19411-1775659754/content","state_dir":"/Users/sh/dev-inv/defog-site/.superpowers/brainstorm/19411-1775659754/state"}
+{"type":"screen-added","file":"/Users/sh/dev-inv/defog-site/.superpowers/brainstorm/19411-1775659754/content/fullpage-overview.html"}
+{"type":"screen-added","file":"/Users/sh/dev-inv/defog-site/.superpowers/brainstorm/19411-1775659754/content/waiting-done.html"}
+{"type":"server-stopped","reason":"idle timeout"}
