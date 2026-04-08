@@ -276,6 +276,47 @@
       border-color: #71717a;
     }
 
+    .btn-cta-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.85rem 1.75rem;
+      border-radius: 8px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      background: var(--text);
+      color: #fff;
+      transition: background 0.2s, transform 0.2s;
+    }
+    .btn-cta-primary:hover {
+      background: #000;
+      transform: translateY(-1px);
+    }
+
+    .btn-cta-ghost {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.85rem 1.75rem;
+      border-radius: 8px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      background: transparent;
+      color: var(--text-muted);
+      border: 1.5px solid #d1d5db;
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .btn-cta-ghost:hover {
+      border-color: #9ca3af;
+      color: var(--text);
+    }
+
     .btn svg { width: 18px; height: 18px; flex-shrink: 0; }
 
     /* --- SITES BAR --- */
@@ -528,8 +569,8 @@
       position: relative;
       transition: background 0.2s;
     }
-    .pill.on { background: var(--sun); }
-    .pill.off { background: var(--fog-light); }
+    .pill.on  { background: var(--amber); }
+    .pill.off { background: var(--zinc-off); }
 
     .pill::after {
       content: '';
@@ -546,9 +587,9 @@
 
     /* --- CTA --- */
     .cta {
+      background: var(--light-2);
       text-align: center;
       padding: 5rem 1.5rem 6rem;
-      border-top: 1px solid var(--border);
     }
 
     .cta h2 {
@@ -755,7 +796,8 @@
 
   <!-- TOGGLE PREVIEW -->
   <section class="categories">
-    <h2>Du bestemmer</h2>
+    <span class="section-badge">Du bestemmer</span>
+    <h2>Velg hva du ser</h2>
     <p>Hver kategori kan slås av og på. Defog husker valgene dine.</p>
     <div class="toggle-list">
       <div class="toggle-item"><span>Sport</span><div class="pill off"></div></div>
@@ -770,11 +812,12 @@
 
   <!-- CTA -->
   <section class="cta">
+    <span class="section-badge">Kom i gang</span>
     <h2>Klar for klarere nyheter?</h2>
     <p>Gratis, åpen kildekode, ingen tracking.</p>
     <div class="cta-actions">
-      <a href="#" class="btn btn-primary">Installer Defog</a>
-      <a href="https://buymeacoffee.com/getdefog" class="btn btn-ghost" target="_blank" rel="noopener noreferrer">☕ Støtt prosjektet</a>
+      <a href="#" class="btn btn-cta-primary">Installer Defog</a>
+      <a href="https://buymeacoffee.com/getdefog" class="btn btn-cta-ghost" target="_blank" rel="noopener noreferrer">Støtt prosjektet</a>
     </div>
   </section>
   </main>
