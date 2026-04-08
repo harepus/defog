@@ -1,0 +1,1132 @@
+- generic [ref=e1]:
+  - link "Hopp til hovedinnhold" [ref=e2] [cursor=pointer]:
+    - /url: "#skip-nav"
+  - banner [ref=e4]:
+    - generic [ref=e5]:
+      - link "Tilbake til forsiden" [ref=e6] [cursor=pointer]:
+        - /url: https://www.vg.no
+        - img [ref=e7]
+      - navigation [ref=e10]:
+        - list [ref=e11]:
+          - listitem [ref=e12]:
+            - link "VG Live" [ref=e13] [cursor=pointer]:
+              - /url: https://vglive.vg.no
+          - listitem [ref=e14]:
+            - link "VGTV" [ref=e15] [cursor=pointer]:
+              - /url: https://tv.vg.no
+          - listitem [ref=e16]:
+            - link "eAvis" [ref=e17] [cursor=pointer]:
+              - /url: https://eavis.vg.no/?utm_source=vgfront-header
+          - listitem [ref=e18]:
+            - link "TV-guide" [ref=e19] [cursor=pointer]:
+              - /url: https://tvguide.vg.no
+          - listitem [ref=e20]:
+            - link "Tips oss" [ref=e21] [cursor=pointer]:
+              - /url: https://www.vg.no/tips-oss
+          - listitem [ref=e22]:
+            - link "VG Tilbud" [ref=e23] [cursor=pointer]:
+              - /url: https://www.vg.no/tilbud?utm_source=vgfront-header
+              - text: VG Tilbud
+              - img [ref=e24]
+      - generic [ref=e29]:
+        - img "Search" [ref=e30]
+        - searchbox "Søk" [ref=e32]
+      - list [ref=e33]:
+        - listitem [ref=e34]:
+          - button "Brukermeny" [ref=e35] [cursor=pointer]:
+            - img "User" [ref=e36]
+        - listitem [ref=e39]:
+          - button "Hovedmeny" [ref=e40] [cursor=pointer]:
+            - img "Hamburger" [ref=e41]
+  - generic [ref=e48]:
+    - img "Schibsted" [ref=e49]
+    - generic [ref=e52]:
+      - text: VG er en del av Schibsted Media. Schibsted Media AS er ansvarlig for dine data på dette nettstedet.
+      - link "Les mer her" [ref=e53] [cursor=pointer]:
+        - /url: https://info.privacy.schibsted.com/no/schibsted-norge-personvernerklaering/
+  - generic [ref=e54]:
+    - generic [ref=e63]:
+      - heading "VG Forside" [level=1] [ref=e64]
+      - generic [ref=e65]:
+        - main [ref=e66]:
+          - generic [ref=e67]:
+            - link "Opptil 50% rabatt på alt fra VG Nedtelling Kjøp" [ref=e69] [cursor=pointer]:
+              - /url: https://kundeportal.vg.no/sider/kjop-vg?utm_source=vgfront&utm_medium=paske2026_fishfinger&utm_campaign=paske2026&utm_term=acqu&utm_content=fishfinger_blue
+              - img [ref=e70]
+              - paragraph [ref=e71]: Opptil 50% rabatt på alt fra VG
+              - generic [ref=e72]:
+                - generic "Nedtelling" [ref=e73]:
+                  - generic [ref=e74]:
+                    - generic [ref=e75]: "01"
+                    - generic [ref=e76]: Dager
+                  - generic [ref=e77]:
+                    - generic [ref=e78]: "01"
+                    - generic [ref=e79]: Timer
+                  - generic [ref=e80]:
+                    - generic [ref=e81]: "23"
+                    - generic [ref=e82]: Min
+                  - generic [ref=e83]:
+                    - generic [ref=e84]: "19"
+                    - generic [ref=e85]: Sek
+                - generic [ref=e86]: Kjøp
+            - generic [ref=e87]:
+              - article [ref=e88]:
+                - 'link "PSG - Liverpool: I trøbbel" [ref=e90] [cursor=pointer]':
+                  - /url: https://vglive.vg.no/fotball/paris-saint-germain-liverpool/738347/rapport?utm_source=vgfront&utm_content=hovedlopet_row2_pos1&utm_term=dre-yxrizgt8-1775680148%3Adre-69d6ba9407e0fbd0eff438e6&utm_medium=dre-69d6ba9407e0fbd0eff438e6
+                  - figure [ref=e91]
+                  - generic [ref=e94]:
+                    - generic [ref=e95]: "PSG - Liverpool:"
+                    - 'heading "PSG - Liverpool: I trøbbel" [level=2] [ref=e96]':
+                      - generic [ref=e97]: I trøbbel
+              - article [ref=e98]:
+                - link "Satt ut av konkurranse" [ref=e100] [cursor=pointer]:
+                  - /url: https://tv.vg.no/video/361083?utm_source=vgfront&utm_content=hovedlopet_row2_pos2&utm_medium=dre-69d616b907e0fbd0ef96751e
+                  - figure [ref=e101]:
+                    - generic [ref=e103]:
+                      - generic:
+                        - img "VGTV"
+                      - generic:
+                        - generic: 0 minutter
+                    - generic [ref=e105]: A
+                    - generic [ref=e106]: Aldersgrense 0 år
+                  - heading "Satt ut av konkurranse" [level=2] [ref=e108]:
+                    - generic [ref=e109]: Satt ut av
+                    - generic [ref=e110]: konkurranse
+            - generic [ref=e111]:
+              - navigation [ref=e114]:
+                - link "Krigen i Midtøsten" [ref=e115] [cursor=pointer]:
+                  - /url: https://www.vg.no/nyheter/i/Pd4OR7/israel-og-usa-angriper-iran?utm_source=vg-header-krig_i_midtosten&utm_medium=tittel
+                - generic [ref=e116]:
+                  - link "Fakta" [ref=e117] [cursor=pointer]:
+                    - /url: https://www.vg.no/nyheter/i/ArP98E/krigen-i-midtoesten-spoersmaal-og-svar?utm_source=vg-header-krig_i_midtosten&utm_medium=fakta
+                  - link "Følg live" [ref=e118] [cursor=pointer]:
+                    - /url: https://www.vg.no/nyheter/i/Pd4OR7/israel-og-usa-angriper-iran?utm_source=vg-header-krig_i_midtosten&utm_medium=live
+                    - generic [ref=e119]: Følg live
+                    - img [ref=e120]
+              - generic [ref=e123]:
+                - article [ref=e124]:
+                  - 'link "Wall Street Journal: NÅ: Vurderer straff mot Nato-land" [ref=e126] [cursor=pointer]':
+                    - /url: https://www.vg.no/nyheter/i/Pd4OR7/krigen-i-midtoesten-siste-nytt?pinnedEntry=73491&utm_source=vgfront&utm_content=hovedlopet_row3_pos1&utm_medium=dre-69d6b7d407e0fbd0eff38075
+                    - figure [ref=e127]
+                    - generic [ref=e129]:
+                      - generic [ref=e130]: "Wall Street Journal:"
+                      - 'heading "Wall Street Journal: NÅ: Vurderer straff mot Nato-land" [level=2] [ref=e131]':
+                        - generic [ref=e132]: "Nå: Vurderer straff"
+                        - generic [ref=e133]: mot Nato-land
+                - article [ref=e134]:
+                  - 'link "Massive angrep i Libanon: –⁠ ⁠Kan få det hele til å rakne" [ref=e136] [cursor=pointer]':
+                    - /url: https://www.vg.no/nyheter/i/y5l3KA/midtoesten-ekspert-libanon-strid-kan-velte-vaapenhvilen?utm_source=vgfront&utm_content=hovedlopet_row3_pos2&utm_medium=dre-69d6a47807e0fbd0efed555b
+                    - figure [ref=e137]
+                    - generic [ref=e139]:
+                      - generic [ref=e140]: "Massive angrep i Libanon:"
+                      - 'heading "Massive angrep i Libanon: –⁠ ⁠Kan få det hele til å rakne" [level=2] [ref=e141]':
+                        - generic [ref=e142]: –⁠ ⁠Kan få det hele
+                        - generic [ref=e143]: til å rakne
+                - article [ref=e144]:
+                  - link "–⁠ ⁠Iran lover å åpne Hormuzstredet" [ref=e146] [cursor=pointer]:
+                    - /url: https://www.vg.no/nyheter/i/Pd4OR7/krigen-i-midtoesten-siste-nytt?pinnedEntry=73490&utm_source=vgfront&utm_content=hovedlopet_row3_pos3&utm_medium=dre-69d6aec25974211ddfb54b93
+                    - figure [ref=e147]
+                    - heading "–⁠ ⁠Iran lover å åpne Hormuzstredet" [level=2] [ref=e150]:
+                      - generic [ref=e151]: –⁠ ⁠Iran lover å åpne
+                      - generic [ref=e152]: Hormuzstredet
+            - generic [ref=e155]:
+              - article [ref=e156]:
+                - 'link "Barcelona-Atlético: 0⁠ ⁠–⁠ ⁠2" [ref=e158] [cursor=pointer]':
+                  - /url: https://vglive.vg.no/fotball/barcelona-atletico-madrid/738352/rapport?utm_source=vgfront&utm_content=hovedlopet_row4_pos1&utm_medium=dre-69d696b95974211ddfad6f86
+                  - figure [ref=e159]
+                  - generic [ref=e162]:
+                    - generic [ref=e163]: "Barcelona-Atlético:"
+                    - 'heading "Barcelona-Atlético: 0⁠ ⁠–⁠ ⁠2" [level=2] [ref=e164]':
+                      - generic [ref=e165]: 0⁠ ⁠–⁠ ⁠2
+              - article [ref=e166]:
+                - 'link "Ny studie: Kan kutte angst på 24 min." [ref=e168] [cursor=pointer]':
+                  - /url: https://www.vg.no/forbruker/i/Wv0GQk/denne-musikken-kan-redusere-angst-betydelig-paa-bare-24-minutter?utm_source=vgfront&utm_content=hovedlopet_row4_pos2&utm_medium=dre-69d4b7e1f74f76909f01255c
+                  - figure [ref=e169]:
+                    - generic [ref=e171]:
+                      - generic:
+                        - img "VG pluss"
+                  - generic [ref=e172]:
+                    - generic [ref=e173]: "Ny studie:"
+                    - 'heading "Ny studie: Kan kutte angst på 24 min." [level=2] [ref=e174]':
+                      - generic [ref=e175]: Kan kutte angst
+                      - generic [ref=e176]: på 24 min.
+            - article [ref=e177]:
+              - 'link "Det hvite hus: –⁠ ⁠Vil diskutere utmelding med Nato" [ref=e179] [cursor=pointer]':
+                - /url: https://www.vg.no/nyheter/i/Pd4OR7/krigen-i-midtoesten-siste-nytt?pinnedEntry=73488&utm_source=vgfront&utm_content=hovedlopet_row5_pos1&utm_medium=dre-69d6987e5974211ddfae0b9b
+                - 'heading "Det hvite hus: –⁠ ⁠Vil diskutere utmelding med Nato" [level=2] [ref=e181]':
+                  - generic [ref=e182]: "Det hvite hus: –⁠ ⁠Vil diskutere"
+                  - generic [ref=e183]: utmelding med Nato
+            - article [ref=e184]:
+              - link "Russisk hacker- nettverk avslørt" [ref=e186] [cursor=pointer]:
+                - /url: https://www.vg.no/nyheter/i/16ok3q/russisk-hackernettverk-avsloert?utm_source=vgfront&utm_content=hovedlopet_row6_pos1&utm_medium=dre-69d6b41b5974211ddfb70c1f
+                - figure [ref=e187]
+                - heading "Russisk hacker- nettverk avslørt" [level=2] [ref=e190]:
+                  - generic [ref=e191]: Russisk hacker-
+                  - generic [ref=e192]: nettverk avslørt
+            - article [ref=e194]:
+              - 'link "Lorry: Ikke noe godt kjøp" [ref=e196] [cursor=pointer]':
+                - /url: https://vink.aftenposten.no/artikkel/m0Po2p/lorry-lever-pa-sjarmen--maten-holder-ikke-mal?utm_source=iosapp&utm_medium=dre-69d6af445974211ddfb585a8&utm_content=hovedlopet_row7_pos2
+                - figure [ref=e197]
+                - generic [ref=e200]:
+                  - generic [ref=e201]: "Lorry:"
+                  - 'heading "Lorry: Ikke noe godt kjøp" [level=2] [ref=e202]':
+                    - generic [ref=e203]: Ikke noe
+                    - generic [ref=e204]: godt kjøp
+          - generic [ref=e206]:
+            - article [ref=e207]:
+              - 'link "Svarer om F-16: Prioriterte Romania" [ref=e209] [cursor=pointer]':
+                - /url: https://www.vg.no/nyheter/i/JOr1nb/f-16-gaven-til-ukraina-romania-fikk-hoeyeste-prioritet?utm_source=vgfront&utm_content=hovedlopet_row8_pos1&utm_medium=dre-69d6ab2707e0fbd0efef94bf
+                - figure [ref=e210]
+                - 'heading "Svarer om F-16: Prioriterte Romania" [level=2] [ref=e213]':
+                  - generic [ref=e214]: "Svarer om F-16:"
+                  - generic [ref=e215]: Prioriterte Romania
+            - article [ref=e217]:
+              - link "Uvanlig varmt i London" [ref=e219] [cursor=pointer]:
+                - /url: https://www.vg.no/nyheter/i/lnKAxk/varmerenget-i-storbritannia-26-6-grader-i-london?utm_source=vgfront&utm_content=hovedlopet_row9_pos1&utm_medium=dre-69d6b08e5974211ddfb5dbfc
+                - figure [ref=e220]
+                - heading "Uvanlig varmt i London" [level=2] [ref=e223]:
+                  - generic [ref=e224]: Uvanlig varmt
+                  - generic [ref=e225]: i London
+            - article [ref=e226]:
+              - 'link "Se hele sesongen: –⁠ ⁠En drive verdt en reprise" [ref=e228] [cursor=pointer]':
+                - /url: https://tv.vg.no/video/353583/sudden-death-og-scramble?utm_source=vgfront&utm_content=hovedlopet_row10_pos1&utm_term=dre-svp-353583-1775666755%3Adre-69d49bb6bd1c15e5d5c5ac5e&utm_medium=dre-69d49bb6bd1c15e5d5c5ac5e
+                - figure [ref=e229]:
+                  - generic [ref=e231]:
+                    - generic:
+                      - img "VGTV"
+                    - generic:
+                      - img "VG Pluss"
+                  - generic [ref=e233]: A
+                  - generic [ref=e234]: Aldersgrense 0 år
+                - generic [ref=e235]:
+                  - generic [ref=e236]: "Se hele sesongen:"
+                  - 'heading "Se hele sesongen: –⁠ ⁠En drive verdt en reprise" [level=2] [ref=e237]':
+                    - generic [ref=e238]: –⁠ ⁠En drive verdt
+                    - generic [ref=e239]: en reprise
+            - article [ref=e241]:
+              - link "Russen dropper denne" [ref=e243] [cursor=pointer]:
+                - /url: https://tv.vg.no/video/361093?utm_source=vgfront&utm_content=hovedlopet_row11_pos1&utm_term=dre-wtfl22yd-1775673580%3Adre-69d6a0ec5974211ddfb0d078&utm_medium=dre-69d6a0ec5974211ddfb0d078
+                - figure [ref=e244]:
+                  - generic [ref=e246]:
+                    - generic:
+                      - img "VGTV"
+                    - generic:
+                      - generic: 1 minutter
+                - heading "Russen dropper denne" [level=2] [ref=e248]:
+                  - generic [ref=e249]: Russen
+                  - generic [ref=e250]: dropper
+                  - generic [ref=e251]: denne
+            - generic [ref=e252]:
+              - navigation [ref=e255]:
+                - link "Krigen i Midtøsten" [ref=e256] [cursor=pointer]:
+                  - /url: https://www.vg.no/nyheter/i/Pd4OR7/israel-og-usa-angriper-iran?utm_source=vg-header-krig_i_midtosten&utm_medium=tittel
+                - generic [ref=e257]:
+                  - link "Fakta" [ref=e258] [cursor=pointer]:
+                    - /url: https://www.vg.no/nyheter/i/ArP98E/krigen-i-midtoesten-spoersmaal-og-svar?utm_source=vg-header-krig_i_midtosten&utm_medium=fakta
+                  - link "Følg live" [ref=e259] [cursor=pointer]:
+                    - /url: https://www.vg.no/nyheter/i/Pd4OR7/israel-og-usa-angriper-iran?utm_source=vg-header-krig_i_midtosten&utm_medium=live
+                    - generic [ref=e260]: Følg live
+                    - img [ref=e261]
+              - generic [ref=e264]:
+                - article [ref=e265]:
+                  - link "–⁠ ⁠Kroppsdeler lå strødd" [ref=e267] [cursor=pointer]:
+                    - /url: https://www.vg.no/nyheter/i/GxrG1x/israel-med-massivt-angrep-i-libanon-kroppsdeler-laa-stroedd?utm_source=vgfront&utm_content=hovedlopet_row12_pos1&utm_medium=dre-69d65b035974211ddf91d661
+                    - figure [ref=e268]
+                    - heading "–⁠ ⁠Kroppsdeler lå strødd" [level=2] [ref=e271]:
+                      - generic [ref=e272]: –⁠ ⁠Kroppsdeler
+                      - generic [ref=e273]: lå strødd
+                - article [ref=e274]:
+                  - link "Massive angrep" [ref=e276] [cursor=pointer]:
+                    - /url: https://tv.vg.no/video/361143/her-blir-beirut-bombet?utm_source=vgfront&utm_content=hovedlopet_row12_pos2&utm_medium=dre-69d677df5974211ddfa1a984
+                    - figure [ref=e277]:
+                      - generic [ref=e279]:
+                        - generic:
+                          - img "VGTV"
+                        - generic:
+                          - generic: 0 minutter
+                    - heading "Massive angrep" [level=2] [ref=e281]:
+                      - generic [ref=e282]: Massive
+                      - generic [ref=e283]: angrep
+          - generic [ref=e285]:
+            - article [ref=e286]:
+              - 'link "Irans ambassadør til VG: –⁠ ⁠Vi stoler ikke på USA" [ref=e288] [cursor=pointer]':
+                - /url: https://www.vg.no/nyheter/i/j0vP5n/irans-ambassadoer-til-vg-vi-stoler-ikke-paa-usa?utm_source=vgfront&utm_content=hovedlopet_row14_pos1&utm_medium=dre-69d687175974211ddfa7edb4
+                - figure [ref=e289]
+                - generic [ref=e291]:
+                  - generic [ref=e292]: "Irans ambassadør til VG:"
+                  - 'heading "Irans ambassadør til VG: –⁠ ⁠Vi stoler ikke på USA" [level=2] [ref=e293]':
+                    - generic [ref=e294]: –⁠ ⁠Vi stoler
+                    - generic [ref=e295]: ikke på USA
+            - article [ref=e298]:
+              - 'link "Fødsel uten epidural: –⁠ ⁠Bedre tid nordpå" [ref=e300] [cursor=pointer]':
+                - /url: https://www.vg.no/helse/i/m0Pdkg/epiduralbedoevelse-under-foedsel-saa-stor-er-forskjellen-mellom-nord-og-soer?utm_source=vgfront&utm_content=hovedlopet_row15_pos1&utm_medium=dre-69d67c2607e0fbd0efdf0cbe
+                - figure [ref=e301]
+                - generic [ref=e303]:
+                  - generic [ref=e304]: "Fødsel uten epidural:"
+                  - 'heading "Fødsel uten epidural: –⁠ ⁠Bedre tid nordpå" [level=2] [ref=e305]':
+                    - generic [ref=e306]: –⁠ ⁠Bedre tid
+                    - generic [ref=e307]: nordpå
+            - generic [ref=e308]:
+              - article [ref=e309]:
+                - 'link "USA: Erkjenner åtte drap" [ref=e311] [cursor=pointer]':
+                  - /url: https://www.vg.no/nyheter/i/Pdg9Oe/seriemorder-erkjenner-aatte-drap-paa-long-island?utm_source=vgfront&utm_content=hovedlopet_row16_pos1&utm_medium=dre-69d67f775974211ddfa50adc
+                  - figure [ref=e312]
+                  - generic [ref=e314]:
+                    - generic [ref=e315]: "USA:"
+                    - 'heading "USA: Erkjenner åtte drap" [level=2] [ref=e316]':
+                      - generic [ref=e317]: Erkjenner
+                      - generic [ref=e318]: åtte drap
+              - article [ref=e319]:
+                - 'link "Aksjetips: Tar olje- grep" [ref=e321] [cursor=pointer]':
+                  - /url: https://www.vg.no/dinepenger/sparing-og-investering/aksjer/i/GMM0zJ/aksjetips-fra-dine-penger-oppdaterte-aksjeraad-naa?utm_source=vgfront&utm_content=hovedlopet_row16_pos2&vgfront=true&utm_medium=dre-69d6393907e0fbd0efb31b6d
+                  - figure [ref=e322]:
+                    - generic [ref=e324]:
+                      - generic:
+                        - img "VG pluss"
+                  - generic [ref=e325]:
+                    - generic [ref=e326]: "Aksjetips:"
+                    - 'heading "Aksjetips: Tar olje- grep" [level=2] [ref=e327]':
+                      - generic [ref=e328]: Tar olje-
+                      - generic [ref=e329]: grep
+            - article [ref=e331]:
+              - 'link "Test: Teslas nye elbil er et varsko til bransjen" [ref=e333] [cursor=pointer]':
+                - /url: https://www.tek.no/test/i/V66Kzd/tesla-model-3-rwd-2026?utm_source=vgfront&utm_content=hovedlopet_row18_pos2&utm_medium=dre-69d65bb007e0fbd0efce3f86
+                - figure [ref=e334]
+                - generic [ref=e336]:
+                  - generic [ref=e337]: "Test:"
+                  - 'heading "Test: Teslas nye elbil er et varsko til bransjen" [level=2] [ref=e338]':
+                    - generic [ref=e339]: Teslas nye elbil
+                    - generic [ref=e340]: er et varsko
+                    - generic [ref=e341]: til bransjen
+            - generic [ref=e344]:
+              - article [ref=e345]:
+                - link "Lover flere dieselkutt" [ref=e347] [cursor=pointer]:
+                  - /url: https://www.vg.no/nyheter/i/6q4nkL/jens-stoltenberg-lover-diesel-priskutt-innen-1-mai?utm_source=vgfront&utm_content=hovedlopet_row19_pos1&utm_medium=dre-69d65f4007e0fbd0efd0a3b2
+                  - figure [ref=e348]
+                  - heading "Lover flere dieselkutt" [level=2] [ref=e351]:
+                    - generic [ref=e352]: Lover flere
+                    - generic [ref=e353]: dieselkutt
+              - article [ref=e354]:
+                - link "Jeg er 21 år og skal arve Trumps kaos" [ref=e356] [cursor=pointer]:
+                  - /url: https://www.vg.no/nyheter/i/q6ynR1/trump-er-i-ferd-med-aa-sette-fyr-paa-selve-grunnmuren-som-har-sikret-global-handel-og-stabilitet?utm_source=vgfront&utm_content=hovedlopet_row19_pos2&utm_medium=dre-69d676905974211ddfa119aa
+                  - figure [ref=e357]:
+                    - generic [ref=e359]:
+                      - generic:
+                        - generic: Meninger
+                  - heading "Jeg er 21 år og skal arve Trumps kaos" [level=2] [ref=e361]:
+                    - generic [ref=e362]: Jeg er 21 år
+                    - generic [ref=e363]: og skal arve
+                    - generic [ref=e364]: Trumps kaos
+            - article [ref=e365]:
+              - 'link "Klatreulykken på Kolsås: Steinblokk løsnet og kuttet tauet" [ref=e367] [cursor=pointer]':
+                - /url: https://www.friflyt.no/klatring/sikkerhet/steinblokk-losnet-og-kuttet-tauet?utm_source=vgfront&utm_content=hovedlopet_row20_pos1&utm_medium=dre-69d670c307e0fbd0efda2ea8
+                - figure [ref=e368]
+                - generic [ref=e371]:
+                  - generic [ref=e372]: "Klatreulykken på Kolsås:"
+                  - 'heading "Klatreulykken på Kolsås: Steinblokk løsnet og kuttet tauet" [level=2] [ref=e373]':
+                    - generic [ref=e374]: Steinblokk løsnet
+                    - generic [ref=e375]: og kuttet tauet
+          - generic [ref=e377]:
+            - article [ref=e378]:
+              - link "Fjernet som styremedlem" [ref=e380] [cursor=pointer]:
+                - /url: https://e24.no/naeringsliv/i/vrlmG4/boerge-brende-fjernet-fra-bilderberg-styre-foer-elitemoete?utm_source=vgfront&utm_content=hovedlopet_row21_pos1&referer=https%3A%2F%2Fwww.vg.no&utm_medium=dre-69d655255974211ddf8d0073
+                - figure [ref=e381]
+                - heading "Fjernet som styremedlem" [level=2] [ref=e385]:
+                  - generic [ref=e386]: Fjernet som
+                  - generic [ref=e387]: styremedlem
+            - generic [ref=e390]:
+              - article [ref=e391]:
+                - link "–⁠ ⁠Ville heller dø enn å føde" [ref=e393] [cursor=pointer]:
+                  - /url: https://www.vg.no/helse/i/V6Pq33/elisabeth-32-har-foedselsangst-ville-heller-doe-enn-aa-foede?utm_source=vgfront&utm_content=hovedlopet_row22_pos1&utm_medium=dre-69cbacebf74f76909f5d8b83
+                  - figure [ref=e394]:
+                    - generic [ref=e396]:
+                      - generic:
+                        - img "VG pluss"
+                  - heading "–⁠ ⁠Ville heller dø enn å føde" [level=2] [ref=e398]:
+                    - generic [ref=e399]: –⁠ ⁠Ville heller
+                    - generic [ref=e400]: dø enn å føde
+              - article [ref=e401]:
+                - link "Politiet henlegger" [ref=e403] [cursor=pointer]:
+                  - /url: https://www.vg.no/nyheter/i/QJglnx/politiet-henlegger-saken-mot-mimir-kristjansson?utm_source=vgfront&utm_content=hovedlopet_row22_pos2&utm_medium=dre-69d652725974211ddf8aa2f7
+                  - figure [ref=e404]
+                  - heading "Politiet henlegger" [level=2] [ref=e407]:
+                    - generic [ref=e408]: Politiet
+                    - generic [ref=e409]: henlegger
+            - generic [ref=e410]:
+              - article [ref=e411]:
+                - link "Forsvinner fra hyllene" [ref=e413] [cursor=pointer]:
+                  - /url: https://www.vg.no/nyheter/i/0pBEdA/orkla-slaar-sammen-merkevarer-nora-syltetoey-forsvinner-fra-butikkhyllene?utm_source=vgfront&utm_content=hovedlopet_row24_pos1&utm_medium=dre-69d6444c5974211ddf7f7c12
+                  - figure [ref=e414]
+                  - heading "Forsvinner fra hyllene" [level=2] [ref=e417]:
+                    - generic [ref=e418]: Forsvinner
+                    - generic [ref=e419]: fra hyllene
+              - article [ref=e420]:
+                - link "–⁠ ⁠Bruker mye penger" [ref=e422] [cursor=pointer]:
+                  - /url: https://tv.vg.no/video/359801/shopping-trbbel-det-klr-i-fingrene?utm_source=vgfront&utm_content=hovedlopet_row24_pos2&utm_medium=dre-69d626195974211ddf669bcd
+                  - figure [ref=e423]:
+                    - generic [ref=e425]:
+                      - generic:
+                        - img "VGTV"
+                      - generic:
+                        - generic: 0 minutter
+                  - heading "–⁠ ⁠Bruker mye penger" [level=2] [ref=e427]:
+                    - generic [ref=e428]: –⁠ ⁠Bruker mye
+                    - generic [ref=e429]: penger
+            - article [ref=e430]:
+              - 'link "Drapet på LastebilJonas: Se første episode gratis" [ref=e432] [cursor=pointer]':
+                - /url: https://tv.vg.no/serier/drapet-pa-lastebiljonas/s1e1/noen-er-ute-etter-meg?id=356818&utm_source=vgfront&utm_content=hovedlopet_row25_pos1&utm_term=dre-h4d9obsj-1775148996%3Adre-69ce9e78bd1c15e5d5557120&utm_medium=dre-69ce9e78bd1c15e5d5557120
+                - figure [ref=e433]:
+                  - generic [ref=e435]:
+                    - generic:
+                      - img "VGTV"
+                  - generic [ref=e437]: "12"
+                  - generic [ref=e438]: Aldersgrense 12 år
+                - generic [ref=e439]:
+                  - generic [ref=e440]: "Drapet på LastebilJonas:"
+                  - 'heading "Drapet på LastebilJonas: Se første episode gratis" [level=2] [ref=e441]':
+                    - generic [ref=e442]: Se første
+                    - generic [ref=e443]: episode gratis
+            - generic [ref=e446]:
+              - navigation [ref=e449]:
+                - link "Krigen i Midtøsten" [ref=e450] [cursor=pointer]:
+                  - /url: https://www.vg.no/nyheter/i/Pd4OR7/israel-og-usa-angriper-iran?utm_source=vg-header-krig_i_midtosten&utm_medium=tittel
+                - generic [ref=e451]:
+                  - link "Fakta" [ref=e452] [cursor=pointer]:
+                    - /url: https://www.vg.no/nyheter/i/ArP98E/krigen-i-midtoesten-spoersmaal-og-svar?utm_source=vg-header-krig_i_midtosten&utm_medium=fakta
+                  - link "Følg live" [ref=e453] [cursor=pointer]:
+                    - /url: https://www.vg.no/nyheter/i/Pd4OR7/israel-og-usa-angriper-iran?utm_source=vg-header-krig_i_midtosten&utm_medium=live
+                    - generic [ref=e454]: Følg live
+                    - img [ref=e455]
+              - generic [ref=e458]:
+                - article [ref=e459]:
+                  - link "–⁠ ⁠Tapte krigen" [ref=e461] [cursor=pointer]:
+                    - /url: https://www.vg.no/nyheter/i/xrrxGB/kritiserer-trump-tapte-krigen-paa-alle-mulige-maater?utm_source=vgfront&utm_content=hovedlopet_row26_pos1&utm_medium=dre-69d645e95974211ddf80b2e5
+                    - figure [ref=e462]
+                    - heading "–⁠ ⁠Tapte krigen" [level=2] [ref=e465]:
+                      - generic [ref=e466]: –⁠ ⁠Tapte
+                      - generic [ref=e467]: krigen
+                - article [ref=e468]:
+                  - link "Hevder full seier" [ref=e470] [cursor=pointer]:
+                    - /url: https://www.vg.no/nyheter/i/wr3EGG/pete-hegseth-hevder-full-militaer-seier-over-iran?utm_source=vgfront&utm_content=hovedlopet_row26_pos2&utm_medium=dre-69d64eb95974211ddf879082
+                    - figure [ref=e471]
+                    - heading "Hevder full seier" [level=2] [ref=e474]:
+                      - generic [ref=e475]: Hevder
+                      - generic [ref=e476]: full seier
+            - article [ref=e478]:
+              - link "Zendaya lånte kjole av kollega" [ref=e480] [cursor=pointer]:
+                - /url: https://www.minmote.no/mote/roed-loeper/a/GxxoKx/zendaya-skapte-bryllupsmagi-paa-filmturne?utm_source=vgfront&utm_content=hovedlopet_row28_pos1&utm_medium=dre-69d65ba907e0fbd0efce3bd3
+                - figure [ref=e481]
+                - heading "Zendaya lånte kjole av kollega" [level=2] [ref=e484]:
+                  - generic [ref=e485]: Zendaya
+                  - generic [ref=e486]: lånte kjole
+                  - generic [ref=e487]: av kollega
+            - article [ref=e488]:
+              - 'link "SHL-semifinale kl 19: SE: Växjö - Rögle" [ref=e490] [cursor=pointer]':
+                - /url: https://tv.vg.no/video/359929/vxj-rgle?utm_source=vgfront&utm_content=hovedlopet_row29_pos1&utm_medium=dre-69d4d03abd1c15e5d5e9297f
+                - figure [ref=e491]:
+                  - generic [ref=e493]:
+                    - generic:
+                      - img "VGTV"
+                    - generic:
+                      - img "VG Pluss"
+                - generic [ref=e494]:
+                  - generic [ref=e495]: "SHL-semifinale kl 19:"
+                  - 'heading "SHL-semifinale kl 19: SE: Växjö - Rögle" [level=2] [ref=e496]':
+                    - generic [ref=e497]: "Se: Växjö - Rögle"
+          - generic [ref=e499]:
+            - article [ref=e505]:
+              - 'link "Se: Kan ta over Rosenborg" [ref=e507] [cursor=pointer]':
+                - /url: https://tv.vg.no/video/361100/disse-kan-ta-over-rosenborg?utm_source=vgfront&utm_content=hovedlopet_row30_pos2&utm_medium=dre-69d64bd507e0fbd0efc1c45a
+                - figure [ref=e508]:
+                  - generic [ref=e510]:
+                    - generic:
+                      - img "VGTV"
+                    - generic:
+                      - generic: 0 minutter
+                - 'heading "Se: Kan ta over Rosenborg" [level=2] [ref=e512]':
+                  - generic [ref=e513]: "Se: Kan ta over"
+                  - generic [ref=e514]: Rosenborg
+            - article [ref=e515]:
+              - link "Kaller inn til krisemøte" [ref=e517] [cursor=pointer]:
+                - /url: https://www.vg.no/nyheter/i/rrMLq3/opplysninger-til-vg-ap-har-innkalt-til-krisemoete-etter-drivstofftap?utm_source=vgfront&utm_content=hovedlopet_row32_pos1&utm_medium=dre-69d64eb95974211ddf879080
+                - figure [ref=e518]
+                - heading "Kaller inn til krisemøte" [level=2] [ref=e521]:
+                  - generic [ref=e522]: Kaller inn til
+                  - generic [ref=e523]: krisemøte
+            - article [ref=e525]:
+              - link "Blant Norges raskeste" [ref=e527] [cursor=pointer]:
+                - /url: https://www.vg.no/forbruker/i/XMjVro/hedda-schroeter-skaug-fra-hiit-til-topp-i-norsk-halvmaraton?utm_source=vgfront&utm_content=hovedlopet_row33_pos1&utm_medium=dre-69d0f9b3bd1c15e5d5e125ff
+                - figure [ref=e528]:
+                  - generic [ref=e530]:
+                    - generic:
+                      - img "VG pluss"
+                - heading "Blant Norges raskeste" [level=2] [ref=e532]:
+                  - generic [ref=e533]: Blant Norges
+                  - generic [ref=e534]: raskeste
+            - article [ref=e537]:
+              - link "–⁠ ⁠Vi skal langt tilbake i tid" [ref=e539] [cursor=pointer]:
+                - /url: https://www.vg.no/nyheter/i/wrrwpG/avgiftskuttet-paa-drivstoff-det-virker?utm_source=vgfront&utm_content=hovedlopet_row34_pos1&utm_medium=dre-69d62be807e0fbd0efa79871
+                - figure [ref=e540]
+                - heading "–⁠ ⁠Vi skal langt tilbake i tid" [level=2] [ref=e543]:
+                  - generic [ref=e544]: –⁠ ⁠Vi skal langt
+                  - generic [ref=e545]: tilbake i tid
+            - generic [ref=e546]:
+              - article [ref=e547]:
+                - link "Filmet underliv" [ref=e549] [cursor=pointer]:
+                  - /url: https://www.vg.no/nyheter/i/aJO1yd/sopra-steria-sak-tiltalte-hevder-han-filmet-kolleger-av-nysgjerrighet?utm_source=vgfront&utm_content=hovedlopet_row35_pos1&utm_medium=dre-69d620e907e0fbd0ef9edb22
+                  - figure [ref=e550]
+                  - heading "Filmet underliv" [level=2] [ref=e553]:
+                    - generic [ref=e554]: Filmet
+                    - generic [ref=e555]: underliv
+              - article [ref=e556]:
+                - link "Smakfull saus" [ref=e558] [cursor=pointer]:
+                  - /url: https://www.godt.no/oppskrifter/tilbehoer/dressing/9713/chimichurri?utm_source=vgfront&utm_content=hovedlopet_row35_pos2&utm_medium=dre-69d6562907e0fbd0efc9f018
+                  - figure [ref=e559]
+                  - heading "Smakfull saus" [level=2] [ref=e562]:
+                    - generic [ref=e563]: Smakfull
+                    - generic [ref=e564]: saus
+            - article [ref=e565]:
+              - 'link "Gullrutens fagpris: Nominert til tre priser" [ref=e567] [cursor=pointer]':
+                - /url: https://tv.vg.no/video/356033/esben-og-tore-del-1?utm_source=vgfront&utm_content=hovedlopet_row36_pos1&utm_medium=dre-69d64f2a5974211ddf87eea1
+                - figure [ref=e568]:
+                  - generic [ref=e570]:
+                    - generic:
+                      - img "VGTV"
+                    - generic:
+                      - img "VG Pluss"
+                  - generic [ref=e572]: A
+                  - generic [ref=e573]: Aldersgrense 0 år
+                - generic [ref=e574]:
+                  - generic [ref=e575]: "Gullrutens fagpris:"
+                  - 'heading "Gullrutens fagpris: Nominert til tre priser" [level=2] [ref=e576]':
+                    - generic [ref=e577]: Nominert til
+                    - generic [ref=e578]: tre priser
+            - generic [ref=e579]:
+              - article [ref=e580]:
+                - link "Slik vet du at de er forelsket" [ref=e582] [cursor=pointer]:
+                  - /url: https://www.vg.no/forbruker/i/vrg2Ol/slik-vet-du-at-de-er-forelsket-i-deg?utm_source=vgfront&utm_content=hovedlopet_row37_pos1&utm_medium=dre-69d6117d5974211ddf530955
+                  - figure [ref=e583]
+                  - heading "Slik vet du at de er forelsket" [level=2] [ref=e586]:
+                    - generic [ref=e587]: Slik vet du
+                    - generic [ref=e588]: at de er
+                    - generic [ref=e589]: forelsket
+              - article [ref=e590]:
+                - link "Diesel- krav" [ref=e592] [cursor=pointer]:
+                  - /url: https://www.vg.no/nyheter/i/7p7nPW/sp-leder-trygve-slagsvold-vedum-kaller-jens-stoltenberg-for-diesel-sinke?utm_source=vgfront&utm_content=hovedlopet_row37_pos2&utm_medium=dre-69d6099f5974211ddf4b88c6
+                  - figure [ref=e593]
+                  - heading "Diesel- krav" [level=2] [ref=e596]:
+                    - generic [ref=e597]: Diesel-
+                    - generic [ref=e598]: krav
+            - article [ref=e601]:
+              - 'link "Stavanger Aftenblad: Ber om 14 års forvaring for 17-åring" [ref=e603] [cursor=pointer]':
+                - /url: https://www.vg.no/nyheter/i/K8rvoX/stavanger-aftenblad-aktor-ber-om-14-aars-forvaring-for-17-aaring?utm_source=vgfront&utm_content=hovedlopet_row38_pos1&utm_medium=dre-69d64f6307e0fbd0efc44f6e
+                - generic [ref=e604]:
+                  - generic [ref=e605]: "Stavanger Aftenblad:"
+                  - 'heading "Stavanger Aftenblad: Ber om 14 års forvaring for 17-åring" [level=2] [ref=e606]':
+                    - generic [ref=e607]: Ber om 14 års
+                    - generic [ref=e608]: forvaring for 17-åring
+          - generic [ref=e610]:
+            - article [ref=e611]:
+              - 'link "Rakettoppskyting fra Andøya: Fiskebåt-grep" [ref=e613] [cursor=pointer]':
+                - /url: https://www.vg.no/nyheter/i/pB16KG/nytt-forsoek-paa-rakettoppskyting-fra-andoeya-tar-fiskebaat-grep?utm_source=vgfront&utm_content=hovedlopet_row39_pos1&utm_medium=dre-69d6338e07e0fbd0efae5c22
+                - figure [ref=e614]
+                - generic [ref=e616]:
+                  - generic [ref=e617]: "Rakettoppskyting fra Andøya:"
+                  - 'heading "Rakettoppskyting fra Andøya: Fiskebåt-grep" [level=2] [ref=e618]':
+                    - generic [ref=e619]: Fiskebåt-grep
+            - generic [ref=e620]:
+              - article [ref=e621]:
+                - 'link "Pensjon: Gjør dette nå – ellers blir det dyrt" [ref=e623] [cursor=pointer]':
+                  - /url: https://www.vg.no/dinepenger/jobb/i/j003XL/pensjon-slik-naar-du-det-magiske-beloepet?utm_source=vgfront&utm_content=hovedlopet_row40_pos1&vgfront=true&utm_medium=dre-69cf7c99bd1c15e5d580b269
+                  - figure [ref=e624]:
+                    - generic [ref=e626]:
+                      - generic:
+                        - img "VG pluss"
+                  - generic [ref=e627]:
+                    - generic [ref=e628]: "Pensjon:"
+                    - 'heading "Pensjon: Gjør dette nå – ellers blir det dyrt" [level=2] [ref=e629]':
+                      - generic [ref=e630]: Gjør dette nå
+                      - generic [ref=e631]: – ellers blir
+                      - generic [ref=e632]: det dyrt
+              - article [ref=e633]:
+                - link "Enorm eksplosjon under broen" [ref=e635] [cursor=pointer]:
+                  - /url: https://tv.vg.no/video/361041/eksploderer-under-broen?utm_source=vgfront&utm_content=hovedlopet_row40_pos2&utm_medium=dre-69d5beed5974211ddf2b1b3a
+                  - figure [ref=e636]:
+                    - generic [ref=e638]:
+                      - generic:
+                        - img "VGTV"
+                      - generic:
+                        - generic: 0 minutter
+                  - heading "Enorm eksplosjon under broen" [level=2] [ref=e640]:
+                    - generic [ref=e641]: Enorm eksplosjon
+                    - generic [ref=e642]: under broen
+            - generic [ref=e643]:
+              - navigation [ref=e646]:
+                - link "Krigen i Midtøsten" [ref=e647] [cursor=pointer]:
+                  - /url: https://www.vg.no/nyheter/i/Pd4OR7/israel-og-usa-angriper-iran?utm_source=vg-header-krig_i_midtosten&utm_medium=tittel
+                - generic [ref=e648]:
+                  - link "Fakta" [ref=e649] [cursor=pointer]:
+                    - /url: https://www.vg.no/nyheter/i/ArP98E/krigen-i-midtoesten-spoersmaal-og-svar?utm_source=vg-header-krig_i_midtosten&utm_medium=fakta
+                  - link "Følg live" [ref=e650] [cursor=pointer]:
+                    - /url: https://www.vg.no/nyheter/i/Pd4OR7/israel-og-usa-angriper-iran?utm_source=vg-header-krig_i_midtosten&utm_medium=live
+                    - generic [ref=e651]: Følg live
+                    - img [ref=e652]
+              - generic [ref=e655]:
+                - article [ref=e656]:
+                  - link "Skip passerte" [ref=e658] [cursor=pointer]:
+                    - /url: https://www.vg.no/nyheter/i/Pd4OR7/krigen-i-midtoesten-siste-nytt?pinnedEntry=73466&utm_source=vgfront&utm_content=hovedlopet_row41_pos1&utm_medium=dre-69d628065974211ddf685aec
+                    - figure [ref=e659]
+                    - heading "Skip passerte" [level=2] [ref=e662]:
+                      - generic [ref=e663]: Skip passerte
+                - article [ref=e664]:
+                  - link "Krevde åpning umiddelbart" [ref=e666] [cursor=pointer]:
+                    - /url: https://www.vg.no/nyheter/i/6qqroz/trump-stanser-bombing-midlertidig?utm_source=vgfront&utm_content=hovedlopet_row41_pos2&utm_medium=dre-69d586d25974211ddf24e478
+                    - figure [ref=e667]
+                    - heading "Krevde åpning umiddelbart" [level=2] [ref=e670]:
+                      - generic [ref=e671]: Krevde åpning
+                      - generic [ref=e672]: umiddelbart
+                - article [ref=e673]:
+                  - 'link "Norske skip: Vil ikke passere" [ref=e675] [cursor=pointer]':
+                    - /url: https://e24.no/internasjonal-oekonomi/i/Arbzgr/rederiforbundet-situasjonen-fortsatt-uavklart-og-uforutsigbar?utm_source=vgfront&utm_content=hovedlopet_row41_pos3&referer=https%3A%2F%2Fwww.vg.no&utm_medium=dre-69d617e107e0fbd0ef978aa5
+                    - figure [ref=e676]
+                    - generic [ref=e679]:
+                      - generic [ref=e680]: "Norske skip:"
+                      - 'heading "Norske skip: Vil ikke passere" [level=2] [ref=e681]':
+                        - generic [ref=e682]: Vil ikke
+                        - generic [ref=e683]: passere
+            - article [ref=e685]:
+              - link "Freidig melding" [ref=e687] [cursor=pointer]:
+                - /url: https://tv.vg.no/video/360829/detaljen-p-ballen-vekker-oppsikt?utm_source=vgfront&utm_content=hovedlopet_row42_pos2&utm_medium=dre-69d28092f74f76909f61e9eb
+                - figure [ref=e688]:
+                  - generic [ref=e690]:
+                    - generic:
+                      - img "VGTV"
+                    - generic:
+                      - generic: 0 minutter
+                - heading "Freidig melding" [level=2] [ref=e692]:
+                  - generic [ref=e693]: Freidig
+                  - generic [ref=e694]: melding
+            - article [ref=e695]:
+              - link "Boligpris-oppgang" [ref=e697] [cursor=pointer]:
+                - /url: https://e24.no/norsk-oekonomi/i/JOrWB6/boligprisene-steg-0-4-prosent-i-mars?utm_source=vgfront&utm_content=hovedlopet_row43_pos1&referer=https%3A%2F%2Fwww.vg.no&utm_medium=dre-69d61b745974211ddf5dfa40
+                - figure [ref=e698]
+                - heading "Boligpris-oppgang" [level=2] [ref=e702]:
+                  - generic [ref=e703]: Boligpris-oppgang
+            - generic [ref=e704]:
+              - article [ref=e705]:
+                - 'link "Oppdal: –⁠ ⁠Trodde jeg skulle dø" [ref=e707] [cursor=pointer]':
+                  - /url: https://tv.vg.no/video/360789/trodde-serist-jeg-skulle-d?utm_source=vgfront&utm_content=hovedlopet_row44_pos1&utm_medium=dre-69d17d62f74f76909f2b1d56
+                  - figure [ref=e708]:
+                    - generic [ref=e710]:
+                      - generic:
+                        - img "VGTV"
+                      - generic:
+                        - generic: 1 minutter
+                  - generic [ref=e711]:
+                    - generic [ref=e712]: "Oppdal:"
+                    - 'heading "Oppdal: –⁠ ⁠Trodde jeg skulle dø" [level=2] [ref=e713]':
+                      - generic [ref=e714]: –⁠ ⁠Trodde jeg
+                      - generic [ref=e715]: skulle dø
+              - article [ref=e716]:
+                - 'link "Maria får hets: Er ufør, men fysisk aktiv" [ref=e718] [cursor=pointer]':
+                  - /url: https://www.vg.no/forbruker/i/L4MQdx/maria-eidskrem-toeroe-37-har-addison-sykdom?utm_source=vgfront&utm_content=hovedlopet_row44_pos2&utm_medium=dre-69d389eaf74f76909fa12516
+                  - figure [ref=e719]:
+                    - generic [ref=e721]:
+                      - generic:
+                        - img "VG pluss"
+                  - generic [ref=e722]:
+                    - generic [ref=e723]: "Maria får hets:"
+                    - 'heading "Maria får hets: Er ufør, men fysisk aktiv" [level=2] [ref=e724]':
+                      - generic [ref=e725]: Er ufør, men
+                      - generic [ref=e726]: fysisk aktiv
+            - article [ref=e727]:
+              - 'link "Utvalg: Nei til kjernekraft nå" [ref=e729] [cursor=pointer]':
+                - /url: https://www.vg.no/nyheter/i/gkdap9/utvalg-sier-nei-til-kjernekraft-i-norge-naa-for-dyrt-og-tar-for-lang-tid?utm_source=vgfront&utm_content=hovedlopet_row45_pos1&utm_medium=dre-69d5fec35974211ddf418fee
+                - figure [ref=e730]
+                - 'heading "Utvalg: Nei til kjernekraft nå" [level=2] [ref=e733]':
+                  - generic [ref=e734]: "Utvalg: Nei til"
+                  - generic [ref=e735]: kjernekraft nå
+            - article [ref=e736]:
+              - generic [ref=e737]:
+                - 'link "Oslo: Fotgjenger påkjørt" [ref=e738] [cursor=pointer]':
+                  - /url: https://www.vg.no/nyheter/i/L44yyV/fotgjenger-paakjoert-i-oslo-alvorlig?utm_source=vgfront&utm_content=hovedlopet_row46_pos1&utm_medium=dre-69d5e9e25974211ddf3504a3
+                  - figure [ref=e739]
+                  - generic [ref=e741]:
+                    - generic [ref=e742]: "Oslo:"
+                    - 'heading "Oslo: Fotgjenger påkjørt" [level=2] [ref=e743]':
+                      - generic [ref=e744]: Fotgjenger påkjørt
+                - link "Send tips til VG via tips-skjema" [ref=e746] [cursor=pointer]:
+                  - /url: https://www.vg.no/tips-oss
+                  - generic [ref=e747]: Send tips til VG
+                  - generic [ref=e748]: Tips oss
+                  - generic [ref=e749]: Har du informasjon om saken? Send oss tekst, bilder eller video
+                  - img "Tips icon" [ref=e751]
+            - generic [ref=e754]:
+              - article [ref=e755]:
+                - link "Går viralt" [ref=e757] [cursor=pointer]:
+                  - /url: https://tv.vg.no/video/361028/gammelt-trump-klipp-gr-viralt?utm_source=vgfront&utm_content=hovedlopet_row47_pos1&utm_medium=dre-69d5410e5974211ddf12c766
+                  - figure [ref=e758]:
+                    - generic [ref=e760]:
+                      - generic:
+                        - img "VGTV"
+                      - generic:
+                        - generic: 0 minutter
+                  - heading "Går viralt" [level=2] [ref=e762]:
+                    - generic [ref=e763]: Går viralt
+              - article [ref=e764]:
+                - 'link "Politi og banker: Trøbbel løst" [ref=e766] [cursor=pointer]':
+                  - /url: https://www.vg.no/nyheter/i/zOl585/koe-i-passkontrollen-paa-gardermoen?utm_source=vgfront&utm_content=hovedlopet_row47_pos2&utm_medium=dre-69d5fd6a07e0fbd0ef7d16f9
+                  - figure [ref=e767]
+                  - generic [ref=e769]:
+                    - generic [ref=e770]: "Politi og banker:"
+                    - 'heading "Politi og banker: Trøbbel løst" [level=2] [ref=e771]':
+                      - generic [ref=e772]: Trøbbel
+                      - generic [ref=e773]: løst
+            - article [ref=e774]:
+              - link "Fant nakent par på biblioteket" [ref=e776] [cursor=pointer]:
+                - /url: https://www.vg.no/nyheter/i/XMMGxx/fant-nakent-par-paa-biblioteket-i-sandnes?utm_source=vgfront&utm_content=hovedlopet_row48_pos1&utm_medium=dre-69d5e9835974211ddf34dba4
+                - heading "Fant nakent par på biblioteket" [level=2] [ref=e778]:
+                  - generic [ref=e779]: Fant nakent par
+                  - generic [ref=e780]: på biblioteket
+          - generic [ref=e782]:
+            - generic [ref=e783]:
+              - article [ref=e784]:
+                - 'link "Aksjer: –⁠ ⁠Mye bra AI" [ref=e786] [cursor=pointer]':
+                  - /url: https://www.vg.no/dinepenger/sparing-og-investering/aksjer/i/Pddk2R/kjoep-disse-ai-aksjene-paa-oslo-boers-mye-bra-ai-paa-oslo-boers?utm_source=vgfront&utm_content=hovedlopet_row49_pos1&vgfront=true&utm_medium=dre-69d5deaf5974211ddf312f34
+                  - figure [ref=e787]:
+                    - generic [ref=e789]:
+                      - generic:
+                        - img "VG pluss"
+                  - 'heading "Aksjer: –⁠ ⁠Mye bra AI" [level=2] [ref=e791]':
+                    - generic [ref=e792]: "Aksjer: –⁠ ⁠Mye"
+                    - generic [ref=e793]: bra AI
+              - article [ref=e794]:
+                - 'link "Oslo Børs: Kraftig Equinor-fall" [ref=e796] [cursor=pointer]':
+                  - /url: https://e24.no/boers-og-finans/i/Rjj3v2/venter-kraftig-fall-paa-oslo-boers-etter-oljeprisras?utm_source=vgfront&utm_content=hovedlopet_row49_pos2&referer=https%3A%2F%2Fwww.vg.no&utm_medium=dre-69d5efd007e0fbd0ef750619
+                  - figure [ref=e797]
+                  - generic [ref=e800]:
+                    - generic [ref=e801]: "Oslo Børs:"
+                    - 'heading "Oslo Børs: Kraftig Equinor-fall" [level=2] [ref=e802]':
+                      - generic [ref=e803]: Kraftig
+                      - generic [ref=e804]: Equinor-fall
+            - article [ref=e805]:
+              - 'link "Etterforsket drap: Fikk lytterne mot seg" [ref=e807] [cursor=pointer]':
+                - /url: https://tv.vg.no/video/292793/citizen-sleuth?utm_source=vgfront&utm_content=hovedlopet_row50_pos1&utm_medium=dre-69ca38d2a2aa92259e5584fc
+                - figure [ref=e808]:
+                  - generic [ref=e810]:
+                    - generic:
+                      - img "VGTV"
+                    - generic:
+                      - img "VG Pluss"
+                  - generic [ref=e812]: "9"
+                  - generic [ref=e813]: Aldersgrense 9 år
+                - generic [ref=e814]:
+                  - generic [ref=e815]: "Etterforsket drap:"
+                  - 'heading "Etterforsket drap: Fikk lytterne mot seg" [level=2] [ref=e816]':
+                    - generic [ref=e817]: Fikk lytterne
+                    - generic [ref=e818]: mot seg
+            - article [ref=e822]:
+              - link "Politiet svarer" [ref=e824] [cursor=pointer]:
+                - /url: https://tv.vg.no/video/360976/rmte-fra-politibil-dette-er-politiets-svar?utm_source=vgfront&utm_content=hovedlopet_row51_pos2&utm_medium=dre-69d412a4bd1c15e5d5ae7e82
+                - figure [ref=e825]:
+                  - generic [ref=e827]:
+                    - generic:
+                      - img "VGTV"
+                    - generic:
+                      - generic: 0 minutter
+                - heading "Politiet svarer" [level=2] [ref=e829]:
+                  - generic [ref=e830]: Politiet
+                  - generic [ref=e831]: svarer
+            - article [ref=e833]:
+              - 'link "Ny studie: Spiste kun havregrøt - dette skjedde" [ref=e835] [cursor=pointer]':
+                - /url: https://www.vg.no/forbruker/i/bOOJll/ny-studie-derfor-er-havregryn-bra-for-kolesterolet?utm_source=vgfront&utm_content=hovedlopet_row52_pos1&utm_medium=dre-69d38e47f74f76909fa325f2
+                - figure [ref=e836]:
+                  - generic [ref=e838]:
+                    - generic:
+                      - img "VG pluss"
+                - generic [ref=e839]:
+                  - generic [ref=e840]: "Ny studie:"
+                  - 'heading "Ny studie: Spiste kun havregrøt - dette skjedde" [level=2] [ref=e841]':
+                    - generic [ref=e842]: Spiste kun
+                    - generic [ref=e843]: havregrøt -
+                    - generic [ref=e844]: dette skjedde
+            - article [ref=e845]:
+              - generic [ref=e846]:
+                - 'link "Skyting i Oslo: To pågrepet" [ref=e847] [cursor=pointer]':
+                  - /url: https://www.vg.no/nyheter/i/Bxx707/melding-om-skudd-i-oslo?utm_source=vgfront&utm_content=hovedlopet_row53_pos1&utm_medium=dre-69d5785f07e0fbd0ef6064e8
+                  - figure [ref=e848]
+                  - generic [ref=e850]:
+                    - generic [ref=e851]: "Skyting i Oslo:"
+                    - 'heading "Skyting i Oslo: To pågrepet" [level=2] [ref=e852]':
+                      - generic [ref=e853]: To pågrepet
+                - link "Send tips til VG via tips-skjema" [ref=e855] [cursor=pointer]:
+                  - /url: https://www.vg.no/tips-oss
+                  - generic [ref=e856]: Send tips til VG
+                  - generic [ref=e857]: Tips oss
+                  - generic [ref=e858]: Har du informasjon om saken? Send oss tekst, bilder eller video
+                  - img "Tips icon" [ref=e860]
+            - article [ref=e862]:
+              - 'link "Isbading: –⁠ ⁠Veldig viktig å vite hva du gjør" [ref=e864] [cursor=pointer]':
+                - /url: https://www.vg.no/forbruker/i/165zWG/isbading-uten-badstu-fordelene-og-farene?utm_source=vgfront&utm_content=hovedlopet_row54_pos1&utm_medium=dre-69cb9e35bd1c15e5d52e2335
+                - figure [ref=e865]:
+                  - generic [ref=e867]:
+                    - generic:
+                      - img "VG pluss"
+                - generic [ref=e868]:
+                  - generic [ref=e869]: "Isbading:"
+                  - 'heading "Isbading: –⁠ ⁠Veldig viktig å vite hva du gjør" [level=2] [ref=e870]':
+                    - generic [ref=e871]: –⁠ ⁠Veldig viktig
+                    - generic [ref=e872]: å vite hva
+                    - generic [ref=e873]: du gjør
+            - generic [ref=e876]:
+              - article [ref=e877]:
+                - 'link "Nytt i Chrome: Flytt fanene til siden" [ref=e879] [cursor=pointer]':
+                  - /url: https://www.tek.no/nyheter/nyhet/i/0pBjGB/chrome-lanserer-vertikale-faner-ekspert-mener-alle-boer-bytte?utm_source=vgfront&utm_content=hovedlopet_row56_pos1&utm_medium=dre-69d5f7515974211ddf3be145
+                  - figure [ref=e880]
+                  - generic [ref=e882]:
+                    - generic [ref=e883]: "Nytt i Chrome:"
+                    - 'heading "Nytt i Chrome: Flytt fanene til siden" [level=2] [ref=e884]':
+                      - generic [ref=e885]: Flytt fanene
+                      - generic [ref=e886]: til siden
+              - article [ref=e887]:
+                - link "Dramatisk turist-ulykke" [ref=e889] [cursor=pointer]:
+                  - /url: https://tv.vg.no/video/360984/turistaktivitet-ender-i-dramatisk-ulykke?utm_source=vgfront&utm_content=hovedlopet_row56_pos2&utm_medium=dre-69d48556f74f76909fe7c05f
+                  - figure [ref=e890]:
+                    - generic [ref=e892]:
+                      - generic:
+                        - img "VGTV"
+                      - generic:
+                        - generic: 0 minutter
+                  - heading "Dramatisk turist-ulykke" [level=2] [ref=e894]:
+                    - generic [ref=e895]: Dramatisk
+                    - generic [ref=e896]: turist-ulykke
+            - article [ref=e900]:
+              - 'link "Hjernetrim: Spill Ordstjernen" [ref=e902] [cursor=pointer]':
+                - /url: https://www.vg.no/spill/ordstjernen?utm_source=vgfront&utm_content=hovedlopet_row57_pos1&utm_medium=dre-69d2595abd1c15e5d52de07b
+                - figure [ref=e903]
+                - generic [ref=e905]:
+                  - generic [ref=e906]: Hjernetrim
+                  - 'heading "Hjernetrim: Spill Ordstjernen" [level=2] [ref=e907]':
+                    - generic [ref=e908]: Spill
+                    - generic [ref=e909]: Ordstjernen
+            - generic [ref=e910]:
+              - article [ref=e911]:
+                - link "Halvparten dropper tarmscreening" [ref=e913] [cursor=pointer]:
+                  - /url: https://www.vg.no/nyheter/i/7pp9rv/halvparten-dropper-tarmscreening-ny-undersoekelse-kan-forklare-hvorfor?utm_source=vgfront&utm_content=hovedlopet_row58_pos1&utm_medium=dre-69d5d88d07e0fbd0ef6d4891
+                  - figure [ref=e914]
+                  - heading "Halvparten dropper tarmscreening" [level=2] [ref=e917]:
+                    - generic [ref=e918]: Halvparten dropper
+                    - generic [ref=e919]: tarmscreening
+              - article [ref=e920]:
+                - 'link "Rystet Japan: Fortalte om voldtekt" [ref=e922] [cursor=pointer]':
+                  - /url: https://tv.vg.no/video/359974/black-box-diaries?utm_source=vgfront&utm_content=hovedlopet_row58_pos2&utm_medium=dre-69d4b79af74f76909f00fb27
+                  - figure [ref=e923]:
+                    - generic [ref=e925]:
+                      - generic:
+                        - img "VGTV"
+                      - generic:
+                        - img "VG Pluss"
+                    - generic [ref=e927]: "15"
+                    - generic [ref=e928]: Aldersgrense 15 år
+                  - generic [ref=e929]:
+                    - generic [ref=e930]: "Rystet Japan:"
+                    - 'heading "Rystet Japan: Fortalte om voldtekt" [level=2] [ref=e931]':
+                      - generic [ref=e932]: Fortalte om
+                      - generic [ref=e933]: voldtekt
+          - generic [ref=e937]:
+            - article [ref=e938]:
+              - link "Mener Rutte kaster bort tiden" [ref=e940] [cursor=pointer]:
+                - /url: https://www.vg.no/nyheter/i/xrrxdp/tidligere-forsvarssjef-om-nato-sjefens-trump-besoek-kaster-bort-tiden?utm_source=vgfront&utm_content=hovedlopet_row60_pos1&utm_medium=dre-69d5b66b07e0fbd0ef67cc01
+                - figure [ref=e941]
+                - heading "Mener Rutte kaster bort tiden" [level=2] [ref=e944]:
+                  - generic [ref=e945]: Mener Rutte kaster
+                  - generic [ref=e946]: bort tiden
+            - article [ref=e947]:
+              - 'link "Redningsaksjonen: –⁠ ⁠Gjorde det vi kunne" [ref=e949] [cursor=pointer]':
+                - /url: https://www.vg.no/nyheter/i/Arr66E/ledet-redningsaksjonen-i-hemsedal-vi-gjorde-det-vi-kunne?utm_source=vgfront&utm_content=hovedlopet_row61_pos1&utm_medium=dre-69d538185974211ddf0facf4
+                - figure [ref=e950]
+                - 'heading "Redningsaksjonen: –⁠ ⁠Gjorde det vi kunne" [level=2] [ref=e953]':
+                  - generic [ref=e954]: "Redningsaksjonen:"
+                  - generic [ref=e955]: –⁠ ⁠Gjorde det vi kunne
+            - generic [ref=e956]:
+              - article [ref=e957]:
+                - link "–⁠ ⁠Vi elsker dere, fra månen" [ref=e959] [cursor=pointer]:
+                  - /url: https://tv.vg.no/video/361016/vi-elsker-dere-fra-mnen?utm_source=vgfront&utm_content=hovedlopet_row62_pos1&utm_medium=dre-69d53c265974211ddf113301
+                  - figure [ref=e960]:
+                    - generic [ref=e962]:
+                      - generic:
+                        - img "VGTV"
+                      - generic:
+                        - generic: 0 minutter
+                  - heading "–⁠ ⁠Vi elsker dere, fra månen" [level=2] [ref=e964]:
+                    - generic [ref=e965]: –⁠ ⁠Vi elsker dere,
+                    - generic [ref=e966]: fra månen
+              - article [ref=e967]:
+                - link "Bagasjen brant opp" [ref=e969] [cursor=pointer]:
+                  - /url: https://www.vg.no/nyheter/i/n115em/kaos-etter-togbrann-dramatisk?utm_source=vgfront&utm_content=hovedlopet_row62_pos2&utm_medium=dre-69d5569707e0fbd0ef57a665
+                  - figure [ref=e970]
+                  - heading "Bagasjen brant opp" [level=2] [ref=e973]:
+                    - generic [ref=e974]: Bagasjen
+                    - generic [ref=e975]: brant opp
+            - article [ref=e978]:
+              - link "Historisk månebilde" [ref=e980] [cursor=pointer]:
+                - /url: https://www.vg.no/nyheter/i/4336Xq/406-772-9-kilometer?utm_source=vgfront&utm_content=hovedlopet_row63_pos1&utm_medium=dre-69d53b1b07e0fbd0ef4ed47c
+                - figure [ref=e981]
+                - heading "Historisk månebilde" [level=2] [ref=e984]:
+                  - generic [ref=e985]: Historisk
+                  - generic [ref=e986]: månebilde
+            - article [ref=e988]:
+              - 'link "Nabokrangler: Dette må du tåle" [ref=e990] [cursor=pointer]':
+                - /url: https://www.vg.no/dinepenger/eiendom/i/6qqoj3/13-ting-som-kan-trigge-nabokrangler?utm_source=vgfront&utm_content=hovedlopet_row65_pos1&vgfront=true&utm_medium=dre-69d38c9abd1c15e5d5795804
+                - figure [ref=e991]:
+                  - generic [ref=e993]:
+                    - generic:
+                      - img "VG pluss"
+                - generic [ref=e994]:
+                  - generic [ref=e995]: "Nabokrangler:"
+                  - 'heading "Nabokrangler: Dette må du tåle" [level=2] [ref=e996]':
+                    - generic [ref=e997]: Dette må
+                    - generic [ref=e998]: du tåle
+            - article [ref=e999]:
+              - link "Tiltalt for å ha voldtatt barnevernsjente" [ref=e1001] [cursor=pointer]:
+                - /url: https://www.vg.no/nyheter/i/rrr0Ga/mann-tiltalt-for-aa-ha-unndratt-barnevernsjente-og-voldtatt?utm_source=vgfront&utm_content=hovedlopet_row66_pos1&utm_medium=dre-69d5541807e0fbd0ef56abfd
+                - figure [ref=e1002]
+                - heading "Tiltalt for å ha voldtatt barnevernsjente" [level=2] [ref=e1005]:
+                  - generic [ref=e1006]: Tiltalt for å ha voldtatt
+                  - generic [ref=e1007]: barnevernsjente
+            - article [ref=e1009]:
+              - 'link "Bill Gates: Skal vitne om Epstein" [ref=e1011] [cursor=pointer]':
+                - /url: https://www.vg.no/nyheter/i/aJJXnd/bill-gates-vitner-i-kongressen-om-epstein?utm_source=vgfront&utm_content=hovedlopet_row67_pos2&utm_medium=dre-69d5468f5974211ddf1459b6
+                - figure [ref=e1012]
+                - generic [ref=e1014]:
+                  - generic [ref=e1015]: "Bill Gates:"
+                  - 'heading "Bill Gates: Skal vitne om Epstein" [level=2] [ref=e1016]':
+                    - generic [ref=e1017]: Skal vitne
+                    - generic [ref=e1018]: om Epstein
+            - article [ref=e1019]:
+              - link "Gaven til Ukraina endte i Belgia" [ref=e1021] [cursor=pointer]:
+                - /url: https://www.vg.no/nyheter/i/JOOKnJ/f16-gaven-til-ukraina-endte-opp-i-belgia?utm_source=vgfront&utm_content=hovedlopet_row68_pos1&utm_medium=dre-69d517d407e0fbd0ef404996
+                - figure [ref=e1022]
+                - heading "Gaven til Ukraina endte i Belgia" [level=2] [ref=e1025]:
+                  - generic [ref=e1026]: Gaven til Ukraina
+                  - generic [ref=e1027]: endte i Belgia
+            - generic [ref=e1028]:
+              - link "Dokumentarer" [ref=e1030] [cursor=pointer]:
+                - /url: https://tv.vg.no/kategori/121/dokumentar
+                - heading "Dokumentarer" [level=2] [ref=e1035]
+                - img [ref=e1037]
+              - generic [ref=e1040]:
+                - article [ref=e1041]:
+                  - link "Sex-tvang i skrekksekt" [ref=e1043] [cursor=pointer]:
+                    - /url: https://tv.vg.no/video/297091/gloriavale-new-zealands-secret-cult?utm_source=vgfront&utm_content=hovedlopet_row69_pos1&utm_medium=dre-676564524ab6070e4afd6ea6
+                    - figure [ref=e1044]:
+                      - generic [ref=e1046]:
+                        - generic:
+                          - img "VGTV"
+                        - generic:
+                          - img "VG Pluss"
+                      - generic [ref=e1048]: "9"
+                      - generic [ref=e1049]: Aldersgrense 9 år
+                    - heading "Sex-tvang i skrekksekt" [level=2] [ref=e1051]
+                - article [ref=e1052]:
+                  - 'link "Svensk forstad: Liv, død og brorskap" [ref=e1054] [cursor=pointer]':
+                    - /url: https://tv.vg.no/video/319545/g-21-scener-fra-gottsunda?utm_source=vgfront&utm_content=hovedlopet_row69_pos2&utm_medium=dre-69c68babea6c34a0a8f50c85
+                    - figure [ref=e1055]:
+                      - generic [ref=e1057]:
+                        - generic:
+                          - img "VGTV"
+                        - generic:
+                          - img "VG Pluss"
+                      - generic [ref=e1059]: "9"
+                      - generic [ref=e1060]: Aldersgrense 9 år
+                    - generic [ref=e1061]:
+                      - generic [ref=e1062]: "Svensk forstad:"
+                      - 'heading "Svensk forstad: Liv, død og brorskap" [level=2] [ref=e1063]': Liv, død og brorskap
+        - complementary [ref=e1064]:
+          - generic [ref=e1066]:
+            - generic [ref=e1068]:
+              - heading "Siste nytt" [level=3] [ref=e1069]
+              - list [ref=e1071]:
+                - listitem [ref=e1072]:
+                  - link [ref=e1073] [cursor=pointer]:
+                    - /url: https://www.vg.no/i/Gxraam/pristak-skaper-fransk-drivstoffmangel?utm_source=vgfront&utm_content=vg-widget-latest&utm_campaign=latest
+                    - article [ref=e1074]:
+                      - generic [ref=e1076]:
+                        - time [ref=e1077]: 3 min siden
+                        - heading "Pristak skaper fransk drivstoffmangel" [level=4] [ref=e1078]
+                - listitem [ref=e1079]:
+                  - link [ref=e1080] [cursor=pointer]:
+                    - /url: https://www.vg.no/sport/i/Wvv9kr/jesper-mathisens-barnefotballag-blir-boikottet-i-kristiansand?utm_source=vgfront&utm_content=vg-widget-latest&utm_campaign=latest
+                    - article [ref=e1081]:
+                      - generic [ref=e1083]:
+                        - time [ref=e1084]: 23 min siden
+                        - 'heading "Fotball-mamma reagerer på boikott: – Barn blir brukt" [level=4] [ref=e1085]'
+                - listitem [ref=e1086]:
+                  - link [ref=e1087] [cursor=pointer]:
+                    - /url: https://www.vg.no/nyheter/i/16ok3q/russisk-hackernettverk-avsloert?utm_source=vgfront&utm_content=vg-widget-latest&utm_campaign=latest
+                    - article [ref=e1088]:
+                      - generic [ref=e1090]:
+                        - time [ref=e1091]: 41 min siden
+                        - heading "Russisk hackernettverk avslørt" [level=4] [ref=e1092]
+                - listitem [ref=e1093]:
+                  - link [ref=e1094] [cursor=pointer]:
+                    - /url: https://www.vg.no/nyheter/i/lnKAxk/varmerenget-i-storbritannia-26-6-grader-i-london?utm_source=vgfront&utm_content=vg-widget-latest&utm_campaign=latest
+                    - article [ref=e1095]:
+                      - generic [ref=e1097]:
+                        - time [ref=e1098]: 54 min siden
+                        - heading "London varmere enn Roma og Ibiza" [level=4] [ref=e1099]
+                - listitem [ref=e1100]:
+                  - link [ref=e1101] [cursor=pointer]:
+                    - /url: https://www.vg.no/nyheter/i/JOr1nb/f-16-gaven-til-ukraina-romania-fikk-hoeyeste-prioritet?utm_source=vgfront&utm_content=vg-widget-latest&utm_campaign=latest
+                    - article [ref=e1102]:
+                      - generic [ref=e1104]:
+                        - time [ref=e1105]: 1 t siden
+                        - 'heading "F-16 gaven til Ukraina: Romania fikk høyeste prioritet" [level=4] [ref=e1106]'
+                - listitem [ref=e1107]:
+                  - link [ref=e1108] [cursor=pointer]:
+                    - /url: https://www.vg.no/nyheter/i/V6gbmd/bane-nor-bergensbanen-aapner-igjen-torsdag-morgen-etter-togbrann?utm_source=vgfront&utm_content=vg-widget-latest&utm_campaign=latest
+                    - article [ref=e1109]:
+                      - generic [ref=e1111]:
+                        - time [ref=e1112]: 1 t siden
+                        - 'heading "Bane Nor: Bergensbanen åpner igjen torsdag morgen etter togbrann" [level=4] [ref=e1113]'
+                - listitem [ref=e1114]:
+                  - link [ref=e1115] [cursor=pointer]:
+                    - /url: https://www.vg.no/nyheter/i/y5l3KA/midtoesten-ekspert-libanon-strid-kan-velte-vaapenhvilen?utm_source=vgfront&utm_content=vg-widget-latest&utm_campaign=latest
+                    - article [ref=e1116]:
+                      - generic [ref=e1118]:
+                        - time [ref=e1119]: 1 t siden
+                        - 'heading "Midtøsten-ekspert: Libanon-strid kan velte våpenhvilen" [level=4] [ref=e1120]'
+                - listitem [ref=e1121]:
+                  - link [ref=e1122] [cursor=pointer]:
+                    - /url: https://www.vg.no/i/y5l3o2/kryptovaluta-veldig-saarbart-for-trump-risiko?utm_source=vgfront&utm_content=vg-widget-latest&utm_campaign=latest
+                    - article [ref=e1123]:
+                      - generic [ref=e1125]:
+                        - time [ref=e1126]: 2 t siden
+                        - 'heading "Kryptovaluta: – Veldig sårbart for Trump-risiko" [level=4] [ref=e1127]'
+                - listitem [ref=e1128]
+            - link "Send tips til VG via tips-skjema" [ref=e1129] [cursor=pointer]:
+              - /url: https://www.vg.no/tips-oss?utm_source=vgfront
+              - generic [ref=e1130]: Tips oss
+    - generic [ref=e1132]:
+      - list [ref=e1133]:
+        - listitem [ref=e1134]:
+          - link "Dagens Pondus tegneserie Les dagens Pondus" [ref=e1135] [cursor=pointer]:
+            - /url: https://www.vg.no/tegneserier?utm_source=comics-bottom&utm_content=pondus
+            - img "Dagens Pondus tegneserie" [ref=e1136]
+            - heading "Les dagens Pondus" [level=2] [ref=e1138]
+        - listitem [ref=e1139]:
+          - link "Dagens Lunch tegneserie Les dagens Lunch" [ref=e1140] [cursor=pointer]:
+            - /url: https://www.vg.no/tegneserier?utm_source=comics-bottom&utm_content=lunch
+            - img "Dagens Lunch tegneserie" [ref=e1141]
+            - heading "Les dagens Lunch" [level=2] [ref=e1143]
+        - listitem [ref=e1144]:
+          - link "Dagens Hjalmar tegneserie Les dagens Hjalmar" [ref=e1145] [cursor=pointer]:
+            - /url: https://www.vg.no/tegneserier?utm_source=comics-bottom&utm_content=hjalmar
+            - img "Dagens Hjalmar tegneserie" [ref=e1146]
+            - heading "Les dagens Hjalmar" [level=2] [ref=e1148]
+      - link "Les flere tegneserier" [ref=e1150] [cursor=pointer]:
+        - /url: https://www.vg.no/tegneserier?utm_source=comics-bottom&utm_content=header
+  - generic [ref=e1151]:
+    - generic [ref=e1155]:
+      - img "Schibsted" [ref=e1156]
+      - generic [ref=e1159]:
+        - text: VG er en del av Schibsted Media. Schibsted Media AS er ansvarlig for dine data på dette nettstedet.
+        - link "Les mer her" [ref=e1160] [cursor=pointer]:
+          - /url: https://info.privacy.schibsted.com/no/schibsted-norge-personvernerklaering/
+    - contentinfo [ref=e1161]:
+      - link "Tilbake til forsiden" [ref=e1162] [cursor=pointer]:
+        - /url: https://www.vg.no
+        - img [ref=e1163]
+      - generic [ref=e1167]:
+        - generic [ref=e1168]:
+          - term [ref=e1169]: "Ansv. redaktør og adm. direktør:"
+          - definition [ref=e1170]:
+            - link "Gard Steiro" [ref=e1171] [cursor=pointer]:
+              - /url: mailto:gard.steiro@vg.no
+        - generic [ref=e1172]:
+          - term [ref=e1173]: "Nyhetsredaktør (konst.):"
+          - definition [ref=e1174]:
+            - link "Anders Sooth Knutsen" [ref=e1175] [cursor=pointer]:
+              - /url: mailto:anders.sooth.knutsen@vg.no
+        - generic [ref=e1176]:
+          - term [ref=e1177]: "Utviklingsredaktør:"
+          - definition [ref=e1178]:
+            - link "Øyvind Brenne" [ref=e1179] [cursor=pointer]:
+              - /url: mailto:oyvind.brenne@vg.no
+        - generic [ref=e1180]:
+          - term [ref=e1181]: "Politisk redaktør:"
+          - definition [ref=e1182]:
+            - link "Frøy Gudbrandsen" [ref=e1183] [cursor=pointer]:
+              - /url: mailto:froy.gudbrandsen@vg.no
+      - generic [ref=e1184]:
+        - group:
+          - list [ref=e1185]:
+            - listitem [ref=e1186]:
+              - link "Åpenhet i VG" [ref=e1187] [cursor=pointer]:
+                - /url: https://www.vg.no/informasjon
+            - listitem [ref=e1188]:
+              - link "Logg over rettelser" [ref=e1189] [cursor=pointer]:
+                - /url: https://www.vg.no/informasjon/rettelser
+            - listitem [ref=e1190]:
+              - link "Bruksvilkår" [ref=e1191] [cursor=pointer]:
+                - /url: https://www.vg.no/informasjon/brukervilkar
+            - listitem [ref=e1192]:
+              - link "Personvernerklæring og informasjonskapsler" [ref=e1193] [cursor=pointer]:
+                - /url: https://info.privacy.schibsted.com/no/schibsted-norge-personvernerklaering/
+        - group:
+          - list [ref=e1194]:
+            - listitem [ref=e1195]:
+              - link "Min side" [ref=e1196] [cursor=pointer]:
+                - /url: https://www.vg.no/minside
+            - listitem [ref=e1197]:
+              - link "Dagens e-avis" [ref=e1198] [cursor=pointer]:
+                - /url: https://eavis.vg.no
+            - listitem [ref=e1199]:
+              - link "Support" [ref=e1200] [cursor=pointer]:
+                - /url: https://support.vg.no/
+        - group:
+          - list [ref=e1201]:
+            - listitem [ref=e1202]:
+              - link "Kontaktinfo" [ref=e1203] [cursor=pointer]:
+                - /url: https://www.vg.no/informasjon/kontakt-oss
+            - listitem [ref=e1204]:
+              - link "Tips oss" [ref=e1205] [cursor=pointer]:
+                - /url: https://www.vg.no/tips-oss
+            - listitem [ref=e1206]:
+              - link "Annonsere i VG" [ref=e1207] [cursor=pointer]:
+                - /url: https://schibstedforbusiness.com/no/
+      - generic [ref=e1208]:
+        - link "Lenke til Redaktørplakaten" [ref=e1209] [cursor=pointer]:
+          - /url: https://www.nored.no/Redaktoerplakaten/Redaktoerplakaten
+          - img "Redaktøransvar" [ref=e1210]
+        - paragraph [ref=e1212]: VG har ikke ansvar for innhold på eksterne nettsider som det lenkes til. Kopiering av materiale fra VG for bruk annet sted, crawling, skraping, indeksering (for eksempel tekst og datamining) er ikke tillatt uten avtale.
+        - generic [ref=e1214]: © 2026 VG
+  - dialog "SP Consent Message" [ref=e1217]:
+    - iframe [active] [ref=e1218]:
+      - generic [ref=f26e6]:
+        - generic [ref=f26e7]:
+          - generic [ref=f26e8]:
+            - generic [ref=f26e12]:
+              - img "VG logo" [ref=f26e13]
+              - img "Schibsted logo" [ref=f26e14]
+            - heading "Cookieinnstillinger" [level=1] [ref=f26e16]
+          - paragraph [ref=f26e17]:
+            - generic [ref=f26e18]:
+              - text: Kjære VG-leser 😊
+              - text: Vårt mål er at VGs nyhetsdekning skal være gratis for alle. Vi ønsker også å gi deg en så god opplevelse som mulig hver gang du besøker oss. Det klarer vi bare hvis du og andre lesere deler data med oss. Vi bruker denne informasjonen til å forbedre tjenestene og annonsene i VG - som finansierer journalistikken.
+              - text: "Du finner mer informasjon om hva dette innebærer her:"
+            - text: Vi bruker cookies for å sikre kvaliteten på tjenestene våre. Når du godtar cookies, godtar du at Schibsted Media AS og våre
+            - link "36 partnere" [ref=f26e19] [cursor=pointer]:
+              - /url: "#"
+            - text: "kan bruke cookies, enhets-IDer og andre data som lagres og/eller vi får tilgang til på din enhet fra VG, til å samle inn persondata, slik som informasjon om hvilke sider du har besøkt, for disse formålene:"
+          - generic [ref=f26e21]:
+            - button "Lagre og/eller få tilgang til informasjon på en enhet" [ref=f26e23] [cursor=pointer]: Lagre og/eller få tilgang til informasjon på en enhet
+            - button "Personlig tilpasset annonsering og innhold, annonsering- og innholdsmåling, publikumsundersøkelser og tjenesteutvikling" [ref=f26e26] [cursor=pointer]: Personlig tilpasset annonsering og innhold, annonsering- og innholdsmåling, publikumsundersøkelser og tjenesteutvikling
+            - button "Produktutvikling, personlig tilpassing, markedsføring og annonsering utført av Schibsted Media AS" [ref=f26e29] [cursor=pointer]: Produktutvikling, personlig tilpassing, markedsføring og annonsering utført av Schibsted Media AS
+          - paragraph [ref=f26e32]: Velg “Tilpass cookies” for å håndtere samtykkene dine eller avvise behandlingen av data basert på berettiget interesse. Du kan når som helst endre innstillingene dine via lenken “Cookieinnstillinger” på tjenestens side.
+          - paragraph [ref=f26e34]:
+            - link "Personvernerklæring" [ref=f26e35] [cursor=pointer]:
+              - /url: https://schibsted.com/schibsteds-personvern-og-cookieerklaering/
+        - generic [ref=f26e36]:
+          - button "Tilpass cookies" [ref=f26e37] [cursor=pointer]
+          - button "Godta alle" [ref=f26e38] [cursor=pointer]

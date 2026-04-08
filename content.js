@@ -9,6 +9,36 @@
   const storage = chrome.storage.local;
   let settings = { ...DEFAULT_SETTINGS };
   let hiddenCount = 0;
+  let isContextAlive = true;
+  let observer = null;
+
+  function hasInvalidatedContext(error) {
+    const message = (error && error.message ? error.message : String(error || "")).toLowerCase();
+    return message.includes("extension context invalidated");
+  }
+
+  function deactivateContext() {
+    if (!isContextAlive) return;
+    isContextAlive = false;
+    if (observer) observer.disconnect();
+  }
+
+  function safeRun(fn) {
+    if (!isContextAlive) return;
+    if (!chrome.runtime || !chrome.runtime.id) {
+      deactivateContext();
+      return;
+    }
+    try {
+      return fn();
+    } catch (error) {
+      if (hasInvalidatedContext(error)) {
+        deactivateContext();
+        return;
+      }
+      throw error;
+    }
+  }
 
   function getSiteDisplayName() {
     return siteKey.charAt(0).toUpperCase() + siteKey.slice(1);
@@ -29,7 +59,6 @@
   function containerMatchesCategory(container, catConfig) {
     if (!container || !catConfig) return false;
     const hrefs = getContainerHrefs(container);
-    if (hrefs.length === 0) return false;
 
     if (Array.isArray(catConfig.urlPatterns) && catConfig.urlPatterns.length > 0) {
       const patterns = catConfig.urlPatterns.map((p) => p.toLowerCase());
@@ -41,6 +70,15 @@
     if (Array.isArray(catConfig.selectors) && catConfig.selectors.length > 0) {
       for (const selector of catConfig.selectors) {
         if (container.querySelector(selector)) return true;
+      }
+    }
+
+    if (Array.isArray(catConfig.textPatterns) && catConfig.textPatterns.length > 0) {
+      const text = (container.textContent || "").toLowerCase();
+      if (text.length > 0) {
+        for (const pattern of catConfig.textPatterns) {
+          if (text.includes(String(pattern).toLowerCase())) return true;
+        }
       }
     }
 
@@ -59,102 +97,150 @@
     return AI_SIGNALS.some((signal) => combined.includes(signal));
   }
 
-  function hideArticles() {
-    hiddenCount = 0;
-    const disabledCategories = Object.keys(settings).filter((k) => !settings[k]);
-    if (disabledCategories.length === 0) {
-      // Show everything
+  function hideArticlesCore() {
+    try {
+      hiddenCount = 0;
+      const disabledCategories = Object.keys(settings).filter((k) => !settings[k]);
+      if (disabledCategories.length === 0) {
+        // Show everything
+        document.querySelectorAll("[data-defog-hidden]").forEach((el) => {
+          el.style.display = "";
+          el.removeAttribute("data-defog-hidden");
+        });
+        updateBadge();
+        return;
+      }
+
+      // Reset previously hidden
       document.querySelectorAll("[data-defog-hidden]").forEach((el) => {
         el.style.display = "";
         el.removeAttribute("data-defog-hidden");
       });
-      updateBadge();
-      return;
-    }
 
-    // Reset previously hidden
-    document.querySelectorAll("[data-defog-hidden]").forEach((el) => {
-      el.style.display = "";
-      el.removeAttribute("data-defog-hidden");
-    });
+      const alreadyHidden = new Set();
+      const allContainers = getContentContainers();
+      const nonAiCategories = disabledCategories.filter((cat) => cat !== "ai");
 
-    const alreadyHidden = new Set();
-    const allContainers = getContentContainers();
-    const nonAiCategories = disabledCategories.filter((cat) => cat !== "ai");
-
-    for (const container of allContainers) {
-      for (const cat of nonAiCategories) {
-        const catConfig = site.categories[cat];
-        if (!catConfig) continue;
-        if (containerMatchesCategory(container, catConfig)) {
-          container.style.display = "none";
-          container.setAttribute("data-defog-hidden", cat);
-          alreadyHidden.add(container);
-          hiddenCount++;
-          break;
+      for (const container of allContainers) {
+        for (const cat of nonAiCategories) {
+          const catConfig = site.categories[cat];
+          if (!catConfig) continue;
+          if (containerMatchesCategory(container, catConfig)) {
+            container.style.display = "none";
+            container.setAttribute("data-defog-hidden", cat);
+            alreadyHidden.add(container);
+            hiddenCount++;
+            break;
+          }
         }
       }
-    }
 
-    // AI detection pass
-    if (disabledCategories.includes("ai")) {
-      allContainers.forEach((container) => {
-        if (!alreadyHidden.has(container) && isAiContent(container)) {
-          container.style.display = "none";
-          container.setAttribute("data-defog-hidden", "ai");
-          alreadyHidden.add(container);
-          hiddenCount++;
-        }
-      });
-    }
+      // AI detection pass — site-specific textPatterns first, then general signals
+      if (disabledCategories.includes("ai")) {
+        const aiConfig = site.categories["ai"];
+        allContainers.forEach((container) => {
+          if (!alreadyHidden.has(container)) {
+            const matchesSitePattern = aiConfig && containerMatchesCategory(container, aiConfig);
+            if (matchesSitePattern || isAiContent(container)) {
+              container.style.display = "none";
+              container.setAttribute("data-defog-hidden", "ai");
+              alreadyHidden.add(container);
+              hiddenCount++;
+            }
+          }
+        });
+      }
 
-    updateBadge();
+      updateBadge();
+    } catch (error) {
+      if (hasInvalidatedContext(error)) {
+        deactivateContext();
+        return;
+      }
+      throw error;
+    }
+  }
+
+  function hideArticles() {
+    safeRun(() => {
+      hideArticlesCore();
+    });
   }
 
   function updateBadge() {
-    chrome.runtime.sendMessage({
-      type: "updateBadge",
-      count: hiddenCount,
-      site: getSiteDisplayName()
+    safeRun(() => {
+      chrome.runtime.sendMessage(
+        {
+          type: "updateBadge",
+          count: hiddenCount,
+          site: getSiteDisplayName()
+        },
+        () => {
+          const err = chrome.runtime.lastError;
+          if (err && hasInvalidatedContext(err)) {
+            deactivateContext();
+          }
+        }
+      );
     });
   }
 
   function loadAndApply() {
-    storage.get(DEFAULT_SETTINGS, (result) => {
-      settings = result;
-      hideArticles();
+    safeRun(() => {
+      storage.get(DEFAULT_SETTINGS, (result) => {
+        safeRun(() => {
+          settings = result;
+          hideArticlesCore();
+        });
+      });
     });
   }
 
   // Listen for setting changes from popup
   chrome.storage.onChanged.addListener((changes, area) => {
-    if (area === "local") {
-      for (const key of Object.keys(changes)) {
-        if (key in settings) {
-          settings[key] = changes[key].newValue;
+    safeRun(() => {
+      if (area === "local") {
+        for (const key of Object.keys(changes)) {
+          if (key in settings) {
+            settings[key] = changes[key].newValue;
+          }
         }
+        hideArticlesCore();
       }
-      hideArticles();
-    }
+    });
   });
 
   // Listen for messages from popup
-  chrome.runtime.onMessage.addListener((msg) => {
+  chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
     if (msg.type === "getStats") {
-      chrome.runtime.sendMessage({
-        type: "stats",
-        count: hiddenCount,
-        site: getSiteDisplayName()
-      });
+      sendResponse({ count: hiddenCount, site: getSiteDisplayName() });
+      return true;
     }
   });
 
   // Run on load
   loadAndApply();
 
+  // If the old script context survives a reload momentarily, stop spammy uncaught errors.
+  window.addEventListener("error", (event) => {
+    if (hasInvalidatedContext(event.error || event.message)) {
+      deactivateContext();
+      event.preventDefault();
+    }
+  });
+
+  window.addEventListener("unhandledrejection", (event) => {
+    if (hasInvalidatedContext(event.reason)) {
+      deactivateContext();
+      event.preventDefault();
+    }
+  });
+
   // Re-run on DOM changes (infinite scroll, dynamic loading)
-  const observer = new MutationObserver(() => {
-    loadAndApply();
+  observer = new MutationObserver(() => {
+    safeRun(() => {
+      loadAndApply();
+    });
   });
   observer.observe(document.body, { childList: true, subtree: true });
 })();

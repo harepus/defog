@@ -29,6 +29,9 @@ const targets = [
   ["nrk.no", "https://www.nrk.no/fotballvm2026/"],
   ["nrk.no", "https://www.nrk.no/kultur/"],
   ["nrk.no", "https://www.nrk.no/norge/"],
+  ["nrk.no", "https://www.nrk.no/stor-oslo/"],
+  ["nrk.no", "https://www.nrk.no/ostfold/"],
+  ["nrk.no", "https://www.nrk.no/nordland/"],
   ["nrk.no", "https://www.nrk.no/okonomi/"],
   ["nrk.no", "https://www.nrk.no/urix/"],
   ["nrk.no", "https://www.nrk.no/ytring/"]

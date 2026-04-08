@@ -1,0 +1,1012 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e4]:
+    - link "Hopp til innhold" [ref=e6] [cursor=pointer]:
+      - /url: "#kurator_main"
+    - link "NRK.no" [ref=e7] [cursor=pointer]:
+      - /url: https://www.nrk.no/
+      - img "NRK.no" [ref=e8]:
+        - img [ref=e9]
+    - navigation "Meny" [ref=e12]:
+      - list [ref=e14]:
+        - listitem [ref=e15]:
+          - link "NRK TV" [ref=e16] [cursor=pointer]:
+            - /url: https://tv.nrk.no/
+        - listitem [ref=e17]:
+          - link "NRK Radio" [ref=e18] [cursor=pointer]:
+            - /url: https://radio.nrk.no/
+        - listitem [ref=e19]:
+          - link "NRK Super" [ref=e20] [cursor=pointer]:
+            - /url: https://nrksuper.no
+        - listitem [ref=e21]:
+          - link "NRK P3" [ref=e22] [cursor=pointer]:
+            - /url: https://p3.no
+        - listitem [ref=e23]:
+          - link "Yr" [ref=e24] [cursor=pointer]:
+            - /url: https://yr.no
+      - list [ref=e25]:
+        - listitem [ref=e26]:
+          - link "Nyheter" [ref=e27] [cursor=pointer]:
+            - /url: /nyheter/
+        - listitem [ref=e28]:
+          - link "Sport" [ref=e29] [cursor=pointer]:
+            - /url: /sport/
+        - listitem [ref=e30]:
+          - link "Kultur" [ref=e31] [cursor=pointer]:
+            - /url: /kultur/
+        - listitem [ref=e32]:
+          - link "Humor" [ref=e33] [cursor=pointer]:
+            - /url: /video/humor/
+        - listitem [ref=e34]:
+          - link "Distrikt" [ref=e35] [cursor=pointer]:
+            - /url: /distrikt/
+      - button "Mer" [ref=e37] [cursor=pointer]:
+        - text: Mer
+        - generic [ref=e38]:
+          - img
+      - generic [ref=e39]:
+        - link "Logg på" [ref=e42] [cursor=pointer]:
+          - /url: https://www.nrk.no/logginn
+          - generic:
+            - img
+          - generic [ref=e43]: Logg på
+        - generic [ref=e46]:
+          - searchbox "Søk i hele nrk-universet" [ref=e47]
+          - button "Søk" [ref=e48] [cursor=pointer]:
+            - img [ref=e49]
+  - main [ref=e51]:
+    - heading "Forside" [level=1] [ref=e52]
+    - generic [ref=e57]:
+      - button "Rull til venstre" [disabled]:
+        - img
+      - generic [ref=e59]:
+        - generic [ref=e60]:
+          - link "Nyhetsmeldinger":
+            - /url: https://www.nrk.no/nyheter
+            - heading "Nyhetsmeldinger" [level=2]:
+              - generic [ref=e61] [cursor=pointer]: Nyhetsmeldinger
+        - button "Barn drept etter droneangrep i Iran Publisert klokken 22:38 i Krigen i Midtøsten" [ref=e63]:
+          - generic:
+            - heading "Barn drept etter droneangrep i Iran" [level=3]
+            - generic:
+              - generic: Publisert klokken
+              - text: 22:38
+              - generic: i
+              - text: Krigen i Midtøsten
+        - button "Trump vurderer å straffe Nato-allierte Publisert klokken 22:18 i Nato" [ref=e66]:
+          - generic:
+            - heading "Trump vurderer å straffe Nato-allierte" [level=3]
+            - generic:
+              - generic: Publisert klokken
+              - text: 22:18
+              - generic: i
+              - text: Nato
+        - 'button "Raude Kors: Sivile må bli verna i Libanon Publisert klokken 21:40 i Libanon og Israel" [ref=e69]':
+          - generic:
+            - 'heading "Raude Kors: Sivile må bli verna i Libanon" [level=3]'
+            - generic:
+              - generic: Publisert klokken
+              - text: 21:40
+              - generic: i
+              - text: Libanon og Israel
+        - button "Vance hevder at Iran har lovet å åpne Hormuzstredet – Iran sier det er stengt Publisert klokken 21:37" [ref=e72]:
+          - generic:
+            - heading "Vance hevder at Iran har lovet å åpne Hormuzstredet – Iran sier det er stengt" [level=3]
+            - generic:
+              - generic: Publisert klokken
+              - text: 21:37
+        - 'button "Bane Nor: Bergensbanen åpner igjen torsdag morgen etter togbrann Publisert klokken 21:06" [ref=e75]':
+          - generic:
+            - 'heading "Bane Nor: Bergensbanen åpner igjen torsdag morgen etter togbrann" [level=3]'
+            - generic:
+              - generic: Publisert klokken
+              - text: 21:06
+        - button "Kvinne dømt til 15 års fengsel for Matthew Perry-overdose Publisert klokken 20:33" [ref=e78]:
+          - generic:
+            - heading "Kvinne dømt til 15 års fengsel for Matthew Perry-overdose" [level=3]
+            - generic:
+              - generic: Publisert klokken
+              - text: 20:33
+        - 'button "Det hvite hus: Trump skal diskutere Nato-exit med Rutte Publisert klokken 19:59 i Nato" [ref=e81]':
+          - generic:
+            - 'heading "Det hvite hus: Trump skal diskutere Nato-exit med Rutte" [level=3]'
+            - generic:
+              - generic: Publisert klokken
+              - text: 19:59
+              - generic: i
+              - text: Nato
+        - 'button "Det hvite hus: USA og Iran skal ha samtaler i Pakistan lørdag – J.D. Vance skal lede USAs team Publisert klokken 19:41" [ref=e84]':
+          - generic:
+            - 'heading "Det hvite hus: USA og Iran skal ha samtaler i Pakistan lørdag – J.D. Vance skal lede USAs team" [level=3]'
+            - generic:
+              - generic: Publisert klokken
+              - text: 19:41
+        - 'button "Irans utenriksminister: USA må velge – våpenhvile eller fortsatt krig via Israel Publisert klokken 19:29" [ref=e87]':
+          - generic:
+            - 'heading "Irans utenriksminister: USA må velge – våpenhvile eller fortsatt krig via Israel" [level=3]'
+            - generic:
+              - generic: Publisert klokken
+              - text: 19:29
+        - 'button "Netanyahu: Våpenhvileavtalen ble inngått «i fullt samarbeid» med Israel Publisert klokken 19:24 i Krigen i Midtøsten" [ref=e90]':
+          - generic:
+            - 'heading "Netanyahu: Våpenhvileavtalen ble inngått «i fullt samarbeid» med Israel" [level=3]'
+            - generic:
+              - generic: Publisert klokken
+              - text: 19:24
+              - generic: i
+              - text: Krigen i Midtøsten
+        - link "Se flere meldinger" [ref=e93] [cursor=pointer]:
+          - /url: https://www.nrk.no/nyheter
+          - text: Se flere meldinger
+          - img [ref=e94]
+      - button "Rull til høyre" [ref=e96]:
+        - img [ref=e97]
+      - button "Åpne" [ref=e99]:
+        - img [ref=e100]
+    - 'link "Merkelapp: SISTE Forsvarsministeren: – Eg har ikkje sagt at dei var levert" [ref=e106] [cursor=pointer]':
+      - /url: https://www.nrk.no/norge/forsvarsministeren-om-f-16-fly_-_-eg-har-ikkje-sagt-at-dei-var-levert-1.17838857
+      - figure [ref=e108]
+      - generic [ref=e109]:
+        - generic [ref=e110]:
+          - generic [ref=e111]: "Merkelapp:"
+          - img [ref=e113]
+          - generic [ref=e116]: SISTE
+        - 'heading "Forsvarsministeren: – Eg har ikkje sagt at dei var levert" [level=2] [ref=e117]':
+          - generic [ref=e118]:
+            - generic [ref=e119]: "Forsvarsministeren:"
+            - text: – Eg har ikkje sagt at dei var levert
+    - generic [ref=e121]:
+      - link "Hormuzstredet åpent? Ja, sier USA. Nei, sier Iran." [ref=e124] [cursor=pointer]:
+        - /url: https://www.nrk.no/urix/iran-om-apning-av-hormuzstredet_-_-begrenset-og-under-irans-kontroll-1.17838269
+        - figure [ref=e126]
+        - heading "Hormuzstredet åpent? Ja, sier USA. Nei, sier Iran." [level=2] [ref=e128]:
+          - generic [ref=e129]:
+            - generic [ref=e130]: Hormuzstredet åpent?
+            - text: Ja, sier USA. Nei, sier Iran.
+      - 'link "Det hvite hus: Skal diskutere Nato-uttrekkelse med Rutte" [ref=e133] [cursor=pointer]':
+        - /url: https://www.nrk.no/nyheter/det-hvite-hus_-trump-skal-diskutere-nato-uttrekkelse-med-rutte-1.17839240
+        - figure [ref=e135]
+        - 'heading "Det hvite hus: Skal diskutere Nato-uttrekkelse med Rutte" [level=2] [ref=e137]':
+          - generic [ref=e138]:
+            - generic [ref=e139]: "Det hvite hus:"
+            - text: Skal diskutere Nato-uttrekkelse med Rutte
+    - generic [ref=e141]:
+      - link "Tar med seg 40 astronauter til Norge" [ref=e144] [cursor=pointer]:
+        - /url: https://www.nrk.no/urix/40-astronauter-til-norge-for-a-inspirere-unge-1.17835850
+        - figure [ref=e146]
+        - heading "Tar med seg 40 astronauter til Norge" [level=2] [ref=e148]:
+          - generic [ref=e149]: Tar med seg 40 astronauter til Norge
+      - 'link "Friends-stjerne døde: Kvinne dømt til 15 års fengsel" [ref=e152] [cursor=pointer]':
+        - /url: https://www.nrk.no/nyheter/kvinne-domt-til-15-ars-fengsel-etter-at-skuespilleren-matthew-perry-dode-av-en-ketamin-overdose-1.17839254
+        - figure [ref=e154]
+        - 'heading "Friends-stjerne døde: Kvinne dømt til 15 års fengsel" [level=2] [ref=e156]':
+          - generic [ref=e157]:
+            - generic [ref=e158]: "Friends-stjerne døde:"
+            - text: Kvinne dømt til 15 års fengsel
+    - link "Verdt å se" [ref=e169] [cursor=pointer]:
+      - /url: https://tv.nrk.no/?utm_source=nrkno&utm_medium=banner_bestpaa_serier_tv&utm_campaign=bakemesterskapet-s3
+      - heading "Verdt å se" [level=2] [ref=e171]
+      - img [ref=e175]
+      - img [ref=e178]
+    - generic [ref=e181]:
+      - 'link "Innbrotsraid: Skal ha stole for 2,5 mill." [ref=e184] [cursor=pointer]':
+        - /url: https://www.nrk.no/vestland/innbrotsraid-pa-vestlandet_-to-menn-ma-mote-i-retten-1.17838306
+        - figure [ref=e186]
+        - 'heading "Innbrotsraid: Skal ha stole for 2,5 mill." [level=2] [ref=e188]':
+          - generic [ref=e189]:
+            - generic [ref=e190]: "Innbrotsraid:"
+            - text: Skal ha stole for 2,5 mill.
+      - 'link "Prisrekord: Knuser alt av hyttesalg" [ref=e193] [cursor=pointer]':
+        - /url: https://www.nrk.no/ostfold/prisrekord-i-skjaergarden_-hytteeiendom-i-ostfold-solgt-for-136-millioner-kroner-1.17838099
+        - figure [ref=e195]
+        - 'heading "Prisrekord: Knuser alt av hyttesalg" [level=2] [ref=e197]':
+          - generic [ref=e198]:
+            - generic [ref=e199]: "Prisrekord:"
+            - text: Knuser alt av hyttesalg
+    - generic [ref=e204]:
+      - 'link "Merkelapp: Terningkast 5 Film «Morsom, syrlig og provoserende» «The Drama»" [ref=e208] [cursor=pointer]':
+        - /url: https://www.nrk.no/filmpolitiet/anmeldelse_-_the-drama_-1.17838535
+        - figure [ref=e210]
+        - generic [ref=e211]:
+          - generic [ref=e212]:
+            - generic [ref=e213]: "Merkelapp: Terningkast 5"
+            - img [ref=e215]
+            - generic [ref=e218]: Film
+          - heading "«Morsom, syrlig og provoserende»" [level=2] [ref=e219]:
+            - generic [ref=e220]: «Morsom, syrlig og provoserende»
+          - paragraph [ref=e221]: «The Drama»
+      - generic [ref=e222]: NRK.no – nyheter, tv og radio fra Norge og hele verden
+    - generic [ref=e229]:
+      - heading "Nyheter fra ditt distrikt" [level=2] [ref=e230]
+      - generic [ref=e231]:
+        - link "Logg på for nyheter nærmere deg" [ref=e232] [cursor=pointer]:
+          - /url: https://innlogging.nrk.no/bruker/region?encodedExitUrl=https%3A%2F%2Fwww.nrk.no%2F%23ditt-distrikt&autoExit=True
+        - link "Hopp over distriktsliste" [ref=e233] [cursor=pointer]:
+          - /url: "#after-district-links"
+        - generic [ref=e234]:
+          - heading [level=2] [ref=e235]:
+            - generic [ref=e237]: Logg på og få nyheter nærmere deg
+          - generic [ref=e238]:
+            - img "Distriktsbilde" [ref=e240]
+            - img [ref=e241]
+        - list "Distrikter" [ref=e242]:
+          - listitem [ref=e243]:
+            - link "Agder" [ref=e244] [cursor=pointer]:
+              - /url: https://innlogging.nrk.no/bruker/region?encodedExitUrl=https%3A%2F%2Fwww.nrk.no%2F%23ditt-distrikt&autoExit=True
+              - generic [ref=e245]: Agder
+          - listitem [ref=e246]:
+            - link "Akershus" [ref=e247] [cursor=pointer]:
+              - /url: https://innlogging.nrk.no/bruker/region?encodedExitUrl=https%3A%2F%2Fwww.nrk.no%2F%23ditt-distrikt&autoExit=True
+              - generic [ref=e248]: Akershus
+          - listitem [ref=e249]:
+            - link "Buskerud" [ref=e250] [cursor=pointer]:
+              - /url: https://innlogging.nrk.no/bruker/region?encodedExitUrl=https%3A%2F%2Fwww.nrk.no%2F%23ditt-distrikt&autoExit=True
+              - generic [ref=e251]: Buskerud
+          - listitem [ref=e252]:
+            - link "Finnmark" [ref=e253] [cursor=pointer]:
+              - /url: https://innlogging.nrk.no/bruker/region?encodedExitUrl=https%3A%2F%2Fwww.nrk.no%2F%23ditt-distrikt&autoExit=True
+              - generic [ref=e254]: Finnmark
+          - listitem [ref=e255]:
+            - link "Innlandet" [ref=e256] [cursor=pointer]:
+              - /url: https://innlogging.nrk.no/bruker/region?encodedExitUrl=https%3A%2F%2Fwww.nrk.no%2F%23ditt-distrikt&autoExit=True
+              - generic [ref=e257]: Innlandet
+          - listitem [ref=e258]:
+            - link "Møre og Romsdal" [ref=e259] [cursor=pointer]:
+              - /url: https://innlogging.nrk.no/bruker/region?encodedExitUrl=https%3A%2F%2Fwww.nrk.no%2F%23ditt-distrikt&autoExit=True
+              - generic [ref=e260]: Møre og Romsdal
+          - listitem [ref=e261]:
+            - link "Nordland" [ref=e262] [cursor=pointer]:
+              - /url: https://innlogging.nrk.no/bruker/region?encodedExitUrl=https%3A%2F%2Fwww.nrk.no%2F%23ditt-distrikt&autoExit=True
+              - generic [ref=e263]: Nordland
+          - listitem [ref=e264]:
+            - link "Oslo" [ref=e265] [cursor=pointer]:
+              - /url: https://innlogging.nrk.no/bruker/region?encodedExitUrl=https%3A%2F%2Fwww.nrk.no%2F%23ditt-distrikt&autoExit=True
+              - generic [ref=e266]: Oslo
+          - listitem [ref=e267]:
+            - link "Rogaland" [ref=e268] [cursor=pointer]:
+              - /url: https://innlogging.nrk.no/bruker/region?encodedExitUrl=https%3A%2F%2Fwww.nrk.no%2F%23ditt-distrikt&autoExit=True
+              - generic [ref=e269]: Rogaland
+          - listitem [ref=e270]:
+            - link "Vestfold" [ref=e271] [cursor=pointer]:
+              - /url: https://innlogging.nrk.no/bruker/region?encodedExitUrl=https%3A%2F%2Fwww.nrk.no%2F%23ditt-distrikt&autoExit=True
+              - generic [ref=e272]: Vestfold
+          - listitem [ref=e273]:
+            - link "Vestland" [ref=e274] [cursor=pointer]:
+              - /url: https://innlogging.nrk.no/bruker/region?encodedExitUrl=https%3A%2F%2Fwww.nrk.no%2F%23ditt-distrikt&autoExit=True
+              - generic [ref=e275]: Vestland
+          - listitem [ref=e276]:
+            - link "Telemark" [ref=e277] [cursor=pointer]:
+              - /url: https://innlogging.nrk.no/bruker/region?encodedExitUrl=https%3A%2F%2Fwww.nrk.no%2F%23ditt-distrikt&autoExit=True
+              - generic [ref=e278]: Telemark
+          - listitem [ref=e279]:
+            - link "Troms" [ref=e280] [cursor=pointer]:
+              - /url: https://innlogging.nrk.no/bruker/region?encodedExitUrl=https%3A%2F%2Fwww.nrk.no%2F%23ditt-distrikt&autoExit=True
+              - generic [ref=e281]: Troms
+          - listitem [ref=e282]:
+            - link "Trøndelag" [ref=e283] [cursor=pointer]:
+              - /url: https://innlogging.nrk.no/bruker/region?encodedExitUrl=https%3A%2F%2Fwww.nrk.no%2F%23ditt-distrikt&autoExit=True
+              - generic [ref=e284]: Trøndelag
+          - listitem [ref=e285]:
+            - link "Østfold" [ref=e286] [cursor=pointer]:
+              - /url: https://innlogging.nrk.no/bruker/region?encodedExitUrl=https%3A%2F%2Fwww.nrk.no%2F%23ditt-distrikt&autoExit=True
+              - generic [ref=e287]: Østfold
+          - listitem [ref=e288]:
+            - link "Sápmi" [ref=e289] [cursor=pointer]:
+              - /url: https://innlogging.nrk.no/bruker/region?encodedExitUrl=https%3A%2F%2Fwww.nrk.no%2F%23ditt-distrikt&autoExit=True
+              - generic [ref=e290]: Sápmi
+        - paragraph [ref=e291]: Slutt på distriktsliste
+    - generic [ref=e293]:
+      - link "Klatrar fall 15 meter – stein kappa tauet" [ref=e296] [cursor=pointer]:
+        - /url: https://www.nrk.no/stor-oslo/klatrar-fall-15-meter-_-atvarar-om-laust-fjell-1.17838551
+        - figure [ref=e298]
+        - heading "Klatrar fall 15 meter – stein kappa tauet" [level=2] [ref=e300]:
+          - generic [ref=e301]: Klatrar fall 15 meter – stein kappa tauet
+      - link "Nord har tatt igjen våren i sør" [ref=e304] [cursor=pointer]:
+        - /url: https://www.nrk.no/nordland/rekordtidlig-var-i-nord-norge-_-har-kommet-like-langt-som-sorlandet-1.17836762
+        - figure [ref=e306]
+        - heading "Nord har tatt igjen våren i sør" [level=2] [ref=e308]:
+          - generic [ref=e309]: Nord har tatt igjen våren i sør
+      - 'link "Kastet inn i hagen til barnefamilie: Her blir bomben sprengt" [ref=e312] [cursor=pointer]':
+        - /url: https://www.nrk.no/norge/fem-personer-moter-i-retten-etter-bombefunn-i-fredrikstad-i-2024-1.17836339
+        - figure [ref=e314]
+        - 'heading "Kastet inn i hagen til barnefamilie: Her blir bomben sprengt" [level=2] [ref=e316]':
+          - generic [ref=e317]:
+            - generic [ref=e318]: "Kastet inn i hagen til barnefamilie:"
+            - text: Her blir bomben sprengt
+    - generic [ref=e320]: NRK.no – nyheter, tv og radio fra Norge og hele verden
+    - generic [ref=e322]:
+      - heading "Iran-krigen" [level=2] [ref=e323]:
+        - generic: Iran-krigen
+      - 'link "USA bekrefter: Libanon ikke en del av våpenhvilen" [ref=e326] [cursor=pointer]':
+        - /url: https://www.nrk.no/urix/libanesere-ser-til-iran-for-vapenhvile-1.17838234
+        - figure [ref=e328]
+        - 'heading "USA bekrefter: Libanon ikke en del av våpenhvilen" [level=3] [ref=e330]':
+          - generic [ref=e331]:
+            - generic [ref=e332]: "USA bekrefter:"
+            - text: Libanon ikke en del av våpenhvilen
+      - 'link "Varighet på video: 01:55 – Katastrofescener" [ref=e335] [cursor=pointer]':
+        - /url: https://www.nrk.no/video/-et-av-de-verste-angrepene-mot-libanon-paa-mange-aar_bb6b03b1-d985-4d09-bb9b-43dfe5920697
+        - figure [ref=e337]
+        - generic [ref=e338]:
+          - generic [ref=e339]:
+            - generic [ref=e340]: "Varighet på video:"
+            - img [ref=e342]
+            - generic [ref=e345]: 01:55
+          - heading "– Katastrofescener" [level=3] [ref=e346]:
+            - generic [ref=e347]: – Katastrofescener
+      - 'link "Merkelapp: Ytring Kommentar «Situasjonen for Trump ble nærmest umulig å stå i» Sigurd Falkenberg Mikkelsen Utenriksredaktør, NRK" [ref=e350] [cursor=pointer]':
+        - /url: https://www.nrk.no/ytring/en-seier-for-iran-1.17838203
+        - figure [ref=e352]
+        - generic [ref=e353]:
+          - generic [ref=e354]:
+            - generic [ref=e355]: "Merkelapp:"
+            - generic [ref=e356]:
+              - img [ref=e357]
+              - img [ref=e359]
+            - generic [ref=e361]:
+              - generic [ref=e362]: Ytring
+              - generic [ref=e363]: Kommentar
+          - heading "«Situasjonen for Trump ble nærmest umulig å stå i»" [level=3] [ref=e364]:
+            - generic [ref=e365]: «Situasjonen for Trump ble nærmest umulig å stå i»
+          - generic [ref=e366]:
+            - figure [ref=e368]
+            - generic [ref=e369]:
+              - text: Sigurd Falkenberg Mikkelsen
+              - generic [ref=e370]: Utenriksredaktør, NRK
+    - generic [ref=e372]:
+      - link "Avkreftar ny «Skam»-oppfølger" [ref=e375] [cursor=pointer]:
+        - /url: https://www.nrk.no/nyheter/nrk-avkreftar-ny-skam-oppfolger-1.17838947
+        - figure [ref=e377]
+        - heading "Avkreftar ny «Skam»-oppfølger" [level=2] [ref=e379]:
+          - generic [ref=e380]: Avkreftar ny «Skam»-oppfølger
+      - link "Stoltenberg lover flere dieselkutt" [ref=e383] [cursor=pointer]:
+        - /url: https://www.nrk.no/norge/rodgront-oppvaskmote-etter-_kaos-og-misnoye_-1.17838851
+        - figure [ref=e385]
+        - heading "Stoltenberg lover flere dieselkutt" [level=2] [ref=e387]:
+          - generic [ref=e388]: Stoltenberg lover flere dieselkutt
+    - link "NRK beklager manglende varsel" [ref=e393] [cursor=pointer]:
+      - /url: https://www.nrk.no/nyheter/nrk-beklager--1.17839074
+      - heading "NRK beklager manglende varsel" [level=2] [ref=e395]:
+        - generic [ref=e396]: NRK beklager manglende varsel
+    - generic [ref=e403]:
+      - generic [ref=e404]:
+        - heading "Daglige minispill og hjernetrim fra NRK" [level=2] [ref=e405]
+        - link "Flere spill" [ref=e406] [cursor=pointer]:
+          - /url: https://nrk.no/spill
+          - text: Flere spill
+          - img [ref=e408]
+      - list [ref=e412]:
+        - listitem [ref=e413]:
+          - link "Spill Kula" [ref=e414] [cursor=pointer]:
+            - /url: https://www.nrk.no/spill/kula-1.17599534
+            - img "Kula" [ref=e415]
+            - generic [ref=e416]: Spill
+        - listitem [ref=e417]:
+          - link "Spill Former" [ref=e418] [cursor=pointer]:
+            - /url: https://www.nrk.no/spill/former-1.17105310
+            - img "Former" [ref=e419]
+            - generic [ref=e420]: Spill
+        - listitem [ref=e421]:
+          - link "Spill Tvers" [ref=e422] [cursor=pointer]:
+            - /url: https://www.nrk.no/spill/tvers-1.17073958
+            - img "Tvers" [ref=e423]
+            - generic [ref=e424]: Spill
+        - listitem [ref=e425]:
+          - link "Spill Musikkquiz" [ref=e426] [cursor=pointer]:
+            - /url: https://www.nrk.no/spill/beat-for-beat-quiz-1.16677413
+            - img "Musikkquiz" [ref=e427]
+            - generic [ref=e428]: Spill
+        - listitem [ref=e429]:
+          - link "Spill Klassequizen" [ref=e430] [cursor=pointer]:
+            - /url: https://www.nrk.no/vestfoldogtelemark/xl/klassequizen-spillet-1.16103898
+            - img "Klassequizen" [ref=e431]
+            - generic [ref=e432]: Spill
+        - listitem [ref=e433]:
+          - link "Spill Straffekonk" [ref=e434] [cursor=pointer]:
+            - /url: https://www.nrk.no/spill/straffekonk-1.16022977
+            - img "Straffekonk" [ref=e435]
+            - generic [ref=e436]: Spill
+        - listitem [ref=e437]:
+          - link "Flere spill" [ref=e438] [cursor=pointer]:
+            - /url: https://nrk.no/spill
+            - text: Flere spill
+            - img [ref=e439]
+    - generic [ref=e442]: NRK.no – nyheter, tv og radio fra Norge og hele verden
+    - generic [ref=e444]:
+      - 'link "6 kroner forskjell: – Virker som tomme løfter" [ref=e447] [cursor=pointer]':
+        - /url: https://www.nrk.no/nordland/reagerer-pa-forskjellen-mellom-diesel-og-bensin-1.17838185
+        - figure [ref=e449]
+        - 'heading "6 kroner forskjell: – Virker som tomme løfter" [level=2] [ref=e451]':
+          - generic [ref=e452]:
+            - generic [ref=e453]: "6 kroner forskjell:"
+            - text: – Virker som tomme løfter
+      - 'link "Tiltalt for medvirkning til flere drap: Aktor ber om 14 års forvaring for 17-åring" [ref=e456] [cursor=pointer]':
+        - /url: https://www.nrk.no/rogaland/ber-om-forvaring-for-17-aring-1.17838015
+        - figure [ref=e458]
+        - 'heading "Tiltalt for medvirkning til flere drap: Aktor ber om 14 års forvaring for 17-åring" [level=2] [ref=e460]':
+          - generic [ref=e461]:
+            - generic [ref=e462]: "Tiltalt for medvirkning til flere drap:"
+            - text: Aktor ber om 14 års forvaring for 17-åring
+    - generic [ref=e469]:
+      - link "Politiet henlegger saken mot Kristjánsson" [ref=e472] [cursor=pointer]:
+        - /url: https://www.nrk.no/norge/henlegger-sak-mot-mimir-kristjansson-1.17838864
+        - figure [ref=e474]
+        - heading "Politiet henlegger saken mot Kristjánsson" [level=2] [ref=e476]:
+          - generic [ref=e477]: Politiet henlegger saken mot Kristjánsson
+      - 'link "Fjerner karakter: – Du havner ikke først i bunken" [ref=e480] [cursor=pointer]':
+        - /url: https://www.nrk.no/ostfold/tester-skole-uten-ordenskarakter_-laerere-og-elever-kritiske-1.17806337
+        - figure [ref=e482]
+        - 'heading "Fjerner karakter: – Du havner ikke først i bunken" [level=2] [ref=e484]':
+          - generic [ref=e485]:
+            - generic [ref=e486]: "Fjerner karakter:"
+            - text: – Du havner ikke først i bunken
+      - link "Forskning på moskéskoler overrasker" [ref=e489] [cursor=pointer]:
+        - /url: https://www.nrk.no/buskerud/ny-forskning-tar-oss-med-pa-innsiden-av-den-norske-moskeskolen-1.17811012
+        - figure [ref=e491]
+        - heading "Forskning på moskéskoler overrasker" [level=2] [ref=e493]:
+          - generic [ref=e494]: Forskning på moskéskoler overrasker
+    - 'link "Forsvarssjefen: Erkjenner at F-16-fly gitt til Ukraina ikke var flydyktige" [ref=e499] [cursor=pointer]':
+      - /url: https://www.nrk.no/nyheter/forsvarssjefen-erkjenner-at-f-16-fly-gitt-til-ukraina-ikke-var-flydyktige-1.17838595
+      - figure [ref=e501]
+      - 'heading "Forsvarssjefen: Erkjenner at F-16-fly gitt til Ukraina ikke var flydyktige" [level=2] [ref=e503]':
+        - generic [ref=e504]:
+          - generic [ref=e505]: "Forsvarssjefen:"
+          - text: Erkjenner at F-16-fly gitt til Ukraina ikke var flydyktige
+    - generic [ref=e509]:
+      - 'link "Planlegger storstilt utbygging: – Har egentlig lagt hele Oslo lufthavn på tegneblokka" [ref=e512] [cursor=pointer]':
+        - /url: https://www.nrk.no/stor-oslo/avinor-legger-fram-plan-for-stor-utbygging-pa-oslo-lufthavn-1.17837442
+        - figure [ref=e514]
+        - 'heading "Planlegger storstilt utbygging: – Har egentlig lagt hele Oslo lufthavn på tegneblokka" [level=2] [ref=e516]':
+          - generic [ref=e517]:
+            - generic [ref=e518]: "Planlegger storstilt utbygging:"
+            - text: – Har egentlig lagt hele Oslo lufthavn på tegneblokka
+      - 'link "Brannen på Bergensbanen: Vy bekrefter at samme vogner luktet brent dagen før" [ref=e521] [cursor=pointer]':
+        - /url: https://www.nrk.no/buskerud/brannen-pa-bergensbanen_-vy-bekrefter-sammenheng-med-hendelse-dagen-for-1.17838248
+        - figure [ref=e523]
+        - 'heading "Brannen på Bergensbanen: Vy bekrefter at samme vogner luktet brent dagen før" [level=2] [ref=e525]':
+          - generic [ref=e526]:
+            - generic [ref=e527]: "Brannen på Bergensbanen:"
+            - text: Vy bekrefter at samme vogner luktet brent dagen før
+    - generic [ref=e529]:
+      - heading "Iran-krigen" [level=2] [ref=e530]:
+        - generic: Iran-krigen
+      - link "Truer med 50 prosent straffetoll for land som selger våpen til Iran" [ref=e533] [cursor=pointer]:
+        - /url: https://www.nrk.no/nyheter/trump-truer-med-50-prosent-straffetoll-for-land-som-selger-vapen-til-iran-1.17838675
+        - figure [ref=e535]
+        - heading "Truer med 50 prosent straffetoll for land som selger våpen til Iran" [level=3] [ref=e537]:
+          - generic [ref=e538]: Truer med 50 prosent straffetoll for land som selger våpen til Iran
+      - 'link "Enige om våpenhvile i to uker: – Noe fundamentalt galt med måten han leder på" [ref=e541] [cursor=pointer]':
+        - /url: https://www.nrk.no/urix/usa-hevder-de-har-vunnet-krigen-1.17837879
+        - figure [ref=e543]
+        - 'heading "Enige om våpenhvile i to uker: – Noe fundamentalt galt med måten han leder på" [level=3] [ref=e545]':
+          - generic [ref=e546]:
+            - generic [ref=e547]: "Enige om våpenhvile i to uker:"
+            - text: – Noe fundamentalt galt med måten han leder på
+      - 'link "Hormuzstredet: De første skipene har kommet seg gjennom" [ref=e550] [cursor=pointer]':
+        - /url: https://www.nrk.no/nyheter/de-forste-skipene-har-kommet-seg-gjennom-hormuzstredet-1.17838413
+        - 'heading "Hormuzstredet: De første skipene har kommet seg gjennom" [level=3] [ref=e552]':
+          - generic [ref=e553]:
+            - generic [ref=e554]: "Hormuzstredet:"
+            - text: De første skipene har kommet seg gjennom
+    - generic [ref=e556]:
+      - link "Jordmødrer tyr til nye grep for å vekkje interesse" [ref=e559] [cursor=pointer]:
+        - /url: https://www.nrk.no/nordland/her-far-niandeklassingar-fodselskurs-_-hapet-er-a-rekruttere-nye-jordmodrer-1.17815966
+        - figure [ref=e562]
+        - heading "Jordmødrer tyr til nye grep for å vekkje interesse" [level=2] [ref=e566]:
+          - generic [ref=e567]: Jordmødrer tyr til nye grep for å vekkje interesse
+      - 'link "Avbrøt rakettoppskyting: Nå stenges fiskebåtene ute fra havet" [ref=e570] [cursor=pointer]':
+        - /url: https://www.nrk.no/nordland/fiskebat-avbrot-oppskyting-pa-andoya-_-na-stenges-de-ute-fra-havet-1.17838107
+        - figure [ref=e572]
+        - 'heading "Avbrøt rakettoppskyting: Nå stenges fiskebåtene ute fra havet" [level=2] [ref=e574]':
+          - generic [ref=e575]:
+            - generic [ref=e576]: "Avbrøt rakettoppskyting:"
+            - text: Nå stenges fiskebåtene ute fra havet
+    - 'link "Mars: Boligprisene steg med 0,4 prosent" [ref=e581] [cursor=pointer]':
+      - /url: https://www.nrk.no/nyheter/boligprisene-steg-med-0_4-prosent-i-mars-1.17838311
+      - figure [ref=e583]
+      - 'heading "Mars: Boligprisene steg med 0,4 prosent" [level=2] [ref=e585]':
+        - generic [ref=e586]:
+          - generic [ref=e587]: "Mars:"
+          - text: Boligprisene steg med 0,4 prosent
+    - generic [ref=e589]:
+      - heading "IRAN" [level=2] [ref=e590]:
+        - generic: IRAN
+      - link "Oppgang på børsene" [ref=e593] [cursor=pointer]:
+        - /url: https://www.nrk.no/urix/oljeanalytiker_-_-vil-ta-tid-for-bensinprisen-gar-ned.-1.17837961
+        - figure [ref=e595]
+        - heading "Oppgang på børsene" [level=3] [ref=e597]:
+          - generic [ref=e598]: Oppgang på børsene
+      - generic [ref=e601]:
+        - generic [ref=e602]:
+          - figure [ref=e603]
+          - generic [ref=e604]: Hør i NRK Radio
+        - generic [ref=e605]:
+          - generic [ref=e606]:
+            - generic [ref=e607]: "Merkelapp: Hør i NRK Radio"
+            - generic [ref=e609]: Podkast
+          - link "Vant Iran krigen nå?" [ref=e610] [cursor=pointer]:
+            - /url: https://radio.nrk.no/podkast/verden_paa_loerdag/l_f8f7c33a-eca3-42de-b7c3-3aeca3a2dee7
+            - heading "Vant Iran krigen nå?" [level=3] [ref=e611]:
+              - generic [ref=e612]: Vant Iran krigen nå?
+          - button "Følg i NRK Radio" [ref=e614] [cursor=pointer]:
+            - img [ref=e615]
+            - generic [ref=e617]: Følg i NRK Radio
+      - link "- Ikke det Netanyahu ønsket seg" [ref=e620] [cursor=pointer]:
+        - /url: https://www.nrk.no/video/--liten-tvil-om-at-dette-ikke-var-det-netanyahu-onsket-seg_02546115-ba54-4148-8c22-3708549b246a
+        - figure [ref=e622]
+        - heading "- Ikke det Netanyahu ønsket seg" [level=3] [ref=e624]:
+          - generic [ref=e625]: "- Ikke det Netanyahu ønsket seg"
+    - generic [ref=e627]:
+      - link "Politiet og banker hadde datatrøbbel" [ref=e630] [cursor=pointer]:
+        - /url: https://www.nrk.no/stor-oslo/stans-i-grensekontroll-_-ko-pa-oslo-lufthavn-1.17838101
+        - figure [ref=e632]
+        - heading "Politiet og banker hadde datatrøbbel" [level=2] [ref=e634]:
+          - generic [ref=e635]: Politiet og banker hadde datatrøbbel
+      - 'link "Romske Angel vil ha endring: – De har aldri hørt om oss" [ref=e638] [cursor=pointer]':
+        - /url: https://www.nrk.no/stor-oslo/romer-viser-vei_-_-det-er-en-historie-som-er-nodt-til-a-bli-hort-1.17830722
+        - figure [ref=e640]
+        - 'heading "Romske Angel vil ha endring: – De har aldri hørt om oss" [level=2] [ref=e642]':
+          - generic [ref=e643]:
+            - generic [ref=e644]: "Romske Angel vil ha endring:"
+            - text: – De har aldri hørt om oss
+    - generic [ref=e646]:
+      - heading "Kjernekraftutvalgets rapport" [level=2] [ref=e647]:
+        - generic [ref=e648]: Kjernekraftutvalgets rapport
+      - link "Mener kjernekraft i Norge er urealistisk før på 2040-tallet" [ref=e651] [cursor=pointer]:
+        - /url: https://www.nrk.no/klima/mener-det-vil-ta-minst-20-ar-for-det-kan-bli-kjernekraft-i-norge-1.17836747
+        - figure [ref=e653]
+        - heading "Mener kjernekraft i Norge er urealistisk før på 2040-tallet" [level=3] [ref=e655]:
+          - generic [ref=e656]: Mener kjernekraft i Norge er urealistisk før på 2040-tallet
+      - 'link "Industrien: – Lar oss ikke stoppe" [ref=e659] [cursor=pointer]':
+        - /url: https://www.nrk.no/rogaland/kjernekraftutvalget-sier-nei-til-kjernekraft-na-_-motes-med-blandede-reaksjoner-fra-industrien-1.17828244
+        - figure [ref=e661]
+        - 'heading "Industrien: – Lar oss ikke stoppe" [level=3] [ref=e663]':
+          - generic [ref=e664]:
+            - generic [ref=e665]: "Industrien:"
+            - text: – Lar oss ikke stoppe
+    - generic [ref=e667]:
+      - 'link "Lønnssjekken: Så mykje tener du samanlikna med andre" [ref=e670] [cursor=pointer]':
+        - /url: https://www.nrk.no/norge/lonnssjekken_-dette-er-vanleg-a-tena-i-yrket-ditt-1.17785212
+        - figure [ref=e672]
+        - 'heading "Lønnssjekken: Så mykje tener du samanlikna med andre" [level=2] [ref=e674]':
+          - generic [ref=e675]:
+            - generic [ref=e676]: "Lønnssjekken:"
+            - text: Så mykje tener du samanlikna med andre
+      - link "Finn (7) ble påkjørt og drept – sjåfør nekter straffskyld" [ref=e679] [cursor=pointer]:
+        - /url: https://www.nrk.no/sorlandet/sjafor-som-kjorte-pa-finn-_7_-erkjenner-ikke-straffskyld-i-retten-1.17834231
+        - figure [ref=e681]
+        - heading "Finn (7) ble påkjørt og drept – sjåfør nekter straffskyld" [level=2] [ref=e683]:
+          - generic [ref=e684]: Finn (7) ble påkjørt og drept – sjåfør nekter straffskyld
+    - generic [ref=e686]:
+      - 'link "Oslo: To personer pågrepet etter skyting" [ref=e689] [cursor=pointer]':
+        - /url: https://www.nrk.no/stor-oslo/skyting-pa-holmlia-_-to-personer-pagrepet-1.17837948
+        - figure [ref=e691]
+        - 'heading "Oslo: To personer pågrepet etter skyting" [level=2] [ref=e693]':
+          - generic [ref=e694]:
+            - generic [ref=e695]: "Oslo:"
+            - text: To personer pågrepet etter skyting
+      - 'link "Samisk hjelpetelefon: Ingen har ringt på seks måneder" [ref=e698] [cursor=pointer]':
+        - /url: https://www.nrk.no/sapmi/ingen-har-ringt-hjelpetelefon-pa-seks-maneder_-_-vi-lurer-pa-om-terskelen-er-for-hoy-1.17830420
+        - figure [ref=e700]
+        - 'heading "Samisk hjelpetelefon: Ingen har ringt på seks måneder" [level=2] [ref=e702]':
+          - generic [ref=e703]:
+            - generic [ref=e704]: "Samisk hjelpetelefon:"
+            - text: Ingen har ringt på seks måneder
+      - 'link "Fronter gigantsøksmål mot Telenor: – Dette er ikke bare mitt tap" [ref=e707] [cursor=pointer]':
+        - /url: https://www.nrk.no/dokumentar/xl/stort-soksmal-mot-telenor-_-kan-dreie-seg-om-milliarder-1.17835475
+        - figure [ref=e709]
+        - 'heading "Fronter gigantsøksmål mot Telenor: – Dette er ikke bare mitt tap" [level=2] [ref=e711]':
+          - generic [ref=e712]:
+            - generic [ref=e713]: "Fronter gigantsøksmål mot Telenor:"
+            - text: – Dette er ikke bare mitt tap
+    - generic [ref=e715]:
+      - generic [ref=e718]:
+        - generic [ref=e719]:
+          - figure [ref=e720]
+          - generic [ref=e721]: Se i NRK TV
+        - generic [ref=e722]:
+          - link "Når bestemor dør, må Lavina konfrontere faren med fortida" [ref=e723] [cursor=pointer]:
+            - /url: https://tv.nrk.no/program/KOIF75002223
+            - heading "Når bestemor dør, må Lavina konfrontere faren med fortida" [level=2] [ref=e724]:
+              - generic [ref=e725]: Når bestemor dør, må Lavina konfrontere faren med fortida
+          - paragraph [ref=e726]: «Lavina»
+          - button "Legg til i Mitt innhold" [ref=e728] [cursor=pointer]:
+            - img [ref=e729]
+            - generic [ref=e731]: Legg til i Mitt innhold
+      - link "John er kreftsyk – den beste behandlingen er for dyr" [ref=e734] [cursor=pointer]:
+        - /url: https://www.nrk.no/rogaland/beslutningsforum-seier-nei-for-andre-gong-til-_den-beste-kreftbehandlinga_-mot-beinmergskreft-1.17823907
+        - figure [ref=e736]
+        - heading "John er kreftsyk – den beste behandlingen er for dyr" [level=2] [ref=e738]:
+          - generic [ref=e739]: John er kreftsyk – den beste behandlingen er for dyr
+    - generic [ref=e742]:
+      - heading "NRK Forklarer" [level=2] [ref=e743]:
+        - generic [ref=e744]: NRK Forklarer
+      - generic [ref=e745]:
+        - 'link "Varighet på video: 01:52 Våpenhvile i Iran – hva med Norge og Trump?" [ref=e748] [cursor=pointer]':
+          - /url: https://www.nrk.no/video/nrk-forklarer-vaapenhvile-i-iran-men-hva-med-norge-og-trump_e04fe619-1669-45c3-b391-4d039cd582b6
+          - figure [ref=e750]
+          - generic [ref=e751]:
+            - generic [ref=e752]:
+              - generic [ref=e753]: "Varighet på video:"
+              - img [ref=e755]
+              - generic [ref=e758]: 01:52
+            - heading "Våpenhvile i Iran – hva med Norge og Trump?" [level=3] [ref=e759]:
+              - generic [ref=e760]: Våpenhvile i Iran – hva med Norge og Trump?
+        - 'link "Varighet på video: 01:43 Rødt-politiker truet med vold" [ref=e763] [cursor=pointer]':
+          - /url: https://www.nrk.no/video/nrk-forklarer-rodt-politiker-truet-med-vold_4c89c752-4bcb-4d96-9423-2db75e12b0e7
+          - figure [ref=e765]
+          - generic [ref=e766]:
+            - generic [ref=e767]:
+              - generic [ref=e768]: "Varighet på video:"
+              - img [ref=e770]
+              - generic [ref=e773]: 01:43
+            - heading "Rødt-politiker truet med vold" [level=3] [ref=e774]:
+              - generic [ref=e775]: Rødt-politiker truet med vold
+        - 'link "Varighet på video: 01:32 Alien og UFO-dokumenter skal frigis" [ref=e778] [cursor=pointer]':
+          - /url: https://www.nrk.no/video/nrk-forklarer-ufo-og-alien-filer-skal-offentliggjores_a6f3ec46-9db5-428c-b590-256801308a1a
+          - figure [ref=e780]
+          - generic [ref=e781]:
+            - generic [ref=e782]:
+              - generic [ref=e783]: "Varighet på video:"
+              - img [ref=e785]
+              - generic [ref=e788]: 01:32
+            - heading "Alien og UFO-dokumenter skal frigis" [level=3] [ref=e789]:
+              - generic [ref=e790]: Alien og UFO-dokumenter skal frigis
+        - 'link "Varighet på video: 01:03 Det danske valget" [ref=e793] [cursor=pointer]':
+          - /url: https://www.nrk.no/video/nrk-forklarer-det-danske-valget_9628d1f2-47ae-40f4-9657-54ee7144981a
+          - figure [ref=e795]
+          - generic [ref=e796]:
+            - generic [ref=e797]:
+              - generic [ref=e798]: "Varighet på video:"
+              - img [ref=e800]
+              - generic [ref=e803]: 01:03
+            - heading "Det danske valget" [level=3] [ref=e804]:
+              - generic [ref=e805]: Det danske valget
+        - 'link "Varighet på video: 01:28 Danske soldater var klare for konflikt" [ref=e808] [cursor=pointer]':
+          - /url: https://www.nrk.no/video/nrk-forklarer-danske-soldater-var-klare-for-konflikt_6248d1b7-440b-4c66-ac77-04c9c593defb
+          - figure [ref=e810]
+          - generic [ref=e811]:
+            - generic [ref=e812]:
+              - generic [ref=e813]: "Varighet på video:"
+              - img [ref=e815]
+              - generic [ref=e818]: 01:28
+            - heading "Danske soldater var klare for konflikt" [level=3] [ref=e819]:
+              - generic [ref=e820]: Danske soldater var klare for konflikt
+        - 'link "Varighet på video: 02:47 Hva kreves for å være en god soldat?" [ref=e823] [cursor=pointer]':
+          - /url: https://www.nrk.no/video/nrk-forklarer-forsvaret-merker-at-vi-er-i-daarligere-form_48bfe7a6-7eb3-4514-b217-90ab5f603f0c
+          - figure [ref=e825]
+          - generic [ref=e826]:
+            - generic [ref=e827]:
+              - generic [ref=e828]: "Varighet på video:"
+              - img [ref=e830]
+              - generic [ref=e833]: 02:47
+            - heading "Hva kreves for å være en god soldat?" [level=3] [ref=e834]:
+              - generic [ref=e835]: Hva kreves for å være en god soldat?
+        - 'link "Varighet på video: 01:12 Bagdad: USAs ambassade truffet" [ref=e838] [cursor=pointer]':
+          - /url: https://www.nrk.no/video/drone-treffer-usas-ambassade-i-bagdad_bd380c0a-18f7-4e44-a64f-80f4f650fe24
+          - figure [ref=e840]
+          - generic [ref=e841]:
+            - generic [ref=e842]:
+              - generic [ref=e843]: "Varighet på video:"
+              - img [ref=e845]
+              - generic [ref=e848]: 01:12
+            - 'heading "Bagdad: USAs ambassade truffet" [level=3] [ref=e849]':
+              - generic [ref=e850]:
+                - generic [ref=e851]: "Bagdad:"
+                - text: USAs ambassade truffet
+        - 'link "Varighet på video: 01:18 Slutt for verdens beste kokk" [ref=e854] [cursor=pointer]':
+          - /url: https://www.nrk.no/video/nrk-forklarer-noma-sjefen-gaar-av_ae36203d-1a6d-498d-9ca6-41b3eb1bba05
+          - figure [ref=e856]
+          - generic [ref=e857]:
+            - generic [ref=e858]:
+              - generic [ref=e859]: "Varighet på video:"
+              - img [ref=e861]
+              - generic [ref=e864]: 01:18
+            - heading "Slutt for verdens beste kokk" [level=3] [ref=e865]:
+              - generic [ref=e866]: Slutt for verdens beste kokk
+        - 'link "Varighet på video: 01:13 Høyre vil fjerne formuesskatten" [ref=e869] [cursor=pointer]':
+          - /url: https://www.nrk.no/video/nrk-forklarer-hoyre-vil-fjerne-formuesskatten_394c805d-4710-48eb-b182-04b7148e10cf
+          - figure [ref=e871]
+          - generic [ref=e872]:
+            - generic [ref=e873]:
+              - generic [ref=e874]: "Varighet på video:"
+              - img [ref=e876]
+              - generic [ref=e879]: 01:13
+            - heading "Høyre vil fjerne formuesskatten" [level=3] [ref=e880]:
+              - generic [ref=e881]: Høyre vil fjerne formuesskatten
+      - button "Rull til høyre" [ref=e882] [cursor=pointer]:
+        - img [ref=e883]
+    - generic [ref=e886]:
+      - heading "FORMKURVEN" [level=2] [ref=e887]:
+        - generic: FORMKURVEN
+      - 'link "Illustrasjon av en jublende Erling Braut Haaland Landslaget nå: VM-gutta er i jubelform! Grafikk som viser endringen i form over tid. Følg spillerne uke for uke" [ref=e893] [cursor=pointer]':
+        - /url: https://www.nrk.no/spesial/folg-spillernes-form-mot-vm-1.17813317?utm_source=lag-plugg
+        - img "Illustrasjon av en jublende Erling Braut Haaland" [ref=e895]
+        - generic [ref=e896]:
+          - paragraph [ref=e897]:
+            - img [ref=e898]
+            - text: "Landslaget nå:"
+          - paragraph [ref=e900]: VM-gutta er i jubelform!
+        - img "Grafikk som viser endringen i form over tid." [ref=e902]
+        - generic [ref=e917]:
+          - img [ref=e918]
+          - paragraph [ref=e920]: Følg spillerne uke for uke
+    - generic [ref=e922]:
+      - link "Kommunar har halde milliardsum om kjernekraft hemmeleg" [ref=e925] [cursor=pointer]:
+        - /url: https://www.nrk.no/klima/kjernekraft-kan-gi-ny-energi-pavirke-klima-og-gi-kommuner-inntekter---hemmeleghald-skapar-kritikk-1.17820734
+        - figure [ref=e927]
+        - heading "Kommunar har halde milliardsum om kjernekraft hemmeleg" [level=2] [ref=e929]:
+          - generic [ref=e930]: Kommunar har halde milliardsum om kjernekraft hemmeleg
+      - 'link "Krisepakker: Forsker ber politikerne holde seg unna" [ref=e933] [cursor=pointer]':
+        - /url: https://www.nrk.no/norge/milliarddryss-fra-staten-_-forsker-frykter-krisepakkesirkel-1.17837021
+        - figure [ref=e935]
+        - 'heading "Krisepakker: Forsker ber politikerne holde seg unna" [level=2] [ref=e937]':
+          - generic [ref=e938]:
+            - generic [ref=e939]: "Krisepakker:"
+            - text: Forsker ber politikerne holde seg unna
+    - generic [ref=e941]:
+      - 'link "Dobbeltrollene florerer i Sykehus-Norge: – Det er veldig rart" [ref=e944] [cursor=pointer]':
+        - /url: https://www.nrk.no/nordland/disse-styrer-sykehus-norge_-sjekk-lista-over-dobbeltroller-1.17828179
+        - figure [ref=e946]
+        - 'heading "Dobbeltrollene florerer i Sykehus-Norge: – Det er veldig rart" [level=2] [ref=e948]':
+          - generic [ref=e949]:
+            - generic [ref=e950]: "Dobbeltrollene florerer i Sykehus-Norge:"
+            - text: – Det er veldig rart
+      - 'link "Brann på Bergensbanen: Undersøker sammenheng med hendelse dagen før" [ref=e953] [cursor=pointer]':
+        - /url: https://www.nrk.no/buskerud/brann-pa-tog-fra-bergen-til-oslo-1.17837548
+        - figure [ref=e955]
+        - 'heading "Brann på Bergensbanen: Undersøker sammenheng med hendelse dagen før" [level=2] [ref=e957]':
+          - generic [ref=e958]:
+            - generic [ref=e959]: "Brann på Bergensbanen:"
+            - text: Undersøker sammenheng med hendelse dagen før
+    - generic [ref=e961]:
+      - 'link "Skuleelev omkom i båtulykke: – Folk har vore i sjokk" [ref=e964] [cursor=pointer]':
+        - /url: https://www.nrk.no/nordland/ein-av-dei-omkomne-i-batulykka-i-lofoten-var-elev-ved-barneskulen-1.17837035
+        - figure [ref=e966]
+        - 'heading "Skuleelev omkom i båtulykke: – Folk har vore i sjokk" [level=2] [ref=e968]':
+          - generic [ref=e969]:
+            - generic [ref=e970]: "Skuleelev omkom i båtulykke:"
+            - text: – Folk har vore i sjokk
+      - link "Slik kan slitsomme kollegaer påvirke helsa di" [ref=e973] [cursor=pointer]:
+        - /url: https://www.nrk.no/trondelag/negative-sosiale-relasjoner-kan-fremskynde-aldringsprosessen-og-oke-risiko-for-sykdom_-viser-studie-1.17816500
+        - figure [ref=e975]
+        - heading "Slik kan slitsomme kollegaer påvirke helsa di" [level=2] [ref=e977]:
+          - generic [ref=e978]: Slik kan slitsomme kollegaer påvirke helsa di
+      - link "Norge lovet Ukraina F-16-fly – kom i kasser" [ref=e981] [cursor=pointer]:
+        - /url: https://www.nrk.no/norge/norske-f-16-til-ukraina-har-enna-ikke-kommet-fram-1.17837044
+        - figure [ref=e983]
+        - heading "Norge lovet Ukraina F-16-fly – kom i kasser" [level=2] [ref=e985]:
+          - generic [ref=e986]: Norge lovet Ukraina F-16-fly – kom i kasser
+    - generic [ref=e988]:
+      - 'link "Merkelapp: Ytring Kommentar «Medisiner er ikke impulskjøp eller smågodt» Dara Obaid Masterstudent i farmasi, UiO" [ref=e991] [cursor=pointer]':
+        - /url: https://www.nrk.no/ytring/apoteket-er-ikke-en-kiosk-1.17815984
+        - figure [ref=e993]
+        - generic [ref=e994]:
+          - generic [ref=e995]:
+            - generic [ref=e996]: "Merkelapp:"
+            - generic [ref=e997]:
+              - img [ref=e998]
+              - img [ref=e1000]
+            - generic [ref=e1002]:
+              - generic [ref=e1003]: Ytring
+              - generic [ref=e1004]: Kommentar
+          - heading "«Medisiner er ikke impulskjøp eller smågodt»" [level=2] [ref=e1005]:
+            - generic [ref=e1006]: «Medisiner er ikke impulskjøp eller smågodt»
+          - generic [ref=e1008]:
+            - text: Dara Obaid
+            - generic [ref=e1009]: Masterstudent i farmasi, UiO
+      - link "Krever dieselkutt" [ref=e1012] [cursor=pointer]:
+        - /url: https://www.nrk.no/norge/kaller-inn-stoltenberg-_-krever-dieselkutt-na-1.17837307
+        - figure [ref=e1014]
+        - heading "Krever dieselkutt" [level=2] [ref=e1016]:
+          - generic [ref=e1017]: Krever dieselkutt
+    - generic [ref=e1020]:
+      - link "Øyelege advarer mot solbrille-felle" [ref=e1023] [cursor=pointer]:
+        - /url: https://www.nrk.no/ostfold/advarer-mot-billige-solbriller-fra-utenlandske-nettsider-1.17827353
+        - figure [ref=e1025]
+        - heading "Øyelege advarer mot solbrille-felle" [level=2] [ref=e1027]:
+          - generic [ref=e1028]: Øyelege advarer mot solbrille-felle
+      - 'link "Rekordvarmt i mars: – Slått med overraskende mye" [ref=e1031] [cursor=pointer]':
+        - /url: https://www.nrk.no/mr/meteorologisk-institutt-melder-at-mars-ble-rekordvarm-1.17837344
+        - figure [ref=e1033]
+        - 'heading "Rekordvarmt i mars: – Slått med overraskende mye" [level=2] [ref=e1035]':
+          - generic [ref=e1036]:
+            - generic [ref=e1037]: "Rekordvarmt i mars:"
+            - text: – Slått med overraskende mye
+    - generic [ref=e1039]: NRK.no – nyheter, tv og radio fra Norge og hele verden
+    - generic [ref=e1041]:
+      - 'link "Læreren satte seg på «Jens»: – Vi merket at han ikke hadde det bra" [ref=e1044] [cursor=pointer]':
+        - /url: https://www.nrk.no/sorlandet/xl/_jens_-_14_-ble-innestengt-og-holdt-nede-pa-skolen-_-vet-ikke-hvor-ofte-det-skjer-1.17810973
+        - figure [ref=e1046]
+        - 'heading "Læreren satte seg på «Jens»: – Vi merket at han ikke hadde det bra" [level=2] [ref=e1048]':
+          - generic [ref=e1049]:
+            - generic [ref=e1050]: "Læreren satte seg på «Jens»:"
+            - text: – Vi merket at han ikke hadde det bra
+      - 'link "Skredtragedien i Hemsedal: Vennene reddet liv i kaoset" [ref=e1053] [cursor=pointer]':
+        - /url: https://www.nrk.no/buskerud/skredtragedien-i-hemsedal_-vennene-reddet-liv-i-kaoset-1.17836961
+        - figure [ref=e1055]
+        - 'heading "Skredtragedien i Hemsedal: Vennene reddet liv i kaoset" [level=2] [ref=e1057]':
+          - generic [ref=e1058]:
+            - generic [ref=e1059]: "Skredtragedien i Hemsedal:"
+            - text: Vennene reddet liv i kaoset
+    - generic [ref=e1061]:
+      - 'link "Kan jobbe 12 døgn i strekk: Dronebåt er vårt nye våpen mot ødeleggelser under vann" [ref=e1064] [cursor=pointer]':
+        - /url: https://www.nrk.no/sorlandet/flytende-forskningsstasjon_-kartlegger-havbunn-i-rekordfart-1.17811514
+        - figure [ref=e1066]
+        - 'heading "Kan jobbe 12 døgn i strekk: Dronebåt er vårt nye våpen mot ødeleggelser under vann" [level=2] [ref=e1068]':
+          - generic [ref=e1069]:
+            - generic [ref=e1070]: "Kan jobbe 12 døgn i strekk:"
+            - text: Dronebåt er vårt nye våpen mot ødeleggelser under vann
+      - link "Kanye West nektet innreise – festival avlyses" [ref=e1073] [cursor=pointer]:
+        - /url: https://www.nrk.no/nyheter/bbc_-festival-avlyses-etter-at-kanye-west-ikke-far-reise-inn-til-storbritannia--1.17837291
+        - figure [ref=e1075]
+        - heading "Kanye West nektet innreise – festival avlyses" [level=2] [ref=e1077]:
+          - generic [ref=e1078]: Kanye West nektet innreise – festival avlyses
+      - 'link "Drapet på Kampen: Familien uenig med tiltalen" [ref=e1081] [cursor=pointer]':
+        - /url: https://www.nrk.no/stor-oslo/drapet-pa-kampen_-18-aring-tiltalt-1.17766014
+        - figure [ref=e1083]
+        - 'heading "Drapet på Kampen: Familien uenig med tiltalen" [level=2] [ref=e1085]':
+          - generic [ref=e1086]:
+            - generic [ref=e1087]: "Drapet på Kampen:"
+            - text: Familien uenig med tiltalen
+    - generic [ref=e1089]:
+      - link "Tapte mot kommunen i retten – no må dei flytte" [ref=e1092] [cursor=pointer]:
+        - /url: https://www.nrk.no/innlandet/egil-andre-og-bente-tapte-i-tingretten_-no-ma-dei-flytte-1.17837205
+        - figure [ref=e1094]
+        - heading "Tapte mot kommunen i retten – no må dei flytte" [level=2] [ref=e1096]:
+          - generic [ref=e1097]: Tapte mot kommunen i retten – no må dei flytte
+      - link "Fire sikta etter mistenkelig dødsfall i Trondheim" [ref=e1100] [cursor=pointer]:
+        - /url: https://www.nrk.no/trondelag/mistenkeleg-dodsfall-i-trondheim_-_-alvorlege-straffbare-forhold-1.17805609
+        - figure [ref=e1102]
+        - heading "Fire sikta etter mistenkelig dødsfall i Trondheim" [level=2] [ref=e1104]:
+          - generic [ref=e1105]: Fire sikta etter mistenkelig dødsfall i Trondheim
+    - generic [ref=e1107]:
+      - 'link "Sliter på målingene: Slik vil Vance redde Orban" [ref=e1110] [cursor=pointer]':
+        - /url: https://www.nrk.no/urix/j.d.-vance-besoker-orban-i-ungarn-1.17836721
+        - figure [ref=e1112]
+        - 'heading "Sliter på målingene: Slik vil Vance redde Orban" [level=2] [ref=e1114]':
+          - generic [ref=e1115]:
+            - generic [ref=e1116]: "Sliter på målingene:"
+            - text: Slik vil Vance redde Orban
+      - 'link "Sendte truende meldinger: Har «veldig lite lyst» til å sitte på Stortinget" [ref=e1119] [cursor=pointer]':
+        - /url: https://www.nrk.no/norge/kristjanson-om-truende-meldinger_---det-klikka-for-meg-1.17836650
+        - figure [ref=e1121]
+        - 'heading "Sendte truende meldinger: Har «veldig lite lyst» til å sitte på Stortinget" [level=2] [ref=e1123]':
+          - generic [ref=e1124]:
+            - generic [ref=e1125]: "Sendte truende meldinger:"
+            - text: Har «veldig lite lyst» til å sitte på Stortinget
+  - contentinfo [ref=e1128]:
+    - region "Hjelp, tjenester og kontaktinformasjon" [ref=e1129]:
+      - generic [ref=e1130]:
+        - generic [ref=e1131]:
+          - generic [ref=e1132]:
+            - link "NRK" [ref=e1133] [cursor=pointer]:
+              - /url: https://www.nrk.no
+              - img [ref=e1134]
+              - generic [ref=e1136]: NRK
+            - list "Informasjon om sideredaktør" [ref=e1137]:
+              - listitem [ref=e1138]:
+                - text: "Kontakt NRK:"
+                - link "23 04 70 00" [ref=e1139] [cursor=pointer]:
+                  - /url: tel:23 04 70 00
+            - generic [ref=e1140]:
+              - link "NRK arbeider etter Vær Varsom-plakatens regler for god presseskikk. Klikk for mer informasjon." [ref=e1141] [cursor=pointer]:
+                - /url: https://presse.no/pfu/etiske-regler/vaer-varsom-plakaten/
+                - img [ref=e1142]
+              - link "NRK følger redaktørplakaten. Les mer på Norsk Redaktørforenings nettsider." [ref=e1146] [cursor=pointer]:
+                - /url: https://www.redaktor.no/ressurser/etiske-og-juridiske-rammeverk/redaktorplakaten
+                - img [ref=e1147]
+            - link "Nyhetstips 03030" [ref=e1166] [cursor=pointer]:
+              - /url: https://www.nrk.no/03030/
+              - generic [ref=e1167]: Nyhetstips 03030
+              - img [ref=e1169]
+          - generic [ref=e1171]:
+            - generic [ref=e1173]:
+              - heading "Kontakt" [level=3] [ref=e1174]
+              - list [ref=e1175]:
+                - listitem [ref=e1176]:
+                  - link "Om NRK" [ref=e1177] [cursor=pointer]:
+                    - /url: https://www.nrk.no/informasjon/
+                    - img [ref=e1179]
+                    - text: Om NRK
+                - listitem [ref=e1181]:
+                  - link "Kontakt NRK" [ref=e1182] [cursor=pointer]:
+                    - /url: https://info.nrk.no/kontakt/
+                    - img [ref=e1184]
+                    - text: Kontakt NRK
+                - listitem [ref=e1186]:
+                  - link "Lisens" [ref=e1187] [cursor=pointer]:
+                    - /url: https://www.nrk.no/lisens/
+                    - img [ref=e1189]
+                    - text: Lisens
+                - listitem [ref=e1191]:
+                  - link "Publikum i NRK" [ref=e1192] [cursor=pointer]:
+                    - /url: https://www.nrk.no/publikum/
+                    - img [ref=e1194]
+                    - text: Publikum i NRK
+                - listitem [ref=e1196]:
+                  - link "Delta i NRK-programmer" [ref=e1197] [cursor=pointer]:
+                    - /url: https://www.nrk.no/deltaker/
+                    - img [ref=e1199]
+                    - text: Delta i NRK-programmer
+                - listitem [ref=e1201]:
+                  - link "Jobb i NRK" [ref=e1202] [cursor=pointer]:
+                    - /url: https://info.nrk.no/stilling/
+                    - img [ref=e1204]
+                    - text: Jobb i NRK
+                - listitem [ref=e1206]:
+                  - link "Presse" [ref=e1207] [cursor=pointer]:
+                    - /url: https://www.nrk.no/presse/
+                    - img [ref=e1209]
+                    - text: Presse
+            - generic [ref=e1212]:
+              - heading "Hjelp" [level=3] [ref=e1213]
+              - list [ref=e1214]:
+                - listitem [ref=e1215]:
+                  - link "Brukerstøtte" [ref=e1216] [cursor=pointer]:
+                    - /url: https://info.nrk.no/
+                    - img [ref=e1218]
+                    - text: Brukerstøtte
+                - listitem [ref=e1220]:
+                  - link "Tilgjengelighet" [ref=e1221] [cursor=pointer]:
+                    - /url: https://info.nrk.no/tilgjengelighet/
+                    - img [ref=e1223]
+                    - text: Tilgjengelighet
+                - listitem [ref=e1225]:
+                  - link "Personvern" [ref=e1226] [cursor=pointer]:
+                    - /url: https://info.nrk.no/personvernerklaering/
+                    - img [ref=e1228]
+                    - text: Personvern
+                - listitem [ref=e1230]:
+                  - link "Informasjonskapsler (cookies)" [ref=e1231] [cursor=pointer]:
+                    - /url: https://info.nrk.no/informasjonskapsler/
+                    - img [ref=e1233]
+                    - text: Informasjonskapsler (cookies)
+            - generic [ref=e1236]:
+              - heading "Tjenester" [level=3] [ref=e1237]
+              - list [ref=e1238]:
+                - listitem [ref=e1239]:
+                  - link "Yr" [ref=e1240] [cursor=pointer]:
+                    - /url: https://www.yr.no
+                    - img [ref=e1242]
+                    - text: Yr
+                - listitem [ref=e1244]:
+                  - link "NRK Skole" [ref=e1245] [cursor=pointer]:
+                    - /url: https://www.nrk.no/skole/
+                    - img [ref=e1247]
+                    - text: NRK Skole
+            - generic [ref=e1250]:
+              - heading "Produksjon" [level=3] [ref=e1251]
+              - list [ref=e1252]:
+                - listitem [ref=e1253]:
+                  - link "Eksterne produksjoner" [ref=e1254] [cursor=pointer]:
+                    - /url: https://www.nrk.no/eksternproduksjon/
+                    - img [ref=e1256]
+                    - text: Eksterne produksjoner
+                - listitem [ref=e1258]:
+                  - link "Retningslinjer og design" [ref=e1259] [cursor=pointer]:
+                    - /url: https://www.nrk.no/retningslinjer/
+                    - img [ref=e1261]
+                    - text: Retningslinjer og design
+            - generic [ref=e1264]:
+              - heading "Salg" [level=3] [ref=e1265]
+              - list [ref=e1266]:
+                - listitem [ref=e1267]:
+                  - link "Spons og salg" [ref=e1268] [cursor=pointer]:
+                    - /url: https://www.nrk.no/salg/
+                    - img [ref=e1270]
+                    - text: Spons og salg
+        - link "Til toppen" [ref=e1273] [cursor=pointer]:
+          - /url: "#innhold"
+          - img [ref=e1275]
+          - text: Til toppen
+    - generic [ref=e1277]:
+      - link "Gå til forsiden - NRK.no" [ref=e1278] [cursor=pointer]:
+        - /url: https://www.nrk.no
+        - img [ref=e1279]
+        - generic [ref=e1281]: Gå til forsiden - NRK.no
+      - link "Opphavsrett NRK © 2025" [ref=e1282] [cursor=pointer]:
+        - /url: https://www.nrk.no/etikk/opphavsrett-pa-nrk.no-1.2843522
+      - 'link "Ansvarlig redaktør: Vibeke Fürst Haugen Nettsjef: Dyveke Sandtorv Nilssen (Konst.)" [ref=e1283] [cursor=pointer]':
+        - /url: https://www.nrk.no/etikk/redaktoransvar-pa-nrk.no-1.2843526
+        - generic [ref=e1284]: "Ansvarlig redaktør: Vibeke Fürst Haugen"
+        - generic [ref=e1285]: "Nettsjef: Dyveke Sandtorv Nilssen (Konst.)"

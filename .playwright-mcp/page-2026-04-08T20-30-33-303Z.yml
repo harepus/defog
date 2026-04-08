@@ -1,0 +1,42 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - generic [ref=e3]:
+      - img [ref=e4]
+      - generic [ref=e10]: Defog
+    - paragraph [ref=e11]: Fjern støyen fra nyhetsbildet
+  - generic [ref=e12]:
+    - generic [ref=e13]: —
+    - generic [ref=e14]: ·
+    - generic [ref=e15]: 0 artikler skjult
+  - paragraph [ref=e16]: "Tips: Slå AV kategorier du vil skjule."
+  - generic [ref=e17]:
+    - generic [ref=e18]:
+      - generic [ref=e19] [cursor=pointer]: Sport
+      - generic [ref=e20]:
+        - checkbox "Sport" [checked]
+    - generic [ref=e22]:
+      - generic [ref=e23] [cursor=pointer]: Sladder / Rampelys
+      - generic [ref=e24]:
+        - checkbox "Sladder / Rampelys" [checked]
+    - generic [ref=e26]:
+      - generic [ref=e27] [cursor=pointer]: Nyheter
+      - generic [ref=e28]:
+        - checkbox "Nyheter" [checked]
+    - generic [ref=e30]:
+      - generic [ref=e31] [cursor=pointer]: Økonomi
+      - generic [ref=e32]:
+        - checkbox "Økonomi" [checked]
+    - generic [ref=e34]:
+      - generic [ref=e35] [cursor=pointer]: Kultur / Underholdning
+      - generic [ref=e36]:
+        - checkbox "Kultur / Underholdning" [checked]
+    - generic [ref=e38]:
+      - generic [ref=e39] [cursor=pointer]: Debatt / Meninger
+      - generic [ref=e40]:
+        - checkbox "Debatt / Meninger" [checked]
+    - generic [ref=e42]:
+      - generic [ref=e43] [cursor=pointer]: AI-generert innhold
+      - generic [ref=e44]:
+        - checkbox "AI-generert innhold" [checked]
+  - link "☕ Støtt Defog" [ref=e47] [cursor=pointer]:
+    - /url: https://buymeacoffee.com/defog

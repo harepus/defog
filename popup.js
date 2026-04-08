@@ -57,17 +57,20 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // Listen for stats from content script
-  chrome.runtime.onMessage.addListener((msg) => {
-    if (msg.type === "stats" || msg.type === "updateBadge") {
-      hiddenCountEl.textContent = msg.count || 0;
+  // Request stats via direct callback — most reliable approach
+  chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
+    if (tabs[0]) {
+      chrome.tabs.sendMessage(tabs[0].id, { type: "getStats" }, (response) => {
+        if (chrome.runtime.lastError) return; // tab not ready / no content script
+        if (response) hiddenCountEl.textContent = response.count || 0;
+      });
     }
   });
 
-  // Request stats
-  chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
-    if (tabs[0]) {
-      chrome.tabs.sendMessage(tabs[0].id, { type: "getStats" }).catch(() => {});
+  // Also listen for proactive updateBadge messages while popup is open
+  chrome.runtime.onMessage.addListener((msg) => {
+    if (msg.type === "updateBadge") {
+      hiddenCountEl.textContent = msg.count || 0;
     }
   });
 });
