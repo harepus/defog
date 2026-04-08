@@ -399,8 +399,8 @@
 
     /* --- HOW IT WORKS --- */
     .how {
-      background: var(--ink);
-      color: #fff;
+      background: var(--light-2);
+      color: var(--text);
       padding: 6rem 1.5rem;
     }
 
@@ -415,8 +415,12 @@
       font-weight: 700;
       font-size: clamp(1.8rem, 4vw, 2.4rem);
       letter-spacing: -0.02em;
-      margin-bottom: 3.5rem;
+      margin-bottom: 1rem;
+      color: var(--text);
     }
+
+    .how-inner > .section-badge { margin-bottom: 1rem; }
+    .how-inner > h2 { margin-bottom: 3.5rem; }
 
     .steps {
       display: flex;
@@ -462,7 +466,7 @@
 
     .step p {
       font-size: 0.88rem;
-      color: #9CA3AF;
+      color: var(--text-muted);
       line-height: 1.55;
     }
 
@@ -727,6 +731,7 @@
   <!-- HOW IT WORKS -->
   <section class="how" id="hvordan">
     <div class="how-inner">
+      <span class="section-badge">Slik fungerer det</span>
       <h2>Tre steg til klarere nyheter</h2>
       <div class="steps">
         <div class="step">
