@@ -9,34 +9,99 @@
   <meta property="og:description" content="Gratis Chrome-utvidelse som skjuler sport, sladder og AI-slop fra norske nyhetssider.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://defog.cloud">
+  <meta name="theme-color" content="#111111">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;0,9..144,800;1,9..144,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&amp;family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;0,9..144,800;1,9..144,400&amp;display=swap" rel="stylesheet">
   <style>
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
     :root {
-      --sun: #FBBF24;
-      --sun-deep: #F59E0B;
-      --sun-glow: #FDE68A;
-      --fog: #9CA3AF;
-      --fog-light: #D1D5DB;
-      --ink: #111111;
-      --ink-soft: #374151;
-      --ink-muted: #6B7280;
-      --paper: #FAFAF9;
-      --card: #FFFFFF;
-      --border: #E5E7EB;
+      --dark-bg:    #0e0e11;
+      --amber:      #f59e0b;
+      --amber-deep: #d97706;
+      --amber-glow: rgba(245,158,11,0.22);
+      --amber-light:#fef3c7;
+      --light-1:    #ffffff;
+      --light-2:    #f3f4f6;
+      --text:       #111827;
+      --text-soft:  #374151;
+      --text-muted: #6b7280;
+      --text-fog:   #71717a;
+      --border:     #e5e7eb;
+      --zinc-off:   #e5e7eb;
+    }
+
+    .section-badge {
+      display: inline-block;
+      background: var(--amber-light);
+      color: var(--amber-deep);
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: 100px;
+      margin-bottom: 14px;
+    }
+
+    .transition-gradient {
+      height: 200px;
+      background: linear-gradient(180deg,
+        #0e0e11 0%,
+        #151209 25%,
+        #251a05 50%,
+        #f5f0e8 78%,
+        #f3f4f6 100%
+      );
+      position: relative;
+      overflow: hidden;
+    }
+
+    .transition-burst {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 400px;
+      height: 120px;
+      background: radial-gradient(ellipse,
+        rgba(245,158,11,0.28) 0%,
+        rgba(245,158,11,0.1) 45%,
+        transparent 75%
+      );
+      pointer-events: none;
     }
 
     html { scroll-behavior: smooth; }
 
+    .skip-link {
+      position: absolute;
+      top: -48px;
+      left: 12px;
+      background: var(--ink);
+      color: #fff;
+      padding: 0.6rem 0.9rem;
+      border-radius: 8px;
+      z-index: 20;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+    .skip-link:focus-visible { top: 12px; }
+
     body {
       font-family: 'DM Sans', sans-serif;
-      color: var(--ink);
-      background: var(--paper);
+      color: var(--text);
+      background: var(--light-1);
       -webkit-font-smoothing: antialiased;
       overflow-x: hidden;
+    }
+
+    a:focus-visible,
+    button:focus-visible {
+      outline: 3px solid var(--sun-deep);
+      outline-offset: 3px;
     }
 
     /* --- HERO --- */
@@ -70,19 +135,6 @@
       position: relative;
       z-index: 1;
       max-width: 680px;
-    }
-
-    /* Sun icon */
-    .sun-icon {
-      width: 72px;
-      height: 72px;
-      margin: 0 auto 2rem;
-      animation: rise 1s ease-out both;
-    }
-
-    @keyframes rise {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
     }
 
     .hero h1 {
@@ -155,36 +207,6 @@
     }
 
     .btn svg { width: 18px; height: 18px; flex-shrink: 0; }
-
-    /* Fog decoration at bottom of hero */
-    .fog-strips {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      height: 120px;
-      pointer-events: none;
-      z-index: 0;
-      overflow: hidden;
-    }
-
-    .fog-strip {
-      position: absolute;
-      height: 6px;
-      border-radius: 100px;
-      background: var(--fog-light);
-      opacity: 0.4;
-      animation: drift 20s ease-in-out infinite alternate;
-    }
-    .fog-strip:nth-child(1) { width: 300px; bottom: 80px; left: 10%; animation-delay: 0s; }
-    .fog-strip:nth-child(2) { width: 450px; bottom: 55px; left: 20%; opacity: 0.3; animation-delay: -4s; }
-    .fog-strip:nth-child(3) { width: 350px; bottom: 30px; left: 30%; opacity: 0.25; animation-delay: -8s; }
-    .fog-strip:nth-child(4) { width: 250px; bottom: 12px; left: 15%; opacity: 0.15; animation-delay: -12s; }
-
-    @keyframes drift {
-      from { transform: translateX(0); }
-      to { transform: translateX(40px); }
-    }
 
     /* --- SITES BAR --- */
     .sites-bar {
@@ -483,10 +505,22 @@
       text-decoration: none;
     }
     footer a:hover { color: var(--ink); }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
   </style>
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Hopp til innhold</a>
 
+  <main id="main-content">
   <!-- HERO -->
   <section class="hero">
     <div class="hero-content">
@@ -543,32 +577,32 @@
     </div>
     <div class="features-grid">
       <div class="feature-card">
-        <div class="feature-icon">🏀</div>
+        <div class="feature-icon" aria-hidden="true">🏀</div>
         <h3>Skjul hele kategorier</h3>
         <p>Sport, sladder, økonomi, kultur, debatt — slå av det du ikke vil se med ett klikk.</p>
       </div>
       <div class="feature-card">
-        <div class="feature-icon">🤖</div>
+        <div class="feature-icon" aria-hidden="true">🤖</div>
         <h3>AI-slop-deteksjon</h3>
         <p>Oppdager og skjuler artikler med AI-genererte bilder og innhold. Ingen API — bare smart gjenkjenning.</p>
       </div>
       <div class="feature-card">
-        <div class="feature-icon">🔄</div>
+        <div class="feature-icon" aria-hidden="true">🔄</div>
         <h3>Synkronisert</h3>
         <p>Innstillingene dine følger Chrome-profilen din. Sett opp én gang, virker overalt.</p>
       </div>
       <div class="feature-card">
-        <div class="feature-icon">⚡</div>
+        <div class="feature-icon" aria-hidden="true">⚡</div>
         <h3>Null ytelsestap</h3>
         <p>Ingen eksterne kall, ingen tracking, ingen analytics. Alt kjører lokalt i nettleseren din.</p>
       </div>
       <div class="feature-card">
-        <div class="feature-icon">🧩</div>
+        <div class="feature-icon" aria-hidden="true">🧩</div>
         <h3>Flere sider kommer</h3>
         <p>VG, NRK og Dagbladet først. Flere norske — og internasjonale — sider på vei.</p>
       </div>
       <div class="feature-card">
-        <div class="feature-icon">☕</div>
+        <div class="feature-icon" aria-hidden="true">☕</div>
         <h3>100% gratis</h3>
         <p>Ingen betalingsmur, ingen premium-versjon. Liker du det? Sleng en kaffe.</p>
       </div>
@@ -620,13 +654,14 @@
     <p>Gratis, åpen kildekode, ingen tracking.</p>
     <div class="cta-actions">
       <a href="#" class="btn btn-primary">Installer Defog</a>
-      <a href="https://buymeacoffee.com/getdefog" class="btn btn-ghost" target="_blank">☕ Støtt prosjektet</a>
+      <a href="https://buymeacoffee.com/getdefog" class="btn btn-ghost" target="_blank" rel="noopener noreferrer">☕ Støtt prosjektet</a>
     </div>
   </section>
+  </main>
 
   <!-- FOOTER -->
   <footer>
-    <p>Defog &copy; 2026 · <a href="https://buymeacoffee.com/getdefog" target="_blank">Støtt Defog</a></p>
+    <p>Defog &copy; 2026 · <a href="https://buymeacoffee.com/getdefog" target="_blank" rel="noopener noreferrer">Støtt Defog</a></p>
   </footer>
 
 </body>
