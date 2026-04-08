@@ -593,40 +593,43 @@
   <main id="main-content">
   <!-- HERO -->
   <section class="hero">
+
+    <!-- Lysstråler fra logoen -->
+    <div class="hero-ray" style="left:50%;width:2px;height:100%;background:linear-gradient(180deg,rgba(245,158,11,0.55) 0%,rgba(245,158,11,0.1) 55%,transparent 85%);"></div>
+    <div class="hero-ray" style="left:50%;transform:rotate(-13deg);width:1.5px;height:80%;background:linear-gradient(180deg,rgba(245,158,11,0.30) 0%,transparent 100%);"></div>
+    <div class="hero-ray" style="left:50%;transform:rotate(13deg);width:1.5px;height:80%;background:linear-gradient(180deg,rgba(245,158,11,0.30) 0%,transparent 100%);"></div>
+    <div class="hero-ray" style="left:50%;transform:rotate(-28deg);width:1px;height:62%;background:linear-gradient(180deg,rgba(245,158,11,0.16) 0%,transparent 100%);"></div>
+    <div class="hero-ray" style="left:50%;transform:rotate(28deg);width:1px;height:62%;background:linear-gradient(180deg,rgba(245,158,11,0.16) 0%,transparent 100%);"></div>
+    <div class="hero-ray" style="left:50%;transform:rotate(-46deg);width:1px;height:44%;background:linear-gradient(180deg,rgba(245,158,11,0.08) 0%,transparent 100%);"></div>
+    <div class="hero-ray" style="left:50%;transform:rotate(46deg);width:1px;height:44%;background:linear-gradient(180deg,rgba(245,158,11,0.08) 0%,transparent 100%);"></div>
+
+    <!-- Fog-striper som krysser strålene -->
+    <div class="hero-fog-group" style="top:30%;">
+      <div style="height:10px;background:rgba(100,100,115,0.22);border-radius:100px;filter:blur(7px);margin-bottom:18px;"></div>
+      <div style="height:7px;background:rgba(100,100,115,0.15);border-radius:100px;filter:blur(5px);margin-left:10%;margin-right:6%;"></div>
+    </div>
+    <div class="hero-fog-group" style="top:46%;">
+      <div style="height:6px;background:rgba(100,100,115,0.10);border-radius:100px;filter:blur(5px);margin-left:18%;margin-right:12%;"></div>
+    </div>
+
+    <!-- Logo — lyskilden -->
+    <div class="hero-logo-wrap" aria-hidden="true">
+      <div class="hero-logo-mark"></div>
+      <span class="hero-logo-name">Defog</span>
+    </div>
+
+    <!-- Hero-innhold -->
     <div class="hero-content">
-      <div class="sun-icon">
-        <svg viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="36" cy="32" r="14" fill="#FBBF24"/>
-          <g stroke="#FBBF24" stroke-width="2.5" stroke-linecap="round">
-            <line x1="36" y1="8" x2="36" y2="13"/>
-            <line x1="36" y1="51" x2="36" y2="56"/>
-            <line x1="12" y1="32" x2="17" y2="32"/>
-            <line x1="55" y1="32" x2="60" y2="32"/>
-            <line x1="19" y1="15" x2="22.5" y2="18.5"/>
-            <line x1="49.5" y1="45.5" x2="53" y2="49"/>
-            <line x1="53" y1="15" x2="49.5" y2="18.5"/>
-            <line x1="22.5" y1="45.5" x2="19" y2="49"/>
-          </g>
-          <rect x="10" y="52" rx="3" width="44" height="5" fill="#D1D5DB" opacity="0.5"/>
-          <rect x="18" y="60" rx="3" width="40" height="4" fill="#D1D5DB" opacity="0.3"/>
-        </svg>
-      </div>
-      <h1>Fjern <span class="highlight">støyen</span> fra nyhetsbildet</h1>
-      <p class="subtitle">Gratis Chrome-utvidelse som skjuler sport, sladder og AI-generert innhold fra norske nyhetssider. Du bestemmer hva du ser.</p>
+      <p class="hero-eyebrow">Chrome-utvidelse for norske nyheter</p>
+      <h1>Fjern <span class="highlight">støyen</span><br>fra nyhetsbildet</h1>
+      <p class="subtitle">Skjuler sport, sladder og AI-generert innhold fra VG, NRK og Dagbladet. Du bestemmer hva du ser.</p>
       <div class="hero-actions">
-        <a href="#" class="btn btn-primary">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14.5v-9l6 4.5-6 4.5z"/></svg>
-          Installer fra Chrome Web Store
-        </a>
+        <div class="hero-cta-glow" aria-hidden="true"></div>
+        <a href="#" class="btn btn-primary">Installer gratis</a>
         <a href="#hvordan" class="btn btn-ghost">Hvordan virker det?</a>
       </div>
     </div>
-    <div class="fog-strips">
-      <div class="fog-strip"></div>
-      <div class="fog-strip"></div>
-      <div class="fog-strip"></div>
-      <div class="fog-strip"></div>
-    </div>
+
   </section>
 
   <!-- SUPPORTED SITES -->
