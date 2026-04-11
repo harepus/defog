@@ -9,6 +9,7 @@
   const storage = chrome.storage.local;
   let settings = { ...DEFAULT_SETTINGS };
   let hiddenCount = 0;
+  let containerCount = 0;
   let isContextAlive = true;
   let observer = null;
 
@@ -56,6 +57,60 @@
     });
   }
 
+  function resolveHideTarget(container) {
+    let target = container;
+    let current = container;
+
+    for (let depth = 0; depth < 6; depth++) {
+      const parent = current.parentElement;
+      if (!parent || parent === document.body || parent === document.documentElement) break;
+
+      const parentStyle = window.getComputedStyle(parent);
+      const parentDisplay = parentStyle.display || "";
+      const parentIsLayout = parentDisplay.includes("grid") || parentDisplay.includes("flex");
+
+      if (parentIsLayout) {
+        target = current;
+        break;
+      }
+
+      const children = Array.from(parent.children).filter(
+        (el) => el.tagName !== "SCRIPT" && el.tagName !== "STYLE"
+      );
+
+      if (children.length === 1) {
+        current = parent;
+        target = parent;
+        continue;
+      }
+
+      const currentRect = current.getBoundingClientRect();
+      const parentRect = parent.getBoundingClientRect();
+      const nearSameWidth = Math.abs(parentRect.width - currentRect.width) <= 2;
+      const nearSameHeight = Math.abs(parentRect.height - currentRect.height) <= 2;
+
+      if (nearSameWidth && nearSameHeight) {
+        current = parent;
+        target = parent;
+        continue;
+      }
+
+      break;
+    }
+
+    return target;
+  }
+
+  function hideContainer(container, category, alreadyHidden) {
+    const hideTarget = resolveHideTarget(container);
+    if (!hideTarget || alreadyHidden.has(hideTarget)) return false;
+
+    hideTarget.style.display = "none";
+    hideTarget.setAttribute("data-defog-hidden", category);
+    alreadyHidden.add(hideTarget);
+    return true;
+  }
+
   function containerMatchesCategory(container, catConfig) {
     if (!container || !catConfig) return false;
     const hrefs = getContainerHrefs(container);
@@ -86,14 +141,38 @@
   }
 
   function isAiContent(el) {
+    // Layer 1: targeted check using site-specific aiIndicators
+    if (site.aiIndicators) {
+      const { imageCredit = [], byline = [] } = site.aiIndicators;
+
+      if (imageCredit.length > 0) {
+        const creditEls = el.querySelectorAll(
+          "figcaption, [class*='credit'], [class*='caption'], [class*='photo'], [class*='image-text']"
+        );
+        for (const credit of creditEls) {
+          const text = (credit.textContent || "").toLowerCase();
+          if (imageCredit.some((s) => text.includes(s.toLowerCase()))) return true;
+        }
+      }
+
+      if (byline.length > 0) {
+        const bylineEls = el.querySelectorAll(
+          "[class*='byline'], [class*='author'], .author, .byline, [rel='author']"
+        );
+        for (const bEl of bylineEls) {
+          const text = (bEl.textContent || "").toLowerCase();
+          if (byline.some((s) => text.includes(s.toLowerCase()))) return true;
+        }
+      }
+    }
+
+    // Layer 2: general AI_SIGNALS scan across full element text + img attributes
     const text = (el.textContent || "").toLowerCase();
-    const html = (el.innerHTML || "").toLowerCase();
     const imgAlts = el.querySelectorAll("img");
-    let combined = text + " " + html;
+    let combined = text;
     imgAlts.forEach((img) => {
       combined += " " + (img.alt || "") + " " + (img.title || "");
     });
-    combined = combined.toLowerCase();
     return AI_SIGNALS.some((signal) => combined.includes(signal));
   }
 
@@ -107,6 +186,7 @@
           el.style.display = "";
           el.removeAttribute("data-defog-hidden");
         });
+        containerCount = getContentContainers().length;
         updateBadge();
         return;
       }
@@ -119,6 +199,7 @@
 
       const alreadyHidden = new Set();
       const allContainers = getContentContainers();
+      containerCount = allContainers.length;
       const nonAiCategories = disabledCategories.filter((cat) => cat !== "ai");
 
       for (const container of allContainers) {
@@ -126,10 +207,9 @@
           const catConfig = site.categories[cat];
           if (!catConfig) continue;
           if (containerMatchesCategory(container, catConfig)) {
-            container.style.display = "none";
-            container.setAttribute("data-defog-hidden", cat);
-            alreadyHidden.add(container);
-            hiddenCount++;
+            if (hideContainer(container, cat, alreadyHidden)) {
+              hiddenCount++;
+            }
             break;
           }
         }
@@ -142,10 +222,9 @@
           if (!alreadyHidden.has(container)) {
             const matchesSitePattern = aiConfig && containerMatchesCategory(container, aiConfig);
             if (matchesSitePattern || isAiContent(container)) {
-              container.style.display = "none";
-              container.setAttribute("data-defog-hidden", "ai");
-              alreadyHidden.add(container);
-              hiddenCount++;
+              if (hideContainer(container, "ai", alreadyHidden)) {
+                hiddenCount++;
+              }
             }
           }
         });
@@ -213,7 +292,7 @@
   // Listen for messages from popup
   chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
     if (msg.type === "getStats") {
-      sendResponse({ count: hiddenCount, site: getSiteDisplayName() });
+      sendResponse({ count: hiddenCount, site: getSiteDisplayName(), containerCount });
       return true;
     }
   });

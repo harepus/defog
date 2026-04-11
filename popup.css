@@ -46,6 +46,18 @@ body {
 
 .site-info .dot { color: #3f3f46; }
 
+.health-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  display: inline-block;
+  flex-shrink: 0;
+  background: #3f3f46;
+}
+
+.health-dot.ok  { background: #22c55e; }
+.health-dot.err { background: #ef4444; }
+
 #siteName { color: #e4e4e7; font-weight: 600; }
 
 .hint {

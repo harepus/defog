@@ -58,11 +58,21 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // Request stats via direct callback — most reliable approach
+  const healthDotEl = document.getElementById("healthDot");
   chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
     if (tabs[0]) {
       chrome.tabs.sendMessage(tabs[0].id, { type: "getStats" }, (response) => {
         if (chrome.runtime.lastError) return; // tab not ready / no content script
-        if (response) hiddenCountEl.textContent = response.count || 0;
+        if (response) {
+          hiddenCountEl.textContent = response.count || 0;
+          if (healthDotEl) {
+            const working = response.containerCount > 0;
+            healthDotEl.classList.add(working ? "ok" : "err");
+            healthDotEl.title = working
+              ? `Selektorer OK (${response.containerCount} containere funnet)`
+              : "Selektorer finner ingen artikler — DOM kan ha endret seg";
+          }
+        }
       });
     }
   });

@@ -262,24 +262,49 @@ const dnCategoryRules = {
 
 const SITES = {
   "vg.no": {
+    version: 1,
     categories: buildCategories(vgCategoryRules),
-    articleContainer: "article.article-extract, article, .article-extract"
+    articleContainer: "article.article-extract, article, .article-extract",
+    aiIndicators: {
+      imageCredit: ["midjourney", "dall-e", "dall·e", "stable diffusion", "ai-generert", "ki-generert", "generert med ki"],
+      byline: ["kunstig intelligens", "chatgpt", "copilot"]
+    }
   },
   "vgtv.no": {
+    version: 1,
     categories: buildCategories(vgCategoryRules),
-    articleContainer: "article, .article-extract, .content-item, .video-item"
+    articleContainer: "article, .article-extract, .content-item, .video-item",
+    aiIndicators: {
+      imageCredit: ["midjourney", "dall-e", "dall·e", "stable diffusion", "ai-generert", "ki-generert"],
+      byline: ["kunstig intelligens", "chatgpt"]
+    }
   },
   "nrk.no": {
+    version: 1,
     categories: buildCategories(nrkCategoryRules),
-    articleContainer: "article, .kur-room, .lp_plug"
+    articleContainer: "article, .kur-room, .lp_plug",
+    aiIndicators: {
+      imageCredit: ["illustrasjon: ki", "illustrasjon av ki", "foto: ki", "ki-illustrasjon", "ki-bilete", "generert av ki", "laget av ki"],
+      byline: ["kunstig intelligens"]
+    }
   },
   "dagbladet.no": {
+    version: 1,
     categories: buildCategories(dagbladetCategoryRules),
-    articleContainer: "article, .news-item, .frontpage-article"
+    articleContainer: "article, .news-item, .frontpage-article",
+    aiIndicators: {
+      imageCredit: ["midjourney", "dall-e", "ai-generert", "ki-generert", "chatgpt"],
+      byline: ["kunstig intelligens"]
+    }
   },
   "dn.no": {
+    version: 1,
     categories: buildCategories(dnCategoryRules),
-    articleContainer: "article, .teaser, .story-list-item, .article-item"
+    articleContainer: "article, .teaser, .story-list-item, .article-item",
+    aiIndicators: {
+      imageCredit: ["midjourney", "dall-e", "ai-generert", "ki-generert"],
+      byline: ["kunstig intelligens"]
+    }
   }
 };
 

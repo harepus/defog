@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+<meta charset="UTF-8">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  width: 1280px; height: 800px; overflow: hidden;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.browser { width: 1280px; height: 800px; display: flex; flex-direction: column; background: #202124; }
+
+.toolbar {
+  height: 48px; background: #35363a; display: flex; align-items: center;
+  gap: 10px; padding: 0 16px; flex-shrink: 0;
+}
+.nav-btns { display: flex; gap: 6px; }
+.nav-btn {
+  width: 26px; height: 26px; border-radius: 50%; border: none;
+  background: #5f6368; color: #e8eaed; font-size: 13px;
+  display: flex; align-items: center; justify-content: center;
+}
+.address-bar {
+  flex: 1; height: 30px; background: #202124; border-radius: 15px;
+  display: flex; align-items: center; padding: 0 12px; gap: 6px;
+  color: #bdc1c6; font-size: 13px;
+}
+.lock { font-size: 11px; color: #5f6368; }
+
+.split { flex: 1; display: flex; overflow: hidden; }
+.side  { flex: 1; display: flex; flex-direction: column; overflow: hidden; position: relative; }
+.divider { width: 3px; background: #111; flex-shrink: 0; }
+
+.side-label {
+  height: 32px; display: flex; align-items: center; justify-content: center;
+  font-size: 11px; font-weight: 800; letter-spacing: 1.2px; text-transform: uppercase;
+}
+.before .side-label { background: #b71c1c; color: #fff; }
+.after  .side-label { background: #1b5e20; color: #fff; }
+
+.feed { flex: 1; display: flex; flex-direction: column; overflow: hidden; background: #f5f5f5; }
+.vg-nav {
+  height: 42px; background: #d50000; display: flex; align-items: center;
+  padding: 0 14px; gap: 0; flex-shrink: 0;
+}
+.vg-logo { color: #fff; font-size: 24px; font-weight: 900; letter-spacing: -1px; margin-right: 18px; }
+.vg-link {
+  color: rgba(255,255,255,0.88); font-size: 12px; font-weight: 600;
+  padding: 0 10px; height: 42px; display: flex; align-items: center;
+  border-bottom: 2px solid transparent;
+}
+.vg-link.active { border-bottom-color: #fff; color: #fff; }
+
+.grid {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 2px; background: #ccc;
+  flex: 1; overflow: hidden;
+}
+
+.card { background: #fff; display: flex; flex-direction: column; overflow: hidden; position: relative; }
+
+.img-wrap { position: relative; overflow: hidden; flex-shrink: 0; }
+.photo-credit {
+  position: absolute; bottom: 0; right: 0;
+  background: rgba(0,0,0,0.55); color: rgba(255,255,255,0.75);
+  font-size: 9px; padding: 2px 5px;
+}
+
+.ph-nyheter {
+  background:
+    radial-gradient(ellipse 70% 50% at 55% 65%, rgba(0,0,0,0.45) 0%, transparent 70%),
+    radial-gradient(ellipse 40% 40% at 20% 15%, rgba(255,255,255,0.1) 0%, transparent 55%),
+    linear-gradient(155deg, #c62828 0%, #7f0000 45%, #3e0000 100%);
+}
+.ph-sport {
+  background:
+    radial-gradient(ellipse 90% 35% at 50% 90%, rgba(56,142,60,0.5) 0%, transparent 55%),
+    radial-gradient(ellipse 55% 55% at 25% 20%, rgba(255,255,255,0.12) 0%, transparent 50%),
+    linear-gradient(160deg, #1565c0 0%, #0d47a1 50%, #1a237e 100%);
+}
+.ph-sladder {
+  background:
+    radial-gradient(ellipse 55% 70% at 60% 25%, rgba(255,200,220,0.18) 0%, transparent 55%),
+    radial-gradient(circle at 15% 85%, rgba(0,0,0,0.3) 0%, transparent 45%),
+    linear-gradient(130deg, #7b1fa2 0%, #4a148c 55%, #6a1b9a 100%);
+}
+.ph-sladder2 {
+  background:
+    radial-gradient(ellipse 55% 70% at 60% 25%, rgba(255,200,220,0.18) 0%, transparent 55%),
+    radial-gradient(circle at 15% 85%, rgba(0,0,0,0.3) 0%, transparent 45%),
+    linear-gradient(130deg, #ad1457 0%, #880e4f 55%, #5c0535 100%);
+}
+.ph-okonomi {
+  background:
+    radial-gradient(ellipse 60% 60% at 70% 40%, rgba(255,255,255,0.08) 0%, transparent 55%),
+    radial-gradient(ellipse 80% 30% at 30% 85%, rgba(0,0,0,0.25) 0%, transparent 50%),
+    linear-gradient(145deg, #2e7d32 0%, #1b5e20 50%, #004d20 100%);
+}
+.ph-kultur {
+  background:
+    radial-gradient(ellipse 50% 60% at 40% 30%, rgba(255,200,100,0.15) 0%, transparent 55%),
+    radial-gradient(ellipse 70% 40% at 70% 80%, rgba(0,0,0,0.3) 0%, transparent 50%),
+    linear-gradient(140deg, #e65100 0%, #bf360c 50%, #7f1000 100%);
+}
+
+.card-body { padding: 7px 9px 8px; display: flex; flex-direction: column; flex: 1; }
+.card-tag  { font-size: 10px; font-weight: 800; letter-spacing: 0.5px; text-transform: uppercase; margin-bottom: 3px; }
+.card-title { font-size: 12.5px; font-weight: 700; line-height: 1.32; color: #111; flex: 1; }
+.card-meta  { margin-top: 5px; font-size: 10px; color: #888; display: flex; gap: 6px; align-items: center; }
+.sep { color: #ccc; }
+
+.hero { grid-row: 1 / 3; }
+.hero .card-title { font-size: 15px; line-height: 1.28; }
+.hero .card-tag   { font-size: 11px; }
+
+.t-sport   { color: #1565c0; }
+.t-sladder { color: #7b1fa2; }
+.t-nyheter { color: #c62828; }
+.t-okonomi { color: #2e7d32; }
+.t-kultur  { color: #e65100; }
+
+/* Hidden card treatment */
+.hidden-card::after {
+  content: '';
+  position: absolute; inset: 0;
+  background: repeating-linear-gradient(
+    -45deg,
+    rgba(238,238,238,0.97) 0px, rgba(238,238,238,0.97) 5px,
+    rgba(220,220,220,0.97) 5px, rgba(220,220,220,0.97) 10px
+  );
+}
+.hidden-badge {
+  position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+  background: #ef4444; color: #fff;
+  font-size: 10px; font-weight: 700; letter-spacing: 0.3px;
+  padding: 4px 11px; border-radius: 20px; z-index: 2; white-space: nowrap;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.bar {
+  height: 36px; display: flex; align-items: center; justify-content: center;
+  font-size: 12px; font-weight: 600; flex-shrink: 0;
+}
+.before .bar { background: #b71c1c; color: rgba(255,255,255,0.92); }
+.after  .bar { background: #1b5e20; color: rgba(255,255,255,0.92); }
+</style>
+</head>
+<body>
+<div class="browser">
+  <div class="toolbar">
+    <div class="nav-btns">
+      <div class="nav-btn">&#8592;</div>
+      <div class="nav-btn">&#8594;</div>
+      <div class="nav-btn">&#8635;</div>
+    </div>
+    <div class="address-bar">
+      <span class="lock">&#128274;</span>
+      <span>vg.no</span>
+    </div>
+  </div>
+
+  <div class="split">
+    <!-- ═══ BEFORE ═══ -->
+    <div class="side before">
+      <div class="side-label">Uten Defog</div>
+      <div class="feed">
+        <div class="vg-nav">
+          <div class="vg-logo">VG</div>
+          <span class="vg-link active">Forsiden</span>
+          <span class="vg-link">Nyheter</span>
+          <span class="vg-link">Sport</span>
+          <span class="vg-link">Rampelys</span>
+          <span class="vg-link">Økonomi</span>
+          <span class="vg-link">Kultur</span>
+        </div>
+        <div class="grid">
+          <div class="card hero">
+            <div class="img-wrap" style="height:222px">
+              <div class="ph-sport" style="height:100%"></div>
+              <span class="photo-credit">Foto: Reuters</span>
+            </div>
+            <div class="card-body">
+              <div class="card-tag t-sport">Sport</div>
+              <div class="card-title">Haaland med hat trick — City knuste Arsenal 4–1 i klassiker på Etihad</div>
+              <div class="card-meta"><span>Ola Nilsen</span><span class="sep">·</span><span>1t siden</span><span class="sep">·</span><span>&#128172; 847</span></div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="img-wrap" style="height:98px">
+              <div class="ph-nyheter" style="height:100%"></div>
+              <span class="photo-credit">Foto: NTB</span>
+            </div>
+            <div class="card-body">
+              <div class="card-tag t-nyheter">Nyheter</div>
+              <div class="card-title">Statsminister varsler krisetiltak etter kraftig prishopp</div>
+              <div class="card-meta"><span>23 min siden</span><span class="sep">·</span><span>&#128172; 312</span></div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="img-wrap" style="height:98px">
+              <div class="ph-sladder" style="height:100%"></div>
+              <span class="photo-credit">Foto: AP</span>
+            </div>
+            <div class="card-body">
+              <div class="card-tag t-sladder">Rampelys</div>
+              <div class="card-title">Kylie Jenner fotografert med ny kjæreste på hemmelig ferie</div>
+              <div class="card-meta"><span>2t siden</span><span class="sep">·</span><span>&#128172; 1 204</span></div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="img-wrap" style="height:86px">
+              <div class="ph-okonomi" style="height:100%"></div>
+              <span class="photo-credit">Foto: NTB</span>
+            </div>
+            <div class="card-body">
+              <div class="card-tag t-okonomi">Økonomi</div>
+              <div class="card-title">Oljeprisen stiger kraftig — analytikere spår 100 dollar</div>
+              <div class="card-meta"><span>3t siden</span></div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="img-wrap" style="height:86px">
+              <div class="ph-sladder2" style="height:100%"></div>
+              <span class="photo-credit">Foto: Getty</span>
+            </div>
+            <div class="card-body">
+              <div class="card-tag t-sladder">Rampelys</div>
+              <div class="card-title">Kjendisparet avslører: — Vi er forlovet</div>
+              <div class="card-meta"><span>4t siden</span><span class="sep">·</span><span>&#128172; 2 761</span></div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="img-wrap" style="height:86px">
+              <div class="ph-kultur" style="height:100%"></div>
+              <span class="photo-credit">Foto: NTB</span>
+            </div>
+            <div class="card-body">
+              <div class="card-tag t-kultur">Kultur</div>
+              <div class="card-title">«Fjord» tar Cannes med storm — norsk film i finalen</div>
+              <div class="card-meta"><span>5t siden</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bar">6 saker vises — sport og sladder blander seg inn i nyhetsbildet</div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- ═══ AFTER ═══ -->
+    <div class="side after">
+      <div class="side-label">Med Defog — sport og sladder filtrert bort</div>
+      <div class="feed">
+        <div class="vg-nav">
+          <div class="vg-logo">VG</div>
+          <span class="vg-link active">Forsiden</span>
+          <span class="vg-link">Nyheter</span>
+          <span class="vg-link">Sport</span>
+          <span class="vg-link">Rampelys</span>
+          <span class="vg-link">Økonomi</span>
+          <span class="vg-link">Kultur</span>
+        </div>
+        <div class="grid">
+          <div class="card hero hidden-card">
+            <div class="img-wrap" style="height:222px"><div class="ph-sport" style="height:100%"></div></div>
+            <div class="card-body">
+              <div class="card-tag t-sport">Sport</div>
+              <div class="card-title">Haaland med hat trick — City knuste Arsenal 4–1 i klassiker på Etihad</div>
+            </div>
+            <div class="hidden-badge">Skjult · Sport</div>
+          </div>
+          <div class="card">
+            <div class="img-wrap" style="height:98px">
+              <div class="ph-nyheter" style="height:100%"></div>
+              <span class="photo-credit">Foto: NTB</span>
+            </div>
+            <div class="card-body">
+              <div class="card-tag t-nyheter">Nyheter</div>
+              <div class="card-title">Statsminister varsler krisetiltak etter kraftig prishopp</div>
+              <div class="card-meta"><span>23 min siden</span><span class="sep">·</span><span>&#128172; 312</span></div>
+            </div>
+          </div>
+          <div class="card hidden-card">
+            <div class="img-wrap" style="height:98px"><div class="ph-sladder" style="height:100%"></div></div>
+            <div class="card-body">
+              <div class="card-tag t-sladder">Rampelys</div>
+              <div class="card-title">Kylie Jenner fotografert med ny kjæreste på hemmelig ferie</div>
+            </div>
+            <div class="hidden-badge">Skjult · Sladder</div>
+          </div>
+          <div class="card">
+            <div class="img-wrap" style="height:86px">
+              <div class="ph-okonomi" style="height:100%"></div>
+              <span class="photo-credit">Foto: NTB</span>
+            </div>
+            <div class="card-body">
+              <div class="card-tag t-okonomi">Økonomi</div>
+              <div class="card-title">Oljeprisen stiger kraftig — analytikere spår 100 dollar</div>
+              <div class="card-meta"><span>3t siden</span></div>
+            </div>
+          </div>
+          <div class="card hidden-card">
+            <div class="img-wrap" style="height:86px"><div class="ph-sladder2" style="height:100%"></div></div>
+            <div class="card-body">
+              <div class="card-tag t-sladder">Rampelys</div>
+              <div class="card-title">Kjendisparet avslører: — Vi er forlovet</div>
+            </div>
+            <div class="hidden-badge">Skjult · Sladder</div>
+          </div>
+          <div class="card">
+            <div class="img-wrap" style="height:86px">
+              <div class="ph-kultur" style="height:100%"></div>
+              <span class="photo-credit">Foto: NTB</span>
+            </div>
+            <div class="card-body">
+              <div class="card-tag t-kultur">Kultur</div>
+              <div class="card-title">«Fjord» tar Cannes med storm — norsk film i finalen</div>
+              <div class="card-meta"><span>5t siden</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bar">3 saker skjult (sport + sladder) — bare det du bryr deg om er synlig</div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

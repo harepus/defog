@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+<meta charset="UTF-8">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  width: 1280px; height: 800px; overflow: hidden;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #f0f0f0;
+}
+
+.browser { width: 1280px; height: 800px; display: flex; flex-direction: column; }
+
+.toolbar {
+  height: 48px; background: #2d2d32; border-bottom: 1px solid #111;
+  display: flex; align-items: center; gap: 10px; padding: 0 16px; flex-shrink: 0;
+}
+.nav-btns { display: flex; gap: 6px; }
+.nav-btn {
+  width: 26px; height: 26px; border-radius: 50%; border: none;
+  background: #3f3f46; color: #a1a1aa; font-size: 13px;
+  display: flex; align-items: center; justify-content: center;
+}
+.address-bar {
+  flex: 1; height: 30px; background: #18181b; border-radius: 15px;
+  display: flex; align-items: center; padding: 0 12px; gap: 6px; color: #a1a1aa; font-size: 13px;
+}
+.lock { font-size: 11px; color: #52525b; }
+.ext-icons { display: flex; align-items: center; gap: 4px; padding-left: 8px; }
+.ext-icon {
+  width: 32px; height: 32px; border-radius: 6px; background: #3f3f4660;
+  display: flex; align-items: center; justify-content: center; position: relative;
+}
+.badge {
+  position: absolute; top: 0; right: 0;
+  background: #f59e0b; color: #000; border-radius: 8px;
+  font-size: 9px; font-weight: 800; min-width: 16px; height: 16px;
+  display: flex; align-items: center; justify-content: center; padding: 0 3px;
+  box-shadow: 0 0 0 1.5px #2d2d32;
+}
+
+/* ── NRK page (blurred behind popup) ── */
+.page {
+  flex: 1; background: #f2f2f2; overflow: hidden; position: relative;
+}
+.page-inner {
+  filter: blur(2px) brightness(0.75) saturate(0.8);
+  height: 100%;
+}
+.nrk-nav {
+  height: 48px; background: #003f5c;
+  display: flex; align-items: center; padding: 0 20px; gap: 0;
+}
+.nrk-logo { color: #fff; font-size: 22px; font-weight: 900; letter-spacing: -0.5px; margin-right: 24px; }
+.nrk-link {
+  color: rgba(255,255,255,0.8); font-size: 13px; font-weight: 600;
+  padding: 0 12px; height: 48px; display: flex; align-items: center;
+  border-bottom: 3px solid transparent;
+}
+.nrk-link.active { color: #fff; border-bottom-color: #f59e0b; }
+
+.nrk-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 2px; background: #ddd;
+  height: calc(100% - 48px); overflow: hidden;
+}
+
+.nc { background: #fff; overflow: hidden; display: flex; flex-direction: column; }
+.nc-img { flex-shrink: 0; position: relative; }
+.nc-body { padding: 10px 12px; }
+.nc-tag { font-size: 10px; font-weight: 800; letter-spacing: 0.5px; text-transform: uppercase; margin-bottom: 4px; }
+.nc-title { font-size: 13px; font-weight: 700; line-height: 1.3; color: #111; }
+.nc-meta { font-size: 10px; color: #888; margin-top: 5px; }
+
+.t-n { color: #c62828; } .t-s { color: #1565c0; } .t-u { color: #7b1fa2; }
+.t-k { color: #2e7d32; } .t-d { color: #37474f; }
+
+.hero-nc { grid-row: 1 / 3; }
+.hero-nc .nc-title { font-size: 16px; line-height: 1.28; }
+
+.ph-n1 {
+  background:
+    radial-gradient(ellipse 60% 50% at 50% 60%, rgba(0,0,0,0.4) 0%, transparent 65%),
+    linear-gradient(150deg, #1565c0 0%, #003f5c 60%, #001f3c 100%);
+}
+.ph-n2 {
+  background:
+    radial-gradient(ellipse 70% 60% at 40% 50%, rgba(0,0,0,0.35) 0%, transparent 65%),
+    linear-gradient(140deg, #c62828 0%, #7f0000 55%, #3e0000 100%);
+}
+.ph-n3 {
+  background:
+    radial-gradient(ellipse 55% 55% at 60% 40%, rgba(255,255,255,0.1) 0%, transparent 60%),
+    linear-gradient(135deg, #1b5e20 0%, #003300 100%);
+}
+.ph-n4 {
+  background:
+    radial-gradient(ellipse 60% 50% at 50% 50%, rgba(255,255,255,0.08) 0%, transparent 60%),
+    linear-gradient(155deg, #37474f 0%, #102027 100%);
+}
+.ph-n5 {
+  background:
+    radial-gradient(ellipse 55% 70% at 55% 30%, rgba(255,200,220,0.15) 0%, transparent 55%),
+    linear-gradient(130deg, #7b1fa2 0%, #4a148c 100%);
+}
+
+/* ── Popup ── */
+.popup-wrap {
+  position: absolute; top: 52px; right: 48px; z-index: 10;
+  filter: drop-shadow(0 24px 48px rgba(0,0,0,0.7)) drop-shadow(0 4px 12px rgba(0,0,0,0.4));
+}
+.popup-wrap::before {
+  content: ''; position: absolute; top: -7px; right: 14px;
+  border: 7px solid transparent; border-bottom-color: #1a1a1e; border-top: none;
+}
+.popup {
+  width: 284px; background: #1a1a1e; color: #e4e4e7;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  font-size: 13px; padding: 16px; border-radius: 10px;
+  border: 1px solid #2a2a2e;
+}
+.p-header { margin-bottom: 12px; }
+.p-logo { display: flex; align-items: center; gap: 8px; color: #fff; }
+.p-logo svg { color: #fbbf24; width: 20px; height: 20px; }
+.p-title { font-size: 18px; font-weight: 700; letter-spacing: -0.3px; }
+.p-sub { color: #71717a; font-size: 11px; margin-top: 2px; }
+
+.p-siteinfo {
+  background: #27272a; border-radius: 8px; padding: 8px 12px;
+  font-size: 12px; color: #a1a1aa; margin-bottom: 12px;
+  display: flex; align-items: center; gap: 6px;
+}
+.hdot { width: 7px; height: 7px; border-radius: 50%; background: #22c55e; flex-shrink: 0; }
+.sname { color: #e4e4e7; font-weight: 600; }
+.dsep { color: #3f3f46; }
+
+.p-hint { margin: -4px 0 10px; color: #71717a; font-size: 11px; }
+
+.toggles { display: flex; flex-direction: column; gap: 1px; }
+.trow {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 7px 4px; border-radius: 6px;
+}
+.trow:hover { background: #27272a; }
+.tlabel { font-size: 13px; color: #d4d4d8; }
+
+.sw { position: relative; width: 36px; height: 20px; flex-shrink: 0; }
+.sl {
+  position: absolute; inset: 0; border-radius: 10px;
+}
+.sl::before {
+  content: ''; position: absolute; width: 14px; height: 14px;
+  left: 3px; top: 3px; background: #fff; border-radius: 50%;
+}
+.on .sl  { background: #f59e0b; }
+.on .sl::before { transform: translateX(16px); }
+.off .sl { background: #3f3f46; }
+
+.p-footer { margin-top: 12px; padding-top: 11px; border-top: 1px solid #27272a; text-align: center; }
+.p-donate { color: #a1a1aa; font-size: 12px; }
+
+/* ── Callout labels ── */
+.callout {
+  position: absolute; background: #fbbf24; color: #111;
+  font-size: 11.5px; font-weight: 700; padding: 5px 12px;
+  border-radius: 20px; white-space: nowrap; z-index: 20;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.3);
+}
+.callout::after { content: ''; position: absolute; border: 6px solid transparent; }
+.arr-r::after { right: -10px; top: 50%; transform: translateY(-50%); border-left-color: #fbbf24; border-right: none; }
+.arr-l::after { left: -10px; top: 50%; transform: translateY(-50%); border-right-color: #fbbf24; border-left: none; }
+</style>
+</head>
+<body>
+<div class="browser">
+  <div class="toolbar">
+    <div class="nav-btns">
+      <div class="nav-btn">&#8592;</div>
+      <div class="nav-btn">&#8594;</div>
+      <div class="nav-btn">&#8635;</div>
+    </div>
+    <div class="address-bar">
+      <span class="lock">&#128274;</span>
+      <span>nrk.no</span>
+    </div>
+    <div class="ext-icons">
+      <div class="ext-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#fbbf24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:18px;height:18px">
+          <circle cx="12" cy="12" r="5"/>
+          <line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+          <line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        </svg>
+        <div class="badge">8</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="page">
+    <!-- NRK page (blurred) -->
+    <div class="page-inner">
+      <div class="nrk-nav">
+        <div class="nrk-logo">NRK</div>
+        <span class="nrk-link active">Nyheter</span>
+        <span class="nrk-link">Sport</span>
+        <span class="nrk-link">TV og radio</span>
+        <span class="nrk-link">Ytring</span>
+        <span class="nrk-link">Vær</span>
+      </div>
+      <div class="nrk-grid">
+        <div class="nc hero-nc">
+          <div class="nc-img" style="height:270px">
+            <div class="ph-n1" style="height:100%"></div>
+          </div>
+          <div class="nc-body">
+            <div class="nc-tag t-n">Nyheter · Norge</div>
+            <div class="nc-title">Regjeringen innfører nye beredskapstiltak — statsministeren holder pressekonferanse klokken 15</div>
+            <div class="nc-meta">Kari Olsen · 18 min siden</div>
+          </div>
+        </div>
+        <div class="nc">
+          <div class="nc-img" style="height:110px">
+            <div class="ph-n2" style="height:100%"></div>
+          </div>
+          <div class="nc-body">
+            <div class="nc-tag t-s">Sport</div>
+            <div class="nc-title">Norges VM-tropp klar — disse er med til USA</div>
+            <div class="nc-meta">1t siden</div>
+          </div>
+        </div>
+        <div class="nc">
+          <div class="nc-img" style="height:110px">
+            <div class="ph-n3" style="height:100%"></div>
+          </div>
+          <div class="nc-body">
+            <div class="nc-tag t-k">Økonomi</div>
+            <div class="nc-title">Renten øker igjen — slik påvirker det deg</div>
+            <div class="nc-meta">2t siden</div>
+          </div>
+        </div>
+        <div class="nc">
+          <div class="nc-img" style="height:100px">
+            <div class="ph-n4" style="height:100%"></div>
+          </div>
+          <div class="nc-body">
+            <div class="nc-tag t-d">Ytring</div>
+            <div class="nc-title">Vi trenger en ny debatt om klimapolitikken</div>
+            <div class="nc-meta">3t siden</div>
+          </div>
+        </div>
+        <div class="nc">
+          <div class="nc-img" style="height:100px">
+            <div class="ph-n5" style="height:100%"></div>
+          </div>
+          <div class="nc-body">
+            <div class="nc-tag t-u">Kultur</div>
+            <div class="nc-title">Norsk film nominert til europeisk filmpris</div>
+            <div class="nc-meta">4t siden</div>
+          </div>
+        </div>
+        <div class="nc">
+          <div class="nc-img" style="height:100px">
+            <div class="ph-n2" style="height:100%; filter:hue-rotate(100deg)"></div>
+          </div>
+          <div class="nc-body">
+            <div class="nc-tag t-s">Sport</div>
+            <div class="nc-title">Haaland ute med skade — usikker til helgens kamp</div>
+            <div class="nc-meta">5t siden</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Popup -->
+    <div class="popup-wrap">
+      <div class="popup">
+        <div class="p-header">
+          <div class="p-logo">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="5"/>
+              <line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+              <line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+            </svg>
+            <span class="p-title">Defog</span>
+          </div>
+          <p class="p-sub">Fjern støyen fra nyhetsbildet</p>
+        </div>
+        <div class="p-siteinfo">
+          <span class="hdot"></span>
+          <span class="sname">Nrk.no</span>
+          <span class="dsep">·</span>
+          <span>8 artikler skjult</span>
+        </div>
+        <p class="p-hint">Tips: Slå AV kategorier du vil skjule.</p>
+        <div class="toggles">
+          <div class="trow"><span class="tlabel">Sport</span><label class="sw off"><div class="sl"></div></label></div>
+          <div class="trow"><span class="tlabel">Sladder / Rampelys</span><label class="sw off"><div class="sl"></div></label></div>
+          <div class="trow"><span class="tlabel">Nyheter</span><label class="sw on"><div class="sl"></div></label></div>
+          <div class="trow"><span class="tlabel">Økonomi</span><label class="sw on"><div class="sl"></div></label></div>
+          <div class="trow"><span class="tlabel">Kultur / Underholdning</span><label class="sw on"><div class="sl"></div></label></div>
+          <div class="trow"><span class="tlabel">Debatt / Meninger</span><label class="sw on"><div class="sl"></div></label></div>
+          <div class="trow"><span class="tlabel">Video / TV</span><label class="sw off"><div class="sl"></div></label></div>
+          <div class="trow"><span class="tlabel">AI-generert innhold</span><label class="sw off"><div class="sl"></div></label></div>
+        </div>
+        <div class="p-footer"><span class="p-donate">Støtt Defog</span></div>
+      </div>
+    </div>
+
+    <!-- Callouts -->
+    <div class="callout arr-r" style="top:66px; right:362px;">Klikk ikonet for å åpne filteret</div>
+    <div class="callout arr-l" style="top:178px; right:308px;">Slått AV = kategorien er skjult</div>
+    <div class="callout arr-l" style="top:352px; right:308px;">På = vises som normalt</div>
+  </div>
+</div>
+</body>
+</html>
