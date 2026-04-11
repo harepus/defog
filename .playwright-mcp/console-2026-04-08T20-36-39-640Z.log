@@ -1,0 +1,15 @@
+[     129ms] [WARNING] @schibsted/sourcepoint: No Schibsted Account integration detected. @ https://www.vg.no/:55
+[     129ms] [WARNING] @schibsted/sourcepoint: No Schibsted Account integration detected. @ https://www.vg.no/:55
+[     244ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ https://log.medietall.no/analytics.v2.js:0
+[     311ms] [INFO] AST library loaded: 1.10.81 @ https://adsdk.microsoft.com/ast/ast.js:4
+[     325ms] [LOG] Messaging without detection successfully executed. @ https://cmp.vg.no/unified/wrapperMessagingWithoutDetection.js:0
+[     340ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ https://id.vg.no/v2/session?client_sdrn=sdrn%3Aspid.no%3Aclient%3A4ef1cfb0e962dd2e0d8d0000&redirect_uri=https%3A%2F%2Fwww.vg.no%2Fauth%2Fcallback&sdk_version=5.2.6&tabId=70728:0
+[     514ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ https://ib.adnxs.com/:0
+[     713ms] [LOG] Skjedd Siden Sist: Initializing @ https://www.vg.no/vgc/frimand/js/dynamic-widgets/Snakkis.053ca6c6.js:0
+[     774ms] [ERROR] Failed to load resource: the server responded with a status of 400 (Bad Request) @ https://session-service.payment.schibsted.no/user-context?client_sdrn=sdrn%3Aspid.no%3Aclient%3A4ef1cfb0e962dd2e0d8d0000&sdk_version=5.2.6:0
+[    3922ms] [WARNING] The resource https://schibsted-cdn.relevant-digital.com/static/tags/6316fce35aea87bd62e92853.js was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ https://www.vg.no/:0
+[    3922ms] [WARNING] The resource https://akamai.vgc.no/users/schibsted/images/148604607.jpg?t[strip]=1&t[crop][x]=0&t[crop][y]=0&t[crop][width]=2000&t[crop][height]=1333&t[resize][width]=734&accessToken=40d19746353e3b52a1e97d0e7901fc0f98071f598a9613d4b9c3bc05913d245f was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ https://www.vg.no/:0
+[    3922ms] [WARNING] The resource https://cogwheel.inventory.schibsted.io/prod/latest/gdpr-bundle.js was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ https://www.vg.no/:0
+[    5686ms] [LOG] %c👋 Velkommen til Konsollens Gang! font-size: 35px; color: #ff0000; font-weight: bold; @ https://www.vg.no/frimand-api/experiments/hovedfront/production/0a6a1f/a.js?_=1740129748000:0
+[    5686ms] [LOG] %cLiker du å være i konsollen? Det gjør vi også. Kom og snakk med oss da vel?
+Join https://discord.gg/vgno. font-size: 18px @ https://www.vg.no/frimand-api/experiments/hovedfront/production/0a6a1f/a.js?_=1740129748000:0

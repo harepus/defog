@@ -1,0 +1,8 @@
+[     158ms] [WARNING] Manifest: property 'start_url' ignored, should be same origin as document. @ https://static.nrk.no/publisering/kurator-visning/assets/manifest.json:0
+[     251ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ https://log.medietall.no/analytics.js:0
+[     576ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ https://s.go-mpulse.net/boomerang/QM4SJ-4XUXE-M9QDD-XSP34-BF2PT:0
+[     674ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ https://s.go-mpulse.net/boomerang/QM4SJ-4XUXE-M9QDD-XSP34-BF2PT:0
+[     692ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ https://s.go-mpulse.net/boomerang/PNWPX-BE9G3-4DHZY-UN976-FJCP7:0
+[     696ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ https://s.go-mpulse.net/boomerang/PNWPX-BE9G3-4DHZY-UN976-FJCP7:0
+[    3676ms] [WARNING] The resource https://s.go-mpulse.net/boomerang/QM4SJ-4XUXE-M9QDD-XSP34-BF2PT was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ https://www.nrk.no/_auth/web/opsession/check?d=2026-04-08:0
+[    3698ms] [WARNING] The resource https://s.go-mpulse.net/boomerang/PNWPX-BE9G3-4DHZY-UN976-FJCP7 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ https://innlogging.nrk.no/nonstandard/opsession?d=2026-04-08:0
