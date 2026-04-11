@@ -3,6 +3,7 @@
   "name": "Defog",
   "version": "1.0.1",
   "description": "Fjern støyen fra nyhetsbildet. Skjul kategorier du ikke bryr deg om på norske nyhetssider.",
+  "homepage_url": "https://defog.cloud",
   "permissions": ["storage", "activeTab"],
   "host_permissions": [
     "*://*.vg.no/*",
